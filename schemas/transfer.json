@@ -93,6 +93,12 @@
 							"component" : "psui-datepicker"
 						}
 					},
+					"note": {
+						"title": "Poznámka",
+						"type": "string",
+						"required": false,
+						"large":true
+					},
 					"state": {
 						"title": "Stav",
 						"type": "string",
