@@ -31,7 +31,7 @@
 						"type": "object",
 						"$objectLink": {
 							"registry": "organizations",
-							"name": "club.sportName"
+							"name": "club.name"
 						},
 						"required": true
 
