@@ -164,7 +164,7 @@
 			{"field":"baseData.name", "title": "Názov"},
 			{"field":"baseData.competition", "title":"Súťaž"},
 			{"field":"baseData.season", "title":"Sezóna"},
-			{"field":"baseData.club.refData.name", "title":"Klub"}],
+			{"field":"baseData.club", "title":"Klub"}],
 		"properties": {
 			"baseData": {
 				"$ref": "uri://registries/roster#new/properties/baseData"
