@@ -63,7 +63,7 @@
 					"required": false,
 					"$objectLink": {
 						"registry": "organizations",
-						"name": "baseData.name"
+						"name": "association.name"
 					}
 				},
 				"ico": {
@@ -185,7 +185,7 @@
 					"required": false,
 					"$objectLink": {
 						"registry": "organizations",
-						"name": "baseData.name"
+						"name": "association.name"
 					}
 				},
 				"startDate": {
