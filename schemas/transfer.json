@@ -44,7 +44,7 @@
 						"required": true,
 						"$objectLink": {
 							"registry": "people",
-							"name": "baseData.name"
+							"name": "baseData.name",
 							"surName": "baseData.surName"
 						}
 					},
