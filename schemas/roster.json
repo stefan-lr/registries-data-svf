@@ -40,7 +40,7 @@
 						"title": "Súťaž",
 						"required": true,
 						"$objectLink": {
-							"registry": "competition",
+							"registry": "competitions",
 							"name": "baseData.name"
 						}
 					},
@@ -48,7 +48,7 @@
 						"title": "Obdobie",
 						"required": true,
 						"$objectLink": {
-							"registry": "season",
+							"registry": "seasons",
 							"name": "baseData.name"
 						}
 					},
