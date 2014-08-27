@@ -37,7 +37,7 @@
     	"title": "osoba",
 		"transCode":"schema.member.view",
         "listFields": {
-            "$ref": "uri://registries/people#person/listFields"
+            "$ref": "uri://registries/people#person/properties/player/listFields"
         },
 		"forcedCriterias": [
 			{ "f": "player", "op": "ex", "v": ""}

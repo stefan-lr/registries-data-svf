@@ -31,28 +31,28 @@
 	},
 	"search" : {
 		"table": "organizations",
-    	"title": "organizácia",
+			"title": "organizácia",
 		"transCode": "schema.org.view",
-        "listFields": [
-			{"field":"id", "title": "ID"},
+				"listFields": [
+			{"field":"club.clubId", "title": "Klub ID"},
 			{"field":"club.name", "title":"Meno"}
 		],
 		"forcedCriterias": [
 			{ "f": "club", "op": "ex", "v": ""}
 		],
-        "properties": {
-            "contactInfo": {
-                "$ref": "uri://registries/organization#properties/contactInfo"
-            },
-            "bankInfo": {
-                "$ref": "uri://registries/organization#properties/bankInfo"
-            },
-            "club": {
-                "$ref": "uri://registries/organization#properties/club"
-            },
+				"properties": {
+						"contactInfo": {
+								"$ref": "uri://registries/organization#properties/contactInfo"
+						},
+						"bankInfo": {
+								"$ref": "uri://registries/organization#properties/bankInfo"
+						},
+						"club": {
+								"$ref": "uri://registries/organization#properties/club"
+						},
 			"clubAdress": {
-                "$ref": "uri://registries/organization#properties/clubAdress"
-            }
-        }
+								"$ref": "uri://registries/organization#properties/clubAdress"
+						}
+				}
 	}
 }

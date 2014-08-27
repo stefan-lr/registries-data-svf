@@ -481,7 +481,20 @@
 		"player":{
 			"title": "Hráč",
 			"type": "object",
+			"listFields": [
+				{"field":"player.playerLicense", "title": "Číslo HL"},
+				{"field":"baseData.name", "title":"Meno"},
+				{"field":"baseData.surName", "title":"Priezvisko"},
+				{"field":"baseData.birthDate", "title":"Dátum narodenia"},
+				{"field":"contactInfo.city", "title":"Mesto"}
+			],
 			"properties": {
+				"playerLicense":{
+					"title": "Číslo HL",
+					"transCode": "schema.people.playerLicense",
+					"type": "string",
+					"required": true
+				},
 				"clubOfFirstRegistration": {
 					"title": "Klub prvotnej registrácie",
 					"required": false,

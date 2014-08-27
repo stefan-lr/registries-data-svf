@@ -50,6 +50,7 @@ angular.module('registries')
 		"schema.org.phoneNumber":"Telefón",
 		"schema.org.mobileNumber":"Mobil",
 		"schema.org.email":"E-mail",
+		"schema.people.playerLicense":"Číslo HL", 
 		"schema.org.bankInfo":"Fakturačné údaje",
 		"schema.org.merchantName":"Obchodný názov spoločnosti",
 		"schema.org.statutarOrgan":"Štatutárny orgán",

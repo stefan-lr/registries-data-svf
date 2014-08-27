@@ -3,7 +3,7 @@
 	"id": "uri://registries/transfer#",
 	"new": {
 		"table" : "transfers",
-		"title" : "Nový transfer",
+		"title" : "Nová Zmena kl. príslušnosti",
 		"xxtransCode": "schema.transfer.title",
 		"listFields": [
 			{"field":"baseData.player.refData.name", "title":"Meno Hráč"},
@@ -30,7 +30,7 @@
 				}
 			},
 			"baseData":{
-				"title": "Základné údaje o transfere",
+				"title": "Základné údaje",
 				"type": "object",
 				"properties": {
 					"id": {
@@ -67,35 +67,23 @@
 						}
 					},
 					"typeOfTransfer": {
-						"title": "Typ transferu",
+						"title": "Typ zmeny",
 						"type": "string",
 						"required": true,
 						"enum":[
 							"prestup",
-							"hosťovanie"
+							"hosťovanie",
+							"striedavý štart",
+							"zahr. transfér"
 						],
 						"render":{
 							"component": "psui-selectbox",
 							"searchable": true
 						}
 					},
-					"stateOfTransfer": {
-						"title": "Stav transferu",
-						"type": "string",
-						"required": true,
-						"enum":[
-							"schválený",
-							"neschválený",
-							"storno",
-							"v riešení"
-						],
-						"render":{
-							"component": "psui-selectbox",
-							"searchable": true
-						}
-					},
+				
 					"dateOfRealization": {
-						"title": "Dátum realizácie transféru",
+						"title": "Dátum realizácie",
 						"type": "string",
 						"required": true,
 						"render" : {
@@ -118,24 +106,40 @@
 							"component" : "psui-datepicker"
 						}
 					},
-					"note": {
-						"title": "Poznámka",
-						"type": "string",
-						"required": false,
-						"large":true
-					},
-					"state": {
+					"stateOfTransfer": {
 						"title": "Stav",
 						"type": "string",
 						"required": true,
 						"enum":[
-							"aktívny",
-							"neaktívny"
+							"schválený",
+							"neschválený",
+							"storno",
+							"v riešení"
 						],
 						"render":{
 							"component": "psui-selectbox",
 							"searchable": true
 						}
+					},
+					
+					"active": {
+						"title": "Aktívny",
+						"type": "string",
+						"required": true,
+						"enum":[
+							"ano",
+							"nie"
+						],
+						"render":{
+							"component": "psui-selectbox",
+							"searchable": true
+						}
+					},
+					"note": {
+						"title": "Poznámka",
+						"type": "string",
+						"required": false,
+						"large":true
 					}
 				}
 			}
@@ -146,14 +150,14 @@
 	},
 	"search" : {
 		"table": "transfers",
-    	"title": "transfér",
-        "listFields": {
-            "$ref": "uri://registries/transfer#new/listFields"
-        },
-        "properties": {
-            "baseData": {
-                "$ref": "uri://registries/transfer#new/properties/baseData"
-            }
-        }
+			"title": "Zmena kl. príslušnosti",
+				"listFields": {
+						"$ref": "uri://registries/transfer#new/listFields"
+				},
+				"properties": {
+						"baseData": {
+								"$ref": "uri://registries/transfer#new/properties/baseData"
+						}
+				}
 	}
 }

@@ -48,6 +48,14 @@
 			"title": "Klub",
 			"type": "object",
 			"properties": {
+				
+
+				"clubId":{
+					"title": "Klub ID",
+					"type": "string",
+					"required": false
+				},
+
 				"name":{
 					"title": "Názov klubu",
 					"type": "string",

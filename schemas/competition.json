@@ -44,14 +44,14 @@
 	},
 	"search" : {
 		"table": "competitions",
-    	"title": "súťaž",
-        "listFields": {
-            "$ref": "uri://registries/competition#new/listFields"
-        },
-        "properties": {
-            "baseData": {
-                "$ref": "uri://registries/competition#new/properties/baseData"
-            }
-        }
+			"title": "súťaž",
+				"listFields": {
+						"$ref": "uri://registries/competition#new/listFields"
+				},
+				"properties": {
+						"baseData": {
+								"$ref": "uri://registries/competition#new/properties/baseData"
+						}
+				}
 	}
 }
