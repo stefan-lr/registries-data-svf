@@ -37,7 +37,7 @@
 			{"field":"club.clubId", "title": "Klub ID"},
 			{"field":"club.name", "title":"Meno"}
 		],
-		"forcedCriterias": [
+		"forcedCriteria": [
 			{ "f": "club", "op": "ex", "v": ""}
 		],
 				"properties": {

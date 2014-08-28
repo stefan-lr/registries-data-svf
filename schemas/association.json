@@ -37,7 +37,7 @@
 			{"field":"id", "title": "ID"},
 			{"field":"association.associationName", "title":"Meno"}
 		],
-		"forcedCriterias": [
+		"forcedCriteria": [
 			{ "f": "association", "op": "ex", "v": ""}
 		],
         "properties": {

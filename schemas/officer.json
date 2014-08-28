@@ -34,30 +34,30 @@
 	},
 	"search" : {
 		"table": "people",
-    	"title": "osoba",
+			"title": "osoba",
 		"transCode":"schema.member.view",
-        "listFields": {
-            "$ref": "uri://registries/people#person/listFields"
-        },
-		"forcedCriterias": [
+				"listFields": {
+						"$ref": "uri://registries/people#person/listFields"
+				},
+		"forcedCriteria": [
 			{ "f": "officer", "op": "ex", "v": ""}
 		],
-        "properties": {
-            "baseData": {
-                "$ref": "uri://registries/people#person/properties/baseData"
-            },
-            "contactInfo": {
-                "$ref": "uri://registries/people#person/properties/contactInfo"
-            },
-            "bankInfo": {
-                "$ref": "uri://registries/people#person/properties/bankInfo"
-            },
-            "otherInfo": {
-                "$ref": "uri://registries/people#person/properties/otherInfo"
-            },
-            "officer": {
-                "$ref": "uri://registries/people#person/properties/officer"
-            }
-        }
+				"properties": {
+						"baseData": {
+								"$ref": "uri://registries/people#person/properties/baseData"
+						},
+						"contactInfo": {
+								"$ref": "uri://registries/people#person/properties/contactInfo"
+						},
+						"bankInfo": {
+								"$ref": "uri://registries/people#person/properties/bankInfo"
+						},
+						"otherInfo": {
+								"$ref": "uri://registries/people#person/properties/otherInfo"
+						},
+						"officer": {
+								"$ref": "uri://registries/people#person/properties/officer"
+						}
+				}
 	}
 }

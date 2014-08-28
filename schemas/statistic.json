@@ -39,7 +39,7 @@
         "listFields": {
             "$ref": "uri://registries/people#person/listFields"
         },
-		"forcedCriterias": [
+		"forcedCriteria": [
 			{ "f": "statistic", "op": "ex", "v": ""}
 		],
         "properties": {

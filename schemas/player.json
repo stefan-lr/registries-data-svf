@@ -34,30 +34,30 @@
 	},
 	"search" : {
 		"table": "people",
-    	"title": "osoba",
+			"title": "osoba",
 		"transCode":"schema.member.view",
-        "listFields": {
-            "$ref": "uri://registries/people#person/properties/player/listFields"
-        },
-		"forcedCriterias": [
+				"listFields": {
+						"$ref": "uri://registries/people#person/properties/player/listFields"
+				},
+		"forcedCriteria": [
 			{ "f": "player", "op": "ex", "v": ""}
 		],
-        "properties": {
-            "baseData": {
-                "$ref": "uri://registries/people#person/properties/baseData"
-            },
-            "contactInfo": {
-                "$ref": "uri://registries/people#person/properties/contactInfo"
-            },
-            "bankInfo": {
-                "$ref": "uri://registries/people#person/properties/bankInfo"
-            },
-            "otherInfo": {
-                "$ref": "uri://registries/people#person/properties/otherInfo"
-            },
-            "player": {
-                "$ref": "uri://registries/people#person/properties/player"
-            }
-        }
+		"properties": {
+				"baseData": {
+						"$ref": "uri://registries/people#person/properties/baseData"
+				},
+				"contactInfo": {
+						"$ref": "uri://registries/people#person/properties/contactInfo"
+				},
+				"bankInfo": {
+						"$ref": "uri://registries/people#person/properties/bankInfo"
+				},
+				"otherInfo": {
+						"$ref": "uri://registries/people#person/properties/otherInfo"
+				},
+				"player": {
+						"$ref": "uri://registries/people#person/properties/player"
+				}
+		}
 	}
 }
