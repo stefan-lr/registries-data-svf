@@ -34,6 +34,11 @@
 						"title": "Názov",
 						"type": "string",
 						"required": true
+					},
+					"clubSeq":{
+					"title": "Seq",
+					"type": "string",
+					"$sequence": "clubs"
 					}
 				}
 			}
@@ -44,14 +49,14 @@
 	},
 	"search" : {
 		"table": "seasons",
-    	"title": "Súťažný ročník",
-        "listFields": {
-            "$ref": "uri://registries/season#new/listFields"
-        },
-        "properties": {
-            "baseData": {
-                "$ref": "uri://registries/season#new/properties/baseData"
-            }
-        }
+		"title": "Súťažný ročník",
+		"listFields": {
+			"$ref": "uri://registries/season#new/listFields"
+		},
+		"properties": {
+				"baseData": {
+					"$ref": "uri://registries/season#new/properties/baseData"
+				}
+		}
 	}
 }

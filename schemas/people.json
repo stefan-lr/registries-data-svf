@@ -4,9 +4,8 @@
 	"table": "people",
 	"title":"person",
 	"listFields": [
-		{"field":"id", "title": "ID"},
-		{"field":"baseData.name", "title":"Meno"},
 		{"field":"baseData.surName", "title":"Priezvisko"},
+		{"field":"baseData.name", "title":"Meno"},
 		{"field":"baseData.birthDate", "title":"Dátum narodenia"},
 		{"field":"contactInfo.city", "title":"Mesto"}
 	],
@@ -196,6 +195,13 @@
 		"coach":{
 			"title": "Tréner",
 			"type": "object",
+			"listFields": [
+				{"field":"coach.coachLicense", "title": "Číslo Lic"},
+				{"field":"baseData.surName", "title":"Priezvisko"},
+				{"field":"baseData.name", "title":"Meno"},
+				{"field":"baseData.birthDate", "title":"Dátum narodenia"},
+				{"field":"contactInfo.city", "title":"Mesto"}
+			],
 			"properties": {
 				"firstAssociation": {
 					"title": "Prvotný zväz",
@@ -247,7 +253,8 @@
 				"coachLicence": {
 					"title": "Trénerská licencia",
 					"type": "string",
-					"required": true
+					"required": true, 
+					"$sequence": "coachLicence"
 				},
 				"dateOfExpiration": {
 					"title": "Dátum platnosti preukazu",
@@ -483,8 +490,8 @@
 			"type": "object",
 			"listFields": [
 				{"field":"player.playerLicense", "title": "Číslo HL"},
-				{"field":"baseData.name", "title":"Meno"},
 				{"field":"baseData.surName", "title":"Priezvisko"},
+				{"field":"baseData.name", "title":"Meno"},
 				{"field":"baseData.birthDate", "title":"Dátum narodenia"},
 				{"field":"contactInfo.city", "title":"Mesto"}
 			],
@@ -493,7 +500,8 @@
 					"title": "Číslo HL",
 					"transCode": "schema.people.playerLicense",
 					"type": "string",
-					"required": true
+					"required": true,
+					"$sequence":"playerLicense"
 				},
 				"clubOfFirstRegistration": {
 					"title": "Klub prvotnej registrácie",

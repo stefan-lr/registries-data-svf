@@ -34,7 +34,7 @@
 			"title": "organizácia",
 		"transCode": "schema.org.view",
 				"listFields": [
-			{"field":"club.clubId", "title": "Klub ID"},
+			{"field":"club.codeOfClub", "title": "Klub ID"},
 			{"field":"club.name", "title":"Meno"}
 		],
 		"forcedCriteria": [

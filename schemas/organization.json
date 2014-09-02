@@ -48,14 +48,12 @@
 			"title": "Klub",
 			"type": "object",
 			"properties": {
-				
-
-				"clubId":{
-					"title": "Klub ID",
+				"codeOfClub":{
+					"title": "Kód klubu",
 					"type": "string",
-					"required": false
+					"required": false,
+					"$sequence": "clubs"
 				},
-
 				"name":{
 					"title": "Názov klubu",
 					"type": "string",
@@ -64,7 +62,8 @@
 				"codeOfClub":{
 					"title": "Kód klubu",
 					"type": "string",
-					"required": false
+					"required": false,
+					"$sequence": "clubs"
 				},
 				"association": {
 					"title": "Zväz",
