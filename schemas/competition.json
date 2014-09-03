@@ -34,10 +34,54 @@
 						"title": "Názov súťaže",
 						"type": "string",
 						"required": true
+					},
+					"season": {
+						"title": "Súťažný ročnik",
+						"$objectLink": {
+							"registry": "seasons",
+							"name": "baseData.name"
+							},
+								"required": true
+						},
+					"association": {
+						"title": "Zvaz",
+						"type": "object",
+						"$objectLink": {
+							"registry": "organizations",
+							"name": "association.associationName"
+							},
+							"required": true
+						},
+						"ageCategory": {
+						"title": "Veková kategória",
+						"type": "object",
+						"$objectLink": {
+							"registry": "ageCategory",
+							"name": "association.associationName"
+							},
+							"required": true
+						},
+						"sex":{
+						"title": "Pohlavie",
+						"type":"string",
+						"enum":["M","Z"],
+						"required": true,
+						"render":{
+						"component": "psui-selectbox",
+						"searchable": true
+						}
+					},
+
+					"competitionLevel": {
+						"title": "Úroveň súťaže",
+						"type": "integer",
+						"required": true
+					}
+
 					}
 				}
 			}
-		}
+		
 	},
 	"view" : {
 		"$ref" : "uri://registries/competition#new"
