@@ -16,21 +16,11 @@
 				"title": "Údaje o súpiske",
 				"type": "object",
 				"properties": {
-					"competition": {
-						"title": "Súťaž",
-						"required": true,
-						"$objectLink": {
-							"registry": "competitions",
-							"name": "baseData.name"
-						}
-					},
-					"season": {
-						"title": "Súťažný ročnik",
-						"required": true,
-						"$objectLink": {
-							"registry": "seasons",
-							"name": "baseData.name"
-						}
+
+					"prName": {
+						"title": "Názov družstva",
+						"type": "string",
+						"required": true
 					},
 					"club": {
 						"title": "Klub",
@@ -41,65 +31,48 @@
 						},
 						"required": true
 					},
-					
-					"ageCategory":{
-						"title": "Veková kategória",
-						"type":"string",
-						"enum":[
-								"D Extraliga muži",
-								"D Prelínacia muži",
-								"D 1.Liga muži - BA",
-								"D 1.Liga muži - Západ",
-								"D 1.Liga muži - Stred",
-								"D 1.Liga muži - Východ",
-								"D 2.Liga muži - BA",
-								"D 2.Liga muži - Západ",
-								"D 2.Liga muži - Stred",
-								"D 2.Liga muži - Východ",
-								"U20 muži - Východ",
-								"U20 muži - Západ",
-								"U18 muži - A",
-								"U18 muži - B",
-								"U18 muži - C",
-								"U16 muži - A",
-								"U16 muži - B",
-								"U16 muži - C",
-								"U14 muži - A",
-								"U14 muži - B",
-								"U14 muži - C",
-								"D Extraliga ženy",
-								"D Prelínacia ženy",
-								"D 1.Liga ženy - BA",
-								"D 1.Liga ženy - Západ",
-								"D 1.Liga ženy - Východ",
-								"D 1.Liga ženy - Stred",
-								"D 2.Liga ženy - BA",
-								"D 2.Liga ženy - Západ",
-								"D 2.Liga ženy - Stred",
-								"D 2.Liga ženy - Východ",
-								"U20 ženy - Východ",
-								"U20 ženy - Západ",
-								"U18 ženy - A",
-								"U18 ženy - B",
-								"U18 ženy - C",
-								"U16 ženy - A",
-								"U16 ženy - B",
-								"U16 ženy - C",
-								"U14 ženy - A",
-								"U14 ženy - B",
-								"U14 ženy - C"
-							],
-					"required": true,
-					"render":{
-						"component": "psui-selectbox",
-						"searchable": true
-					}
+					"season": {
+						"title": "Súťažný ročnik",
+						"required": true,
+						"$objectLink": {
+							"registry": "seasons",
+							"name": "baseData.name"
+						}
 					},
-					"prName": {
-						"title": "Názov družstva",
-						"type": "string",
+						"gender": {
+												"title": "Pohlavie",
+												"type": "string",
+												"enum": [
+														"M",
+														"Z"
+												],
+												"required": true,
+												"render": {
+														"component": "psui-selectbox",
+														"searchable": true
+												}
+						},
+
+					"ageCategory": {
+						"title": "Veková kategória",
+						"type": "object",
+						"$objectLink": {
+							"registry": "ageCategory",
+							"name": "baseData.name"
+						},
 						"required": true
 					},
+					"competition": {
+						"title": "Súťaž",
+						"required": true,
+						"$objectLink": {
+							"registry": "competitions",
+							"name": "baseData.name"
+						}
+					},
+					
+				
+					
 					"lastModification": {
 						"title": "Dátum poslednej modifikácie",
 						"type":"string",
@@ -121,7 +94,8 @@
 							"registry": "people",
 							"surName": "baseData.surName",
 							"firstName": "baseData.name",
-							"coachLicence": "coach.coachLicence"
+							"license": "coach.coachLicense",
+							"licenseType": "coach.coachLicenseType"
 						}
 					},
 					"aCoach1": {
@@ -131,7 +105,8 @@
 							"registry": "people",
 							"surName": "baseData.surName",
 							"firstName": "baseData.name",
-							"coachLicence": "coach.coachLicence"
+							"license": "coach.coachLicense",
+							"licenseType": "coach.coachLicenseType"
 						}
 					},
 					"aCoach2": {
@@ -141,7 +116,8 @@
 							"registry": "people",
 							"surName": "baseData.surName",
 							"firstName": "baseData.name",
-							"coachLicence": "coach.coachLicence"
+							"license": "coach.coachLicense",
+							"licenseType": "coach.coachLicenseType"
 						}
 					},
 					"aCoach3": {
@@ -151,7 +127,8 @@
 							"registry": "people",
 							"surName": "baseData.surName",
 							"firstName": "baseData.name",
-							"coachLicence": "coach.coachLicence"
+							"license": "coach.coachLicense",
+							"licenseType": "coach.coachLicenseType"
 						}
 					},
 					"aCoach4": {
@@ -161,7 +138,8 @@
 							"registry": "people",
 							"surName": "baseData.surName",
 							"firstName": "baseData.name",
-							"coachLicence": "coach.coachLicence"
+							"license": "coach.coachLicense",
+							"licenseType": "coach.coachLicenseType"
 						}
 					},
 					"aCoach5": {
@@ -171,7 +149,8 @@
 							"registry": "people",
 							"surName": "baseData.surName",
 							"firstName": "baseData.name",
-							"coachLicence": "coach.coachLicence"
+							"license": "coach.coachLicense",
+							"licenseType": "coach.coachLicenseType"
 						}
 					}
 				}

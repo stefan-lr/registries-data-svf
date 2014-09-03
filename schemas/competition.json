@@ -1,94 +1,97 @@
 {
-	"$schema": "http://json-schema.org/schema#",
-	"id": "uri://registries/competition#",
-	"new": {
-		"table" : "competitions",
-		"title" : "Nová súťaž",
-		"xxtransCode": "schema.stadium.title",
-		"listFields": [
-			{"field":"baseData.name", "title":"Názov súťaže"}
-		],
-		"properties":{
-			"_security": {
-				"_create": {
-					"_static": [
-						"Security - write"
-					]
-				},
-				"_read": {
-					"_static": [
-						"Security - read"
-					]
-				},
-				"_modify": {
-					"_static": [
-						"Security - write"
-					]
-				}
-			},
-			"baseData":{
-				"title": "Základné údaje o súťažy",
-				"type": "object",
-				"properties": {
-					"name": {
-						"title": "Názov súťaže",
-						"type": "string",
-						"required": true
-					},
-					"season": {
-						"title": "Súťažný ročnik",
-						"$objectLink": {
-							"registry": "seasons",
-							"name": "baseData.name"
-							},
-								"required": true
-						},
-					"association": {
-						"title": "Zvaz",
-						"type": "object",
-						"$objectLink": {
-							"registry": "organizations",
-							"name": "association.associationName"
-							},
-							"required": true
-						},
-						"ageCategory": {
-						"title": "Veková kategória",
-						"type": "object",
-						"$objectLink": {
-							"registry": "ageCategory",
-							"name": "association.associationName"
-							},
-							"required": true
-						},
-						"sex":{
-						"title": "Pohlavie",
-						"type":"string",
-						"enum":["M","Z"],
-						"required": true,
-						"render":{
-						"component": "psui-selectbox",
-						"searchable": true
+		"$schema": "http://json-schema.org/schema#",
+		"id": "uri://registries/competition#",
+		"new": {
+				"table": "competitions",
+				"title": "Nová súťaž",
+				"xxtransCode": "schema.stadium.title",
+				"listFields": [
+						{
+								"field": "baseData.name",
+								"title": "Názov súťaže"
 						}
-					},
-
-					"competitionLevel": {
-						"title": "Úroveň súťaže",
-						"type": "integer",
-						"required": true
-					}
-
-					}
+				],
+				"properties": {
+						"_security": {
+								"_create": {
+										"_static": [
+												"Security - write"
+										]
+								},
+								"_read": {
+										"_static": [
+												"Security - read"
+										]
+								},
+								"_modify": {
+										"_static": [
+												"Security - write"
+										]
+								}
+						},
+						"baseData": {
+								"title": "Základné údaje o súťažy",
+								"type": "object",
+								"properties": {
+										"name": {
+												"title": "Názov súťaže",
+												"type": "string",
+												"required": true
+										},
+										"season": {
+												"title": "Súťažný ročnik",
+												"$objectLink": {
+														"registry": "seasons",
+														"name": "baseData.name"
+												},
+												"required": true
+										},
+										"association": {
+												"title": "Zvaz",
+												"type": "object",
+												"$objectLink": {
+														"registry": "organizations",
+														"name": "association.associationName"
+												},
+												"required": true
+										},
+										"ageCategory": {
+												"title": "Veková kategória",
+												"type": "object",
+												"$objectLink": {
+														"registry": "ageCategory",
+														"name": "association.associationName"
+												},
+												"required": true
+										},
+										"gender": {
+												"title": "Pohlavie",
+												"type": "string",
+												"enum": [
+														"M",
+														"Z"
+												],
+												"required": true,
+												"render": {
+														"component": "psui-selectbox",
+														"searchable": true
+												}
+										},
+										"competitionLevel": {
+												"title": "Úroveň súťaže",
+												"type": "integer",
+												"required": true
+										}
+								}
+						}
 				}
-			}
-		
-	},
-	"view" : {
-		"$ref" : "uri://registries/competition#new"
-	},
-	"search" : {
-		"table": "competitions",
-			"title": "súťaž",
+		},
+		"view": {
+				"$ref": "uri://registries/competition#new"
+		},
+		"search": {
+				"table": "competitions",
+				"title": "súťaž",
 				"listFields": {
 						"$ref": "uri://registries/competition#new/listFields"
 				},
@@ -97,5 +100,5 @@
 								"$ref": "uri://registries/competition#new/properties/baseData"
 						}
 				}
-	}
+		}
 }

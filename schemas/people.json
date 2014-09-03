@@ -250,11 +250,23 @@
 						"component" : "psui-datepicker"
 					}
 				},
-				"coachLicence": {
+				"coachLicense": {
 					"title": "Trénerská licencia",
 					"type": "string",
 					"required": true, 
 					"$sequence": "coachLicence"
+				},
+				"coachLicenseType": {
+					"title": "Typ licencie",
+					"type": " string",
+					"enum": [
+						"I","II", "III","IV","DT"
+					],
+					"required": true,
+					"render":{
+						"component": "psui-selectbox",
+						"searchable": true
+					}
 				},
 				"dateOfExpiration": {
 					"title": "Dátum platnosti preukazu",
