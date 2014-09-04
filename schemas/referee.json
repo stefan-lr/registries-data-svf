@@ -40,7 +40,7 @@
             "$ref": "uri://registries/people#person/listFields"
         },
 		"forcedCriteria": [
-			{ "f": "referee", "op": "ex", "v": ""}
+			{ "f": "referee.refereeLicense", "op": "ex", "v": ""}
 		],
         "properties": {
             "baseData": {

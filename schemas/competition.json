@@ -59,8 +59,8 @@
 												"title": "Veková kategória",
 												"type": "object",
 												"$objectLink": {
-														"registry": "ageCategory",
-														"name": "association.associationName"
+														"registry": "ageCategories",
+														"name": "baseData.name"
 												},
 												"required": true
 										},

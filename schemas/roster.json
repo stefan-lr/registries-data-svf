@@ -9,7 +9,7 @@
 		{"field":"contactInfo.city", "title":"Mesto"}
 	],
 	"new": {
-		"table": "roster",
+		"table": "rosters",
 		"title":"Roster",
 		"properties": {
 			"baseData": {
@@ -57,7 +57,7 @@
 						"title": "Veková kategória",
 						"type": "object",
 						"$objectLink": {
-							"registry": "ageCategory",
+							"registry": "ageCategories",
 							"name": "baseData.name"
 						},
 						"required": true
@@ -180,7 +180,7 @@
 		"$ref": "uri://registries/roster#new"
 	},
 	"search": {
-		"table": "roster",
+		"table": "rosters",
 		"title":"Súpisky",
 		"listFields": [
 			{"field":"baseData.season.refData.name", "title":"Sezóna"},

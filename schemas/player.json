@@ -40,7 +40,7 @@
 						"$ref": "uri://registries/people#person/properties/player/listFields"
 				},
 		"forcedCriteria": [
-			{ "f": "player", "op": "ex", "v": ""}
+			{ "f": "player.playerLicense", "op": "ex", "v": ""}
 		],
 		"properties": {
 				"baseData": {

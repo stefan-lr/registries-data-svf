@@ -34,30 +34,30 @@
 	},
 	"search" : {
 		"table": "people",
-    	"title": "osoba",
+			"title": "osoba",
 		"transCode":"schema.member.view",
-        "listFields": {
-            "$ref": "uri://registries/people#person/listFields"
-        },
+				"listFields": {
+						"$ref": "uri://registries/people#person/listFields"
+				},
 		"forcedCriteria": [
-			{ "f": "medic", "op": "ex", "v": ""}
+			{ "f": "medic.dateOfApplicationForId", "op": "ex", "v": ""}
 		],
-        "properties": {
-            "baseData": {
-                "$ref": "uri://registries/people#person/properties/baseData"
-            },
-            "contactInfo": {
-                "$ref": "uri://registries/people#person/properties/contactInfo"
-            },
-            "bankInfo": {
-                "$ref": "uri://registries/people#person/properties/bankInfo"
-            },
-            "otherInfo": {
-                "$ref": "uri://registries/people#person/properties/otherInfo"
-            },
-            "medic": {
-                "$ref": "uri://registries/people#person/properties/medic"
-            }
-        }
+				"properties": {
+						"baseData": {
+								"$ref": "uri://registries/people#person/properties/baseData"
+						},
+						"contactInfo": {
+								"$ref": "uri://registries/people#person/properties/contactInfo"
+						},
+						"bankInfo": {
+								"$ref": "uri://registries/people#person/properties/bankInfo"
+						},
+						"otherInfo": {
+								"$ref": "uri://registries/people#person/properties/otherInfo"
+						},
+						"medic": {
+								"$ref": "uri://registries/people#person/properties/medic"
+						}
+				}
 	}
 }

@@ -1,29 +1,8 @@
 {
 	"$schema" : "http://json-schema.org/schema#",
 	"id" : "uri://registries/person#",
+	
 	"new" : {
-		"table" : "people",
-		"title" : "Nova osoba",
-		"transCode": "schema.person.title",
-		"properties" : {
-			"baseData" : {
-				"$ref": "uri://registries/people#person/properties/baseData"
-			},
-			"photoInfo": {
-				"$ref": "uri://registries/people#person/properties/photoInfo"
-			},
-			"contactInfo": {
-				"$ref": "uri://registries/people#person/properties/contactInfo"
-			},
-			"otherInfo": {
-				"$ref": "uri://registries/people#person/properties/otherInfo"
-			},
-			"idInfo": {
-				"$ref": "uri://registries/people#person/properties/idInfo"
-			}
-		}
-	},
-	"view" : {
 		"table" : "people",
 		"title" : "Osoba",
 		"transCode": "schema.member.view",
@@ -63,6 +42,10 @@
 			}
 		}
 	},
+	"view" : {
+		"$ref" : "uri://registries/person#new"
+	},
+	
 	"search" : {
 		"table": "people",
     	"title": "osoba",

@@ -169,7 +169,7 @@
 						"component" : "psui-datepicker"
 					}
 				},
-				"refereeLicence": {
+				"refereeLicense": {
 					"title": "Rozhodcovská licencia",
 					"type": "string",
 					"required": true

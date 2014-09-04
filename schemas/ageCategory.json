@@ -2,7 +2,7 @@
 		"$schema": "http://json-schema.org/schema#",
 		"id": "uri://registries/ageCategory#",
 		"new": {
-				"table": "ageCategory",
+				"table": "ageCategories",
 				"title": "Veková kategória",
 				"xxtransCode": "schema.stadium.title",
 				"listFields": [
@@ -85,7 +85,7 @@
 				"$ref": "uri://registries/ageCategory#new"
 		},
 		"search": {
-				"table": "competitions",
+				"table": "ageCategories",
 				"title": "súťaž",
 				"listFields": {
 						"$ref": "uri://registries/ageCategory#new/listFields"

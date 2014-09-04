@@ -40,7 +40,7 @@
 						"$ref": "uri://registries/people#person/properties/coach/listFields"
 				},
 		"forcedCriteria": [
-			{ "f": "coach", "op": "ex", "v": ""}
+			{ "f": "coach.coachLicense", "op": "ex", "v": ""}
 		],
 				"properties": {
 						"baseData": {
