@@ -40,7 +40,7 @@
             "$ref": "uri://registries/people#person/listFields"
         },
 		"forcedCriteria": [
-			{ "f": "statistic", "op": "ex", "v": ""}
+			{ "f": "statistic.isStatistic", "op": "eq", "v": "Áno"}
 		],
         "properties": {
             "baseData": {

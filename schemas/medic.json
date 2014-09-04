@@ -40,7 +40,7 @@
 						"$ref": "uri://registries/people#person/listFields"
 				},
 		"forcedCriteria": [
-			{ "f": "medic.dateOfApplicationForId", "op": "ex", "v": ""}
+			{ "f": "medic.isMedic", "op": "eq", "v": "Áno"}
 		],
 				"properties": {
 						"baseData": {
