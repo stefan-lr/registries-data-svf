@@ -3,8 +3,7 @@
 	"id" : "uri://registries/club#",
 	"new" : {
 		"table" : "organizations",
-		"title" : "Nova organizacia",
-		"transCode": "schema.org.title",
+		"title" : "Nový klub",
 		"properties" : {
 			"_security": {
 				"$ref": "uri://registries/organization#properties/_security"
@@ -31,8 +30,7 @@
 	},
 	"search" : {
 		"table": "organizations",
-			"title": "organizácia",
-		"transCode": "schema.org.view",
+			"title": "Klub",
 				"listFields": [
 			{"field":"club.codeOfClub", "title": "Klub ID"},
 			{"field":"club.name", "title":"Meno"}

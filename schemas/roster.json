@@ -10,13 +10,12 @@
 	],
 	"new": {
 		"table": "rosters",
-		"title":"Roster",
+		"title":"Nová súpiska",
 		"properties": {
 			"baseData": {
-				"title": "Údaje o súpiske",
+				"title": "Základné údaje",
 				"type": "object",
 				"properties": {
-
 					"prName": {
 						"title": "Názov družstva",
 						"type": "string",
@@ -70,9 +69,6 @@
 							"name": "baseData.name"
 						}
 					},
-					
-				
-					
 					"lastModification": {
 						"title": "Dátum poslednej modifikácie",
 						"type":"string",
@@ -84,7 +80,7 @@
 				}
 			},
 			"coaches": {
-				"title": "Trénery",
+				"title": "Tréneri",
 				"type": "object",
 				"properties": {
 					"coach": {

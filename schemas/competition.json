@@ -30,7 +30,7 @@
 								}
 						},
 						"baseData": {
-								"title": "Základné údaje o súťažy",
+								"title": "Základné údaje",
 								"type": "object",
 								"properties": {
 										"name": {

@@ -34,8 +34,7 @@
 	},
 	"search" : {
 		"table": "people",
-			"title": "osoba",
-		"transCode":"schema.member.view",
+			"title": "Tréner",
 				"listFields": {
 						"$ref": "uri://registries/people#person/properties/coach/listFields"
 				},

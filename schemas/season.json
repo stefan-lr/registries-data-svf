@@ -36,9 +36,9 @@
 						"required": true
 					},
 					"clubSeq":{
-					"title": "Seq",
+					"title": "Por.číslo",
 					"type": "string",
-					"$sequence": "clubs"
+					"$sequence": "seasons"
 					}
 				}
 			}

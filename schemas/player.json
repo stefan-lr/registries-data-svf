@@ -2,8 +2,7 @@
 	"$schema" : "http://json-schema.org/schema#",
 	"id" : "uri://registries/player#",
 	"new" : {
-		"title" : "Nova osoba",
-		"transCode": "schema.person.title",
+		"title" : "Nový Hráč",
 		"table" : "people",
 		"properties" : {
 			"_security": {
@@ -34,8 +33,7 @@
 	},
 	"search" : {
 		"table": "people",
-			"title": "osoba",
-		"transCode":"schema.member.view",
+			"title": "Hráč",
 				"listFields": {
 						"$ref": "uri://registries/people#person/properties/player/listFields"
 				},

@@ -45,7 +45,7 @@
 			}
 		},
 		"club":{
-			"title": "Klub",
+			"title": "Základné údaje",
 			"type": "object",
 			"properties": {
 				"codeOfClub":{
@@ -168,7 +168,7 @@
 			}
 		},
 		"association":{
-			"title": "Zväz",
+			"title": "Základné údaje",
 			"type": "object",
 			"properties": {
 				"associationName":{

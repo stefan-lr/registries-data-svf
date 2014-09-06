@@ -3,8 +3,7 @@
 	"id" : "uri://registries/association#",
 	"new" : {
 		"table" : "organizations",
-		"title" : "Nova organizacia",
-		"transCode": "schema.org.title",
+		"title" : "Nový zväz",
 		"properties" : {
 			"_security": {
 				"$ref": "uri://registries/organization#properties/_security"
@@ -31,11 +30,9 @@
 	},
 	"search" : {
 		"table": "organizations",
-    	"title": "organizácia",
-		"transCode": "schema.org.view",
+    "title": "Zväzy",
         "listFields": [
-			{"field":"id", "title": "ID"},
-			{"field":"association.associationName", "title":"Meno"}
+					{"field":"association.associationName", "title":"Meno"}
 		],
 		"forcedCriteria": [
 			{ "f": "association", "op": "ex", "v": ""}
