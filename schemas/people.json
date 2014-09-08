@@ -308,8 +308,7 @@
                 "coachLicense": {
                     "title": "Trénerská licencia",
                     "type": "string",
-                    "required": false,
-                    "$sequence": "coachLicence"
+                    "required": false
                 },
                 "coachLicenseType": {
                     "title": "Typ licencie",

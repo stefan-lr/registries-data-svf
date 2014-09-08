@@ -34,7 +34,7 @@
 								"type": "object",
 								"properties": {
 										"name": {
-												"title": "Názov súťaže",
+												"title": "Názov kategórie",
 												"type": "string",
 												"required": true
 										},
