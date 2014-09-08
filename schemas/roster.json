@@ -222,6 +222,7 @@
                                 "birthDate": "baseData.birthDate"
                             },
                             "required": true,
+                            "_$objectLinkForcedCriteria": true,
                             "$objectLinkForcedCriteria": [
                                 {
                                     "f": "player.isPlayer",
