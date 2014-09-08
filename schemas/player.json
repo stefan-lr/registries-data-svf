@@ -1,61 +1,65 @@
 {
-	"$schema" : "http://json-schema.org/schema#",
-	"id" : "uri://registries/player#",
-	"new" : {
-		"title" : "Nový Hráč",
-		"table" : "people",
-		"properties" : {
-			"_security": {
-				"$ref": "uri://registries/people#person/properties/_security"
-			},
-			"baseData" : {
-				"$ref": "uri://registries/people#person/properties/baseData"
-			},
-			"player": {
-				"$ref": "uri://registries/people#person/properties/player"
-			},
-			"photoInfo": {
-				"$ref": "uri://registries/people#person/properties/photoInfo"
-			},
-			"contactInfo": {
-				"$ref": "uri://registries/people#person/properties/contactInfo"
-			},
-			"otherInfo": {
-				"$ref": "uri://registries/people#person/properties/otherInfo"
-			},
-			"idInfo": {
-				"$ref": "uri://registries/people#person/properties/idInfo"
-			}
-		}
-	},
-	"view" : {
-		"$ref" : "uri://registries/player#new"
-	},
-	"search" : {
-		"table": "people",
-			"title": "Hráč",
-				"listFields": {
-						"$ref": "uri://registries/people#person/properties/player/listFields"
-				},
-		"forcedCriteria": [
-			{ "f": "player.isPlayer", "op": "eq", "v": "Áno"}
-		],
-		"properties": {
-				"baseData": {
-						"$ref": "uri://registries/people#person/properties/baseData"
-				},
-				"contactInfo": {
-						"$ref": "uri://registries/people#person/properties/contactInfo"
-				},
-				"bankInfo": {
-						"$ref": "uri://registries/people#person/properties/bankInfo"
-				},
-				"otherInfo": {
-						"$ref": "uri://registries/people#person/properties/otherInfo"
-				},
-				"player": {
-						"$ref": "uri://registries/people#person/properties/player"
-				}
-		}
-	}
+    "$schema": "http://json-schema.org/schema#",
+    "id": "uri://registries/player#",
+    "new": {
+        "title": "Hráč",
+        "table": "people",
+        "properties": {
+            "_security": {
+                "$ref": "uri://registries/people#person/properties/_security"
+            },
+            "baseData": {
+                "$ref": "uri://registries/people#person/properties/baseData"
+            },
+            "player": {
+                "$ref": "uri://registries/people#person/properties/player"
+            },
+            "photoInfo": {
+                "$ref": "uri://registries/people#person/properties/photoInfo"
+            },
+            "contactInfo": {
+                "$ref": "uri://registries/people#person/properties/contactInfo"
+            },
+            "otherInfo": {
+                "$ref": "uri://registries/people#person/properties/otherInfo"
+            },
+            "idInfo": {
+                "$ref": "uri://registries/people#person/properties/idInfo"
+            }
+        }
+    },
+    "view": {
+        "$ref": "uri://registries/player#new"
+    },
+    "search": {
+        "table": "people",
+        "title": "Hráč",
+        "listFields": {
+            "$ref": "uri://registries/people#person/properties/player/listFields"
+        },
+        "forcedCriteria": [
+            {
+                "f": "player.isPlayer",
+                "op": "eq",
+                "v": "Áno"
+            }
+        ],
+        "properties": {
+            "baseData": {
+                "$ref": "uri://registries/people#person/properties/baseData"
+            },
+            "contactInfo": {
+                "$ref": "uri://registries/people#person/properties/contactInfo"
+            },
+            "bankInfo": {
+                "$ref": "uri://registries/people#person/properties/bankInfo"
+            },
+            "otherInfo": {
+                "$ref": "uri://registries/people#person/properties/otherInfo"
+            },
+            "player": {
+                "$ref": "uri://registries/people#person/properties/player"
+            }
+        }
+    }
 }

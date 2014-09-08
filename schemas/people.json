@@ -134,7 +134,7 @@
             "title": "Rozhodca",
             "type": "object",
             "properties": {
-            	"isReferee": {
+                "isReferee": {
                     "title": "Je rozhodca",
                     "transCode": "schema.people.isReferee",
                     "type": " string",
@@ -160,8 +160,8 @@
                     "title": "Stav rozhodcu",
                     "type": "string",
                     "enum": [
-                        "aktívna",
-                        "neaktívna"
+                        "aktívny",
+                        "neaktívny"
                     ],
                     "required": false,
                     "render": {
@@ -244,7 +244,7 @@
                 }
             ],
             "properties": {
-            	"isCoach": {
+                "isCoach": {
                     "title": "Je tréner",
                     "transCode": "schema.people.isCoach",
                     "type": " string",
@@ -270,8 +270,8 @@
                     "title": "Stav trénera",
                     "type": "string",
                     "enum": [
-                        "aktívna",
-                        "neaktívna"
+                        "aktívny",
+                        "neaktívny"
                     ],
                     "required": false,
                     "render": {
@@ -349,7 +349,7 @@
             "title": "Funkcionár",
             "type": "object",
             "properties": {
-            	"isOfficer": {
+                "isOfficer": {
                     "title": "Je funkcionár",
                     "transCode": "schema.people.isOfficer",
                     "type": " string",
@@ -406,8 +406,8 @@
                     "title": "Stav funkcionára",
                     "type": "string",
                     "enum": [
-                        "aktívna",
-                        "neaktívna"
+                        "aktívny",
+                        "neaktívny"
                     ],
                     "required": false,
                     "render": {
@@ -437,7 +437,7 @@
             "title": "Zdravotník",
             "type": "object",
             "properties": {
-            	"isMedic": {
+                "isMedic": {
                     "title": "Je zdravotník",
                     "transCode": "schema.people.isMedic",
                     "type": " string",
@@ -455,8 +455,8 @@
                     "title": "Stav zdravotníka",
                     "type": "string",
                     "enum": [
-                        "aktívna",
-                        "neaktívna"
+                        "aktívny",
+                        "neaktívny"
                     ],
                     "required": false,
                     "render": {
@@ -486,7 +486,7 @@
             "title": "Štatista",
             "type": "object",
             "properties": {
-            	"isStatistic": {
+                "isStatistic": {
                     "title": "Je štatista",
                     "transCode": "schema.people.isStatistic",
                     "type": " string",
@@ -504,8 +504,8 @@
                     "title": "Stav štatistu",
                     "type": "string",
                     "enum": [
-                        "aktívna",
-                        "neaktívna"
+                        "aktívny",
+                        "neaktívny"
                     ],
                     "required": false,
                     "render": {
@@ -547,8 +547,8 @@
                     "title": "Stav",
                     "type": "string",
                     "enum": [
-                        "aktívna",
-                        "neaktívna"
+                        "aktívny",
+                        "neaktívny"
                     ],
                     "required": false,
                     "render": {
@@ -624,7 +624,7 @@
                 }
             ],
             "properties": {
-				"isPlayer": {
+                "isPlayer": {
                     "title": "Je hráč",
                     "transCode": "schema.people.isPlayer",
                     "type": " string",
@@ -665,8 +665,8 @@
                     "title": "Stav hráča",
                     "type": "string",
                     "enum": [
-                        "aktívna",
-                        "neaktívna"
+                        "aktívny",
+                        "neaktívny"
                     ],
                     "required": false,
                     "render": {
