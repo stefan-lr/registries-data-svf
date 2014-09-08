@@ -186,7 +186,7 @@
 					"required": false,
 					"$objectLink": {
 						"registry": "organizations",
-						"name": "association.name"
+						"name": "association.associationName"
 					}
 				},
 				"startDate": {
