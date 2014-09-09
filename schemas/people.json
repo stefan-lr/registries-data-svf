@@ -645,7 +645,7 @@
                     "$sequence": "playerLicense"
                 },
                 "clubOfFirstRegistration": {
-                    "title": "Klub prvotnej registrácie",
+                    "title": "Materský klub",
                     "required": false,
                     "$objectLink": {
                         "registry": "organizations",
