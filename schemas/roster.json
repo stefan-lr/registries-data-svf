@@ -56,10 +56,14 @@
                     "gender": {
                         "title": "Pohlavie",
                         "type": "string",
-                        "enum": [
-                            "M",
-                            "Z"
-                        ],
+	                    "enum": [
+	                    	"M",
+	                    	"Z"
+	                    ],
+						"enumTransCodes":[
+							"schema.people.gender.man",
+							"schema.people.gender.woman"
+						],
                         "required": true,
                         "render": {
                             "component": "psui-selectbox",

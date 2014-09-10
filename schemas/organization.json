@@ -93,8 +93,8 @@
 					"title": "Stav klubu",
 					"type": "string",
 					"enum":[
-						"aktívna",
-						"neaktívna"
+						"aktívny",
+						"neaktívny"
 					],
 					"required": false,
 					"render":{
@@ -200,7 +200,15 @@
 				"stateOfAssociation": {
 					"title": "Stav zväzu",
 					"type": "string",
-					"required": true
+					"enum":[
+						"aktívny",
+						"neaktívny"
+					],
+					"required": false,
+					"render":{
+						"component": "psui-selectbox",
+						"searchable": true
+					}
 				},
 				"notPaying": {
 					"title": "Neplatič",
@@ -263,7 +271,7 @@
 			}
 		},
 		"logoInfo": {
-			"title": "Logá",
+			"title": "Logo",
 			"transCode": "schema.org.logoInfo",
 			"type": "object",
 			"properties": {
@@ -274,8 +282,8 @@
 					"required": false,
 					"render": {
 						"component": "psui-uploadable-image",
-						"height": 400,
-						"width": 400
+						"height": 300,
+						"width": 300
 					}
 				}
 			}

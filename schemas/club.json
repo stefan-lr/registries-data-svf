@@ -38,7 +38,7 @@
             },
             {
                 "field": "club.name",
-                "title": "Meno"
+                "title": "Názov klubu"
             }
         ],
         "forcedCriteria": [

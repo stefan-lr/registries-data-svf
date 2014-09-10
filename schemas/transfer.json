@@ -8,11 +8,11 @@
         "listFields": [
             {
                 "field": "baseData.player.refData.name",
-                "title": "Meno Hráč"
+                "title": "Meno"
             },
             {
                 "field": "baseData.player.refData.surName",
-                "title": "Priezvyko Hráč"
+                "title": "Priezvisko"
             },
             {
                 "field": "baseData.clubFrom.refData.name",
