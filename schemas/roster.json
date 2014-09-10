@@ -219,7 +219,8 @@
                                 "registry": "people",
                                 "surName": "baseData.surName",
                                 "firstName": "baseData.name",
-                                "birthDate": "baseData.birthDate"
+                                "birthDate": "baseData.birthDate",
+                                "playerLicense": "player.playerLicense"
                             },
                             "required": true,
                             "_$objectLinkForcedCriteria": true,
