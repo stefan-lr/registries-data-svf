@@ -86,10 +86,8 @@
                     "lastModification": {
                         "title": "Dátum poslednej modifikácie",
                         "type": "string",
-                        "required": true,
-                        "render": {
-                            "component": "psui-datepicker"
-                        }
+                        "required": false,
+						"readOnly": true
                     }
                 }
             },
