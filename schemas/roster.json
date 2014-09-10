@@ -208,6 +208,9 @@
             "listOfPlayers": {
                 "title": "Zoznam hráčov",
                 "type": "object",
+				"render": {
+					"width": "full"
+				},
                 "properties": {
                     "players": {
                         "title": "Hráči",
