@@ -78,6 +78,14 @@
                             "name": "club.name"
                         }
                     },
+                    "season": {
+                        "title": "Súťažný ročnik",
+                        "$objectLink": {
+                            "registry": "seasons",
+                            "name": "baseData.name"
+                        },
+                        "required": true
+                    },
                     "typeOfTransfer": {
                         "title": "Typ zmeny",
                         "type": "string",
@@ -102,7 +110,7 @@
                         }
                     },
                     "dateFrom": {
-                        "title": "Dátum od",
+                        "title": "Začiatok hosťovania",
                         "type": "string",
                         "required": true,
                         "render": {
@@ -110,7 +118,15 @@
                         }
                     },
                     "dateTo": {
-                        "title": "Dátum do",
+                        "title": "Koniec hosťovania",
+                        "type": "string",
+                        "required": false,
+                        "render": {
+                            "component": "psui-datepicker"
+                        }
+                    },
+                    "deliveredOn": {
+                        "title": "Dátum doručenia",
                         "type": "string",
                         "required": false,
                         "render": {

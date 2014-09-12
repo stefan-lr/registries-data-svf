@@ -350,6 +350,7 @@
                         "searchable": true
                     }
                 },
+
                 "dateOfExpiration": {
                     "title": "Dátum platnosti preukazu",
                     "type": "string",
@@ -365,7 +366,21 @@
                     "render": {
                         "component": "psui-datepicker"
                     }
+                },
+                "feeDate": {
+                    "title": "Poplatky",
+                    "type": "string",
+                    "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
+                },
+                "licenseSeminar": {
+                    "title": "Licenčný seminár",
+                    "type": "string",
+                    "required": false
                 }
+
             }
         },
         "officer": {
@@ -518,6 +533,30 @@
                     "render": {
                         "component": "psui-datepicker"
                     }
+                },
+                "validFrom": {
+                    "title": "Dátum platnosti",
+                    "type": "string",
+                    "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
+                },
+                "validTo": {
+                    "title": "Doba platnosti",
+                    "type": "string",
+                    "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
+                },
+                "modifiedOn": {
+                    "title": "Dátum aktualizácie",
+                    "type": "string",
+                    "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
                 }
             }
         },
@@ -575,7 +614,33 @@
                     "render": {
                         "component": "psui-datepicker"
                     }
+                },
+                "validFrom": {
+                    "title": "Dátum platnosti",
+                    "type": "string",
+                    "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
+                },
+                "validTo": {
+                    "title": "Doba platnosti",
+                    "type": "string",
+                    "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
                 }
+                ,
+                "modifiedOn": {
+                    "title": "Dátum aktualizácie",
+                    "type": "string",
+                    "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
+                }
+
             }
         },
         "agent": {
@@ -725,7 +790,8 @@
                     "type": "string",
                     "enum": [
                         "aktívny",
-                        "neaktívny"
+                        "neaktívny",
+                        "transfer"
                     ],
 					"enumTransCodes":[
 						"schema.people.state.of.player.active",
@@ -781,6 +847,46 @@
                 },
                 "dateOfApplicationForId": {
                     "title": "Dátum začiatku platnosti preukazu",
+                    "type": "string",
+                    "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
+                },
+                "hostingStartDate": {
+                    "title": "Dátum začiatku hosťovania",
+                    "type": "string",
+                    "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
+                },
+                "hostingEndDate": {
+                    "title": "Dátum konca hosťovania",
+                    "type": "string",
+                    "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
+                },"validFrom": {
+                    "title": "Dátum platnosti",
+                    "type": "string",
+                    "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
+                },
+                "validTo": {
+                    "title": "Doba platnosti",
+                    "type": "string",
+                    "required": false,
+                    "render": {
+                        "component": "psui-datepicker"
+                    }
+                }
+                ,
+                "modifiedOn": {
+                    "title": "Dátum aktualizácie",
                     "type": "string",
                     "required": false,
                     "render": {
