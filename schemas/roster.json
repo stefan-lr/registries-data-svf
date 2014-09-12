@@ -91,7 +91,8 @@
                         "title": "Dátum poslednej modifikácie",
                         "type": "string",
                         "required": false,
-						"readOnly": true
+			"readOnly": true
+                        "$timestamp" : true
                     }
                 }
             },
