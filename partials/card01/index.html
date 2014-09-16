@@ -13,6 +13,11 @@
 	<meta name="description" content="" />
 	<meta name="copyright" content="" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+</head>
+<body>
+<div>
 	<style type="text/css">
 		body,html{
 			margin: 0px;
@@ -24,7 +29,7 @@
 		}
 
 		.page{
-			margin: 15mm 0mm 0mm 93mm;
+			margin: 15mm 0mm 0mm 36%;
 		}
 		.font0,
 		.surname, 
@@ -89,8 +94,17 @@
 				size: auto; 
 				margin: 0cm;
 			}
+			.page{
+				margin: 15mm 0mm 0mm 93mm;
+			}
 			.no-print{
-				display: none;
+				display: none !important;
+			}
+			#main-wrapper > header{
+				display: none !important;
+			}
+			.number{
+				color: #0000ff;
 			}
 		}
 		
@@ -124,9 +138,6 @@
 		}
 		
 	</style>
-	
-</head>
-<body>
 	<div class="page">
 		<div class="surname">Krebes</div>
 		<div class="name">Helmut</div>
@@ -135,9 +146,6 @@
 		<div class="date"><div class="date-from">5. 5. 2001</div><div class="date-to">30.06.2009</div>
 		</div>
 	</div>
-	<div class="buttons no-print">
-		<button class='button print' onClick="window.print();return true;"><span>Tlač</span></button>
-	</div>
-	
+</div>	
 </body>
 </html>
