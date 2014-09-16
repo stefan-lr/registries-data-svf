@@ -57,7 +57,8 @@
                         "$objectLink": {
                             "registry": "people",
                             "surName": "baseData.surName",
-                            "name": "baseData.name"
+                            "name": "baseData.name",
+                            "playerLicense": "player.playerLicense"
                         }
                     },
                     "clubFrom": {
@@ -112,7 +113,7 @@
                     "dateFrom": {
                         "title": "Začiatok hosťovania",
                         "type": "string",
-                        "required": true,
+                        "required": false,
                         "render": {
                             "component": "psui-datepicker"
                         }

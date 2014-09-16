@@ -16,6 +16,24 @@
             },
             "logoInfo": {
                 "$ref": "uri://registries/organization#properties/logoInfo"
+            }
+        }
+    },
+    "view": {
+        "table": "organizations",
+        "title": "Klub",
+        "properties": {
+            "_security": {
+                "$ref": "uri://registries/organization#properties/_security"
+            },
+            "club": {
+                "$ref": "uri://registries/organization#properties/club"
+            },
+            "clubAdress": {
+                "$ref": "uri://registries/organization#properties/clubAdress"
+            },
+            "logoInfo": {
+                "$ref": "uri://registries/organization#properties/logoInfo"
             },
             "contactInfo": {
                 "$ref": "uri://registries/organization#properties/contactInfo"
@@ -24,9 +42,6 @@
                 "$ref": "uri://registries/organization#properties/bankInfo"
             }
         }
-    },
-    "view": {
-        "$ref": "uri://registries/club#new"
     },
     "search": {
         "table": "organizations",
