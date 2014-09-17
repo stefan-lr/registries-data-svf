@@ -2,11 +2,6 @@
 $icon-font-name: "font" !default;
 $icon-font-svg-id: "font" !default;*/
 @media print {
-  @page {
-    margin: 0px; }
-  body {
-    margin: 20mm 15mm 20mm 20mm; }
-
   #main-wrapper > header {
     margin: 0px 15px;
     position: relative;
