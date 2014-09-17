@@ -28,8 +28,40 @@
             }
         }
     },
-    "view": {
-        "$ref": "uri://registries/player#new"
+	"view": {
+        "title": "Hráč",
+        "table": "people",
+		"clientActions": [
+			{
+				"__DIRECTIVE__": "action-link",
+				"title": "Tlač hráčskej licencie",
+				"schema": "uri://registries/player#view",
+				"template": "playerLicenseCard.html"
+			}
+		],
+        "properties": {
+            "_security": {
+                "$ref": "uri://registries/people#person/properties/_security"
+            },
+            "baseData": {
+                "$ref": "uri://registries/people#person/properties/baseData"
+            },
+            "player": {
+                "$ref": "uri://registries/people#person/properties/player"
+            },
+            "photoInfo": {
+                "$ref": "uri://registries/people#person/properties/photoInfo"
+            },
+            "contactInfo": {
+                "$ref": "uri://registries/people#person/properties/contactInfo"
+            },
+            "otherInfo": {
+                "$ref": "uri://registries/people#person/properties/otherInfo"
+            },
+            "idInfo": {
+                "$ref": "uri://registries/people#person/properties/idInfo"
+            }
+        }
     },
     "search": {
         "table": "people",
