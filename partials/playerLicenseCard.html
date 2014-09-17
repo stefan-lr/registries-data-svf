@@ -105,24 +105,20 @@
 		}
 
 		.buttons .print{
+		   	color: #0000ee;
+    		display: inline-block;
+    		padding: 0 10px;
+    		text-decoration: underline;	
 			margin: 10mm 0mm 0mm 93mm;
 			padding: 6px 20px;
 			cursor: pointer;
-			color: white;
-			background-color: #fdb730;
-			text-align: center;
+			text-align: left;
 			vertical-align: middle;
 			cursor: pointer;
-			background-image: none;
-			border: 1px solid #fdae17;
 			white-space: nowrap;
-			
-			font-size: 16px;
-			line-height: 1.42857;
-
 		}
 		.buttons .print:hover{
-			background-color: #fdae17;
+    		text-decoration: none;	
 		}
 		@media screen {
 			
@@ -135,6 +131,8 @@
 		<div><div class="number">{{model.player.playerLicense}}</div><div class="text">hráč</div>
 		</div>
 		<div class="date"><div class="date-from">{{model.player.dateOfExpiration | dateToString}}</div><div class="date-to">{{model.player.dateOfApplicationForId | dateToString}}</div>
+		</div>
+		<div class="no-print buttons"><a href="#" class='print' onClick="window.print();return true;"><span>Tlač</span></a></div>
 		</div>
 	</div>
 </div>	
