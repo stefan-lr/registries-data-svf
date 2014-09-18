@@ -16,7 +16,7 @@
 		}
 
 		.page{
-			margin: 15mm 0mm 0mm 36%;
+			margin: 11mm 0mm 0mm 36%;
 		}
 		.font0,
 		.surname, 
@@ -40,8 +40,7 @@
 		}
 
 		.surname{
-			width: 98px;
-			width: 92px;
+			width: 108px;
 		}
 
 		.surname, .name{
@@ -57,7 +56,7 @@
 			margin-bottom: 0px;
 			color: #0000ff;
 			width: 111px;
-			width: 103px;
+			width: 114px;
 		}
 
 		.text{
@@ -67,13 +66,12 @@
 		}
 		
 		.date{
-			margin-top: 10px;
+			margin-top: 17px;
 		}
 			
 		.date-from{
 			display: inline-block;
-			width: 96px;
-			width: 85px;
+			width: 113px;
 		}
 		
 		@media print {
@@ -86,7 +84,7 @@
 				padding: 0px !important;
 			}
 			.page{
-				margin: 15mm 0mm 0mm 93mm;
+				margin: 11mm 0mm 0mm 93mm;
 			}
 			.no-print{
 				display: none !important;
@@ -130,7 +128,7 @@
 		<div class="name">{{model.baseData.name}}</div>
 		<div><div class="number">{{model.player.playerLicense}}</div><div class="text">hráč</div>
 		</div>
-		<div class="date"><div class="date-from">{{model.player.dateOfExpiration | dateToString}}</div><div class="date-to">{{model.player.dateOfApplicationForId | dateToString}}</div>
+		<div class="date"><div class="date-from">{{model.player.dateOfRegistration | dateToString}}</div><div ng-if="model.player.validTo" class="date-to">{{model.player.validTo | dateToString}}</div><div ng-if="!model.player.validTo" class="date-to">neobmedzené</div>
 		</div>
 		<div class="no-print buttons"><a href="#" class='print' onClick="window.print();return true;"><span>Tlač</span></a></div>
 		</div>
