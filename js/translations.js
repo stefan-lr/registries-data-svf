@@ -156,7 +156,8 @@ angular.module('registries')
 		"schema.org.otherInfo":"Ostatné informácie",
 		"schema.org.note":"Poznámka",
 		"schema.org.view":"Organizácia",
-				
+		
+		"schema.member.title": "Môj profil",
 		"schema.member.view":"Osoba"
 	});
 	
@@ -313,7 +314,8 @@ angular.module('registries')
 		"schema.org.otherInfo":"Ostatné informácie",
 		"schema.org.note":"Poznámka",
 		"schema.org.view":"Organizácia",
-						
+
+		"schema.member.title": "Môj profil",
 		"schema.member.view":"Osoba"
 	});
 }]);
