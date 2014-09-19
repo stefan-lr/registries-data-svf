@@ -130,7 +130,7 @@
 		</div>
 		<div class="date"><div class="date-from">{{model.player.dateOfRegistration | dateToString}}</div><div ng-if="model.player.validTo" class="date-to">{{model.player.validTo | dateToString}}</div><div ng-if="!model.player.validTo" class="date-to">neobmedzené</div>
 		</div>
-		<div class="no-print buttons"><a href="#" class='print' onClick="window.print();return true;"><span>Tlač</span></a></div>
+		<div class="no-print buttons"><a href="#" class='print' onClick="window.print();return false;"><span>Tlač</span></a></div>
 		</div>
 	</div>
 </div>	
