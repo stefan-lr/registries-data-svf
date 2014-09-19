@@ -102,13 +102,13 @@
                     "transCode": "schema.people.gender",
                     "type": " string",
                     "enum": [
-                    	"M",
-                    	"Z"
+                        "M",
+                        "Z"
                     ],
-					"enumTransCodes":[
-						"schema.people.gender.man",
-						"schema.people.gender.woman"
-					],
+                    "enumTransCodes": [
+                        "schema.people.gender.man",
+                        "schema.people.gender.woman"
+                    ],
                     "required": true,
                     "render": {
                         "component": "psui-selectbox",
@@ -126,10 +126,10 @@
                         "aktívna",
                         "neaktívna"
                     ],
-					"enumTransCodes":[
-						"schema.people.state.of.person.active",
-						"schema.people.state.of.person.inactive"
-					],
+                    "enumTransCodes": [
+                        "schema.people.state.of.person.active",
+                        "schema.people.state.of.person.inactive"
+                    ],
                     "required": false,
                     "render": {
                         "component": "psui-selectbox",
@@ -150,10 +150,10 @@
                         "Áno",
                         "Nie"
                     ],
-					"enumTransCodes":[
-						"schema.people.profile.yes",
-						"schema.people.profile.no"
-					],
+                    "enumTransCodes": [
+                        "schema.people.profile.yes",
+                        "schema.people.profile.no"
+                    ],
                     "required": false,
                     "render": {
                         "component": "psui-selectbox",
@@ -175,10 +175,10 @@
                         "aktívny",
                         "neaktívny"
                     ],
-					"enumTransCodes":[
-						"schema.people.state.of.referee.active",
-						"schema.people.state.of.referee.inactive"
-					],
+                    "enumTransCodes": [
+                        "schema.people.state.of.referee.active",
+                        "schema.people.state.of.referee.inactive"
+                    ],
                     "required": false,
                     "render": {
                         "component": "psui-selectbox",
@@ -268,10 +268,10 @@
                         "Áno",
                         "Nie"
                     ],
-					"enumTransCodes":[
-						"schema.people.profile.yes",
-						"schema.people.profile.no"
-					],
+                    "enumTransCodes": [
+                        "schema.people.profile.yes",
+                        "schema.people.profile.no"
+                    ],
                     "required": false,
                     "render": {
                         "component": "psui-selectbox",
@@ -293,10 +293,10 @@
                         "aktívny",
                         "neaktívny"
                     ],
-					"enumTransCodes":[
-						"schema.people.state.of.coach.active",
-						"schema.people.state.of.coach.inactive"
-					],
+                    "enumTransCodes": [
+                        "schema.people.state.of.coach.active",
+                        "schema.people.state.of.coach.inactive"
+                    ],
                     "required": false,
                     "render": {
                         "component": "psui-selectbox",
@@ -350,7 +350,6 @@
                         "searchable": true
                     }
                 },
-
                 "dateOfExpiration": {
                     "title": "Dátum platnosti preukazu",
                     "type": "string",
@@ -380,7 +379,6 @@
                     "type": "string",
                     "required": false
                 }
-
             }
         },
         "officer": {
@@ -395,10 +393,10 @@
                         "Áno",
                         "Nie"
                     ],
-					"enumTransCodes":[
-						"schema.people.profile.yes",
-						"schema.people.profile.no"
-					],
+                    "enumTransCodes": [
+                        "schema.people.profile.yes",
+                        "schema.people.profile.no"
+                    ],
                     "required": false,
                     "render": {
                         "component": "psui-selectbox",
@@ -451,10 +449,10 @@
                         "aktívny",
                         "neaktívny"
                     ],
-					"enumTransCodes":[
-						"schema.people.state.of.officer.active",
-						"schema.people.state.of.officer.inactive"
-					],
+                    "enumTransCodes": [
+                        "schema.people.state.of.officer.active",
+                        "schema.people.state.of.officer.inactive"
+                    ],
                     "required": false,
                     "render": {
                         "component": "psui-selectbox",
@@ -491,10 +489,10 @@
                         "Áno",
                         "Nie"
                     ],
-					"enumTransCodes":[
-						"schema.people.profile.yes",
-						"schema.people.profile.no"
-					],
+                    "enumTransCodes": [
+                        "schema.people.profile.yes",
+                        "schema.people.profile.no"
+                    ],
                     "required": false,
                     "render": {
                         "component": "psui-selectbox",
@@ -508,10 +506,10 @@
                         "aktívny",
                         "neaktívny"
                     ],
-					"enumTransCodes":[
-						"schema.people.state.of.medic.active",
-						"schema.people.state.of.medic.inactive"
-					],
+                    "enumTransCodes": [
+                        "schema.people.state.of.medic.active",
+                        "schema.people.state.of.medic.inactive"
+                    ],
                     "required": false,
                     "render": {
                         "component": "psui-selectbox",
@@ -572,10 +570,10 @@
                         "Áno",
                         "Nie"
                     ],
-					"enumTransCodes":[
-						"schema.people.profile.yes",
-						"schema.people.profile.no"
-					],
+                    "enumTransCodes": [
+                        "schema.people.profile.yes",
+                        "schema.people.profile.no"
+                    ],
                     "required": false,
                     "render": {
                         "component": "psui-selectbox",
@@ -589,10 +587,10 @@
                         "aktívny",
                         "neaktívny"
                     ],
-					"enumTransCodes":[
-						"schema.people.state.of.statistic.active",
-						"schema.people.state.of.statistic.inactive"
-					],
+                    "enumTransCodes": [
+                        "schema.people.state.of.statistic.active",
+                        "schema.people.state.of.statistic.inactive"
+                    ],
                     "required": false,
                     "render": {
                         "component": "psui-selectbox",
@@ -630,8 +628,7 @@
                     "render": {
                         "component": "psui-datepicker"
                     }
-                }
-                ,
+                },
                 "modifiedOn": {
                     "title": "Dátum aktualizácie",
                     "type": "string",
@@ -640,7 +637,6 @@
                         "component": "psui-datepicker"
                     }
                 }
-
             }
         },
         "agent": {
@@ -662,14 +658,10 @@
                         "aktívny",
                         "neaktívny"
                     ],
-					"enumTransCodes":[
-						"schema.people.profile.yes",
-						"schema.people.profile.no"
-					],
-					"enumTransCodes":[
-						"schema.people.state.of.agent.active",
-						"schema.people.state.of.agent.inactive"
-					],
+                    "enumTransCodes": [
+                        "schema.people.state.of.agent.active",
+                        "schema.people.state.of.agent.inactive"
+                    ],
                     "required": false,
                     "render": {
                         "component": "psui-selectbox",
@@ -752,10 +744,10 @@
                         "Áno",
                         "Nie"
                     ],
-					"enumTransCodes":[
-						"schema.people.profile.yes",
-						"schema.people.profile.no"
-					],
+                    "enumTransCodes": [
+                        "schema.people.profile.yes",
+                        "schema.people.profile.no"
+                    ],
                     "required": false,
                     "render": {
                         "component": "psui-selectbox",
@@ -766,8 +758,7 @@
                     "title": "Číslo HL",
                     "transCode": "schema.people.playerLicense",
                     "type": "string",
-                    "required": false,
-                    "$sequence": "playerLicense"
+                    "required": false
                 },
                 "clubOfFirstRegistration": {
                     "title": "Materský klub",
@@ -793,10 +784,10 @@
                         "neaktívny",
                         "transfer"
                     ],
-					"enumTransCodes":[
-						"schema.people.state.of.player.active",
-						"schema.people.state.of.player.inactive"
-					],
+                    "enumTransCodes": [
+                        "schema.people.state.of.player.active",
+                        "schema.people.state.of.player.inactive"
+                    ],
                     "required": false,
                     "render": {
                         "component": "psui-selectbox",
@@ -868,7 +859,8 @@
                     "render": {
                         "component": "psui-datepicker"
                     }
-                },"validFrom": {
+                },
+                "validFrom": {
                     "title": "Dátum platnosti",
                     "type": "string",
                     "required": false,
@@ -883,8 +875,7 @@
                     "render": {
                         "component": "psui-datepicker"
                     }
-                }
-                ,
+                },
                 "modifiedOn": {
                     "title": "Dátum aktualizácie",
                     "type": "string",
