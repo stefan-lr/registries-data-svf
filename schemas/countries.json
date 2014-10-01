@@ -5,6 +5,7 @@
 	"country":{
 		"title": "Štát",
 		"xxtransCode": "schema.people.baseData.nationality",
+		"default": "SVK",
         "type": "string",
 		"enum":[
 			"SVK",

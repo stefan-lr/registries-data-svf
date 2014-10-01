@@ -6,6 +6,7 @@
 		"title": "Štátna príslušnosť",
 		"xxtransCode": "schema.people.baseData.nationality",
         "type": "string",
+		"default": "SVK",
 		"enum":[
 			"SVK",
 			"AFG",
