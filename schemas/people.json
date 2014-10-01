@@ -50,7 +50,7 @@
                     "title": "Registračné číslo",
                     "transCode": "schema.people.registrationID",
                     "type": "string",
-                    "required": true
+                    "required": false
                 },
                 "id": {
                     "title": "Identifikačné číslo",

@@ -11,14 +11,14 @@
             "baseData": {
                 "$ref": "uri://registries/people#person/properties/baseData"
             },
+            "contactInfo": {
+                "$ref": "uri://registries/people#person/properties/contactInfo"
+            },
             "player": {
                 "$ref": "uri://registries/people#person/properties/player"
             },
             "photoInfo": {
                 "$ref": "uri://registries/people#person/properties/photoInfo"
-            },
-            "contactInfo": {
-                "$ref": "uri://registries/people#person/properties/contactInfo"
             },
             "otherInfo": {
                 "$ref": "uri://registries/people#person/properties/otherInfo"
@@ -46,14 +46,14 @@
             "baseData": {
                 "$ref": "uri://registries/people#person/properties/baseData"
             },
+            "contactInfo": {
+                "$ref": "uri://registries/people#person/properties/contactInfo"
+            },
             "player": {
                 "$ref": "uri://registries/people#person/properties/player"
             },
             "photoInfo": {
                 "$ref": "uri://registries/people#person/properties/photoInfo"
-            },
-            "contactInfo": {
-                "$ref": "uri://registries/people#person/properties/contactInfo"
             },
             "otherInfo": {
                 "$ref": "uri://registries/people#person/properties/otherInfo"
