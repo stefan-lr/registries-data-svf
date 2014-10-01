@@ -56,7 +56,11 @@
                     "title": "Identifikačné číslo",
                     "transCode": "schema.people.identifier",
                     "type": "string",
-                    "required": true
+                    "required": true,
+					"unique": {
+						"schema": "uri://registries/person",
+						"field": "baseData.id"
+					}
                 },
                 "name": {
                     "title": "Meno",
