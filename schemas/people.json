@@ -552,6 +552,11 @@
                         "component": "psui-datepicker"
                     }
                 },
+                "medicLicense": {
+                    "title": "Licencia",
+                    "type": "string",
+                    "required": false
+                },
                 "modifiedOn": {
                     "title": "Dátum aktualizácie",
                     "type": "string",
@@ -632,6 +637,11 @@
                     "render": {
                         "component": "psui-datepicker"
                     }
+                },
+                "statisticLicense": {
+                    "title": "Licencia",
+                    "type": "string",
+                    "required": false
                 },
                 "modifiedOn": {
                     "title": "Dátum aktualizácie",
