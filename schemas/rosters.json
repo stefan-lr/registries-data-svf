@@ -1,0 +1,292 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"id": "uri://registries/rosters#",
+
+	"blocks":{
+		"baseData": {
+			"title": "Základné údaje",
+			"type": "object",
+			"properties": {
+				"prName": {
+					"title": "Názov družstva",
+					"type": "string",
+					"required": true
+				},
+				"club": {
+					"title": "Klub",
+					"type": "object",
+					"objectLink": {
+						"registry": "organizations",
+						"name": "club.name"
+					},
+					"required": true
+				},
+				"season": {
+					"title": "Súťažný ročnik",
+					"required": true,
+					"objectLink": {
+						"registry": "seasons",
+						"name": "baseData.name"
+					}
+				},
+				"gender": {
+					"title": "Pohlavie",
+					"type": "string",
+					"enum": [
+						"M",
+						"Z"
+					],
+					"enumTransCodes":[
+						"schema.people.gender.man",
+						"schema.people.gender.woman"
+					],
+					"required": true,
+					"render": {
+						"component": "psui-selectbox",
+						"searchable": true
+					}
+				},
+				"ageCategory": {
+					"title": "Veková kategória",
+					"type": "object",
+					"objectLink": {
+						"registry": "ageCategories",
+						"name": "baseData.name"
+					},
+					"required": true
+				},
+				"competition": {
+					"title": "Súťaž",
+					"required": true,
+					"objectLink": {
+						"registry": "competitions",
+						"name": "baseData.name"
+					}
+				},
+				"lastModification": {
+					"title": "Dátum poslednej modifikácie",
+					"type": "string",
+					"readOnly": true,
+					"$timestamp" : true
+				}
+			}
+		},
+		"coaches": {
+				"title": "Tréneri",
+				"type": "object",
+				"properties": {
+					"coach": {
+						"title": "Tréner",
+						"type": "object",
+						"objectLink": {
+							"registry": "people",
+							"surName": "baseData.surName",
+							"firstName": "baseData.name",
+							"license": "coach.coachLicense",
+							"licenseType": "coach.coachLicenseType"
+						},
+						"objectLinkForcedCriteria": [
+							{
+								"f": "coach.isCoach",
+								"op": "eq",
+								"v": "Áno"
+							}
+						]
+					},
+					"aCoach1": {
+						"title": "Asistent Trénera",
+						"type": "object",
+						"objectLink": {
+							"registry": "people",
+							"surName": "baseData.surName",
+							"firstName": "baseData.name",
+							"license": "coach.coachLicense",
+							"licenseType": "coach.coachLicenseType"
+						},
+						"objectLinkForcedCriteria": [
+							{
+								"f": "coach.isCoach",
+								"op": "eq",
+								"v": "Áno"
+							}
+						]
+					},
+					"aCoach2": {
+						"title": "Asistent Trénera",
+						"type": "object",
+						"objectLink": {
+							"registry": "people",
+							"surName": "baseData.surName",
+							"firstName": "baseData.name",
+							"license": "coach.coachLicense",
+							"licenseType": "coach.coachLicenseType"
+						},
+						"objectLinkForcedCriteria": [
+							{
+								"f": "coach.isCoach",
+								"op": "eq",
+								"v": "Áno"
+							}
+						]
+					},
+					"aCoach3": {
+						"title": "Asistent Trénera",
+						"type": "object",
+						"objectLink": {
+							"registry": "people",
+							"surName": "baseData.surName",
+							"firstName": "baseData.name",
+							"license": "coach.coachLicense",
+							"licenseType": "coach.coachLicenseType"
+						},
+						"objectLinkForcedCriteria": [
+							{
+								"f": "coach.isCoach",
+								"op": "eq",
+								"v": "Áno"
+							}
+						]
+					},
+					"aCoach4": {
+						"title": "Asistent Trénera",
+						"type": "object",
+						"objectLink": {
+							"registry": "people",
+							"surName": "baseData.surName",
+							"firstName": "baseData.name",
+							"license": "coach.coachLicense",
+							"licenseType": "coach.coachLicenseType"
+						},
+						"objectLinkForcedCriteria": [
+							{
+								"f": "coach.isCoach",
+								"op": "eq",
+								"v": "Áno"
+							}
+						]
+					},
+					"aCoach5": {
+						"title": "Asistent Trénera",
+						"type": "object",
+						"objectLink": {
+							"registry": "people",
+							"surName": "baseData.surName",
+							"firstName": "baseData.name",
+							"license": "coach.coachLicense",
+							"licenseType": "coach.coachLicenseType"
+						},
+						"objectLinkForcedCriteria": [
+							{
+								"f": "coach.isCoach",
+								"op": "eq",
+								"v": "Áno"
+							}
+						]
+					}
+				}
+			},
+			"listOfPlayers": {
+				"title": "Zoznam hráčov",
+				"type": "object",
+				"render": {
+					"width": "full"
+				},
+				"properties": {
+					"players": {
+						"title": "Hráči",
+						"type": "array",
+						"items": {
+							"objectLink": {
+								"registry": "people",
+								"surName": "baseData.surName",
+								"firstName": "baseData.name",
+								"birthDate": "baseData.birthDate",
+								"playerLicense": "player.playerLicense"
+							},
+							"required": true,
+							"_$objectLinkForcedCriteria": true,
+							"objectLinkForcedCriteria": [
+								{
+									"f": "player.isPlayer",
+									"op": "eq",
+									"v": "Áno"
+								}
+							]
+						}
+					}
+				}
+			}
+	},
+
+	"models":{
+		"rosters":{
+			"table": "rosters",
+			"title": "Nová súpiska",
+			"security": {
+				"create": {
+					"static": [
+						"Security - write"
+					]
+				},
+				"read": {
+					"static": [
+						"Security - read"
+					]
+				},
+				"modify": {
+					"static": [
+						"Security - write"
+					]
+				}
+			},
+			"properties":{
+				"baseData":{
+					"extends":"uri://registries/rosters#blocks/baseData"
+				},
+				"coaches":{
+					"$ref":"uri://registries/rosters#blocks/coaches"
+				},
+				"listOfPlayers":{
+					"$ref":"uri://registries/rosters#blocks/listOfPlayers"
+				}
+			}
+
+		}
+
+	},
+
+	"views":{
+		"rosters":{
+			"new":{
+				"new":{
+					"extends":"uri://registries/rosters#models/rosters"
+				}
+			},
+			"view":{
+				"extends":"uri://registries/rosters#models/rosters"
+			},
+			"search":{
+				"extends":"uri://registries/rosters#models/rosters",
+
+				"listFields": [
+					{
+						"field": "baseData.season.refData.name",
+						"title": "Sezóna"
+					},
+					{
+						"field": "baseData.competition.refData.name",
+						"title": "Súťaž"
+					},
+					{
+						"field": "baseData.club.refData.name",
+						"title": "Klub"
+					},
+					{
+						"field": "baseData.prName",
+						"title": "Názov družstva"
+					}
+				]
+			}
+		}
+	}
+}

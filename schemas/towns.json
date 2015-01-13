@@ -3,9 +3,7 @@
 	"id": "uri://registries/towns#",
 	"type": "object",
 	"town":{
-		"title": "Obec",
-		"xxtransCode": "schema.people.baseData.town",
-        "type": "string",
+	    "type": "string",
 		"enum":[
 			"Bánovce nad Bebravou",
 			"Ábelová",

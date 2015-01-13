@@ -1,0 +1,599 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"id": "uri://registries/organizations#",
+
+	"blocks":{
+
+		"baseData": {
+			"title": "Základné údaje",
+			"transCode": "schema.org.baseData",
+			"type": "object",
+			"properties": {
+				"name": {
+					"title": "Obchodný názov spoločnosti",
+					"transCode": "schema.org.name",
+					"type": "string",
+					"required": true
+				},
+				"stateOfOrganization": {
+					"title": "Stav organizacie",
+					"transCode": "schema.org.stateOfOrganization",
+					"type": "string",
+					"required": true
+				}
+			}
+		},
+		"club": {
+			"title": "Základné údaje",
+			"type": "object",
+			"properties": {
+				"codeOfClub": {
+					"title": "Kód klubu",
+					"type": "string",
+					"$sequence": "clubs"
+				},
+				"name": {
+					"title": "Názov klubu",
+					"type": "string"
+
+				},
+				"association": {
+					"title": "Zväz",
+					"objectLink": {
+						"registry": "organizations",
+						"name": "association.associationName"
+					}
+				},
+				"ico": {
+					"title": "IČO",
+					"transCode": "schema.org.ico",
+					"type": "string"
+				},
+				"startDate": {
+					"extends":"uri://registries/commontypes#blocks/date",
+					"title": "Dátum založenia"
+				},
+				"stadium": {
+					"title": "Štadión",
+					"objectLink": {
+						"registry": "stadiums",
+						"name": "baseData.name"
+					}
+				},
+				"stateOfClub": {
+					"title": "Stav klubu",
+					"type": "string",
+					"enum": [
+						"aktívny",
+						"neaktívny"
+					],
+					"enumTransCodes":[
+						"schema.club.state.active",
+						"schema.club.state.inactive"
+					],
+
+					"render": {
+						"component": "psui-selectbox",
+						"searchable": true
+					}
+				},
+				"notPaying": {
+					"title": "Neplatič",
+					"type": "string",
+					"enum": [
+						"Áno",
+						"Nie"
+					],
+					"enumTransCodes":[
+						"schema.club.notPaying.yes",
+						"schema.club.notPaying.no"
+					],
+
+					"render": {
+						"component": "psui-selectbox",
+						"searchable": true
+					}
+				},
+				"dateOfRegistration": {
+					"extends":"uri://registries/commontypes#blocks/date",
+					"title": "Dátum registrácie"
+				}
+			}
+		},
+		"clubAdress": {
+			"title": "Klub - poštová adresa",
+			"type": "object",
+			"properties": {
+				"contactPerson": {
+					"title": "Kontaktná osoba",
+					"type": "string"
+				},
+				"mobileNumberOfContactPerson": {
+					"title": "Telefónne číslo kontaktnej osoby",
+					"type": "string"
+				},
+				"street": {
+					"title": "Ulica",
+					"type": "string"
+				},
+				"houseNumber": {
+					"title": "Číslo domu",
+					"type": "string"
+				},
+				"city": {
+					"$ref": "uri://registries/towns#town"
+				},
+				"zipCode": {
+					"title": "PSČ",
+					"type": "string"
+				},
+				"region": {
+					"title": "Kraj",
+					"type": "string"
+				},
+				"country": {
+					"$ref": "uri://registries/countries#country"
+				}
+			}
+		},
+		"association": {
+			"title": "Základné údaje",
+			"type": "object",
+			"properties": {
+				"associationName": {
+					"title": "Názov zväzu",
+					"type": "string"
+				},
+				"shortName": {
+					"title": "Skrátený názov zväzu",
+					"type": "string"
+				},
+				"higherAssociation": {
+					"title": "Nadradený zväz",
+
+					"objectLink": {
+						"registry": "organizations",
+						"name": "association.associationName"
+					}
+				},
+				"startDate": {
+					"title": "Dátum založenia",
+					"type": "string",
+
+					"render": {
+						"component": "psui-datepicker"
+					}
+				},
+				"stateOfAssociation": {
+					"title": "Stav zväzu",
+					"type": "string",
+					"enum": [
+						"aktívny",
+						"neaktívny"
+					],
+					"enumTransCodes":[
+						"schema.association.state.active",
+						"schema.association.state.inactive"
+					],
+
+					"render": {
+						"component": "psui-selectbox",
+						"searchable": true
+					}
+				},
+				"notPaying": {
+					"title": "Neplatič",
+					"type": "string",
+					"enum": [
+						"Áno",
+						"Nie"
+					],
+					"enumTransCodes":[
+						"schema.association.notPaying.yes",
+						"schema.association.notPaying.no"
+					],
+					"required": true,
+					"render": {
+						"component": "psui-selectbox",
+						"searchable": true
+					}
+				},
+				"dateOfRegistration": {
+					"title": "Dátum registrácie",
+					"type": "string",
+
+					"render": {
+						"component": "psui-datepicker"
+					}
+				}
+			}
+		},
+		"associationAdress": {
+			"title": "Zväz - poštová adresa",
+			"type": "object",
+			"properties": {
+				"contactPerson": {
+					"title": "Kontaktná osoba",
+					"type": "string"
+
+				},
+				"mobileNumberOfContactPerson": {
+					"title": "Telefónne číslo kontaktnej osoby",
+					"type": "string"
+
+				},
+				"street": {
+					"title": "Ulica",
+					"type": "string"
+
+				},
+				"houseNumber": {
+					"title": "Číslo domu",
+					"type": "string"
+
+				},
+				"city": {
+					"$ref": "uri://registries/towns#town"
+				},
+				"zipCode": {
+					"title": "PSČ",
+					"type": "string"
+
+				},
+				"country": {
+					"$ref": "uri://registries/countries#country"
+				}
+			}
+		},
+		"logoInfo": {
+			"title": "Logo",
+			"transCode": "schema.org.logoInfo",
+			"type": "object",
+			"properties": {
+				"photo": {
+					"title": "Logo",
+					"transCode": "schema.org.logo",
+					"type": "string",
+
+					"render": {
+						"component": "psui-uploadable-image",
+						"height": 300,
+						"width": 300
+					}
+				}
+			}
+		},
+		"contactInfo": {
+			"title": "Kontaktné údaje",
+			"transCode": "schema.org.contactInfo",
+			"type": "object",
+			"properties": {
+				"street": {
+					"title": "Ulica",
+					"transCode": "schema.org.street",
+					"type": "string"
+				},
+				"houseNumber": {
+					"title": "Číslo domu",
+					"transCode": "schema.org.houseNumber",
+					"type": "string"
+				},
+				"city": {
+					"$ref": "uri://registries/towns#town"
+				},
+				"zipCode": {
+					"title": "PSČ",
+					"transCode": "schema.org.zipCode",
+					"type": "string"
+				},
+				"country": {
+					"$ref": "uri://registries/countries#country"
+				},
+				"phoneNumber": {
+					"title": "Telefón",
+					"transCode": "schema.org.phoneNumber",
+					"type": "string"
+				},
+				"mobileNumber": {
+					"title": "Mobil",
+					"transCode": "schema.org.mobileNumber",
+					"type": "string"
+				},
+				"email": {
+					"title": "E-mail",
+					"transCode": "schema.org.email",
+					"type": "string"
+				},
+				"fax": {
+					"title": "FAX",
+					"xxtransCode": "schema.org.email",
+					"type": "string"
+				},
+				"webPage": {
+					"title": "Webová stránka",
+					"xxtransCode": "schema.org.email",
+					"type": "string"
+				}
+			}
+		},
+		"bankInfo": {
+			"title": "Fakturačné údaje",
+			"transCode": "schema.org.bankInfo",
+			"type": "object",
+			"properties": {
+				"statutarOrgan": {
+					"title": "Štatutárny orgán",
+					"transCode": "schema.org.statutarOrgan",
+					"type": "string"
+				},
+				"ico": {
+					"title": "IČO",
+					"transCode": "schema.org.ico",
+					"type": "string",
+					"required": true
+				},
+				"dic": {
+					"title": "DIČ",
+					"transCode": "schema.org.dic",
+					"type": "string"
+				},
+				"countryIcDPH": {
+					"title": "krajina IČ DPH",
+					"transCode": "schema.org.country.icDPH",
+					"type": "string"
+				},
+				"icDPH": {
+					"title": "IČ DPH",
+					"transCode": "schema.org.icDPH",
+					"type": "string"
+				},
+				"bankAccount": {
+					"title": "Číslo účtu",
+					"transCode": "schema.org.bankAccount",
+					"type": "string"
+				},
+				"bankCode": {
+					"title": "Kód banky",
+					"transCode": "schema.org.bankCode",
+					"type": "string"
+				},
+				"bank": {
+					"title": "Názov banky",
+					"transCode": "schema.org.bank",
+					"type": "string"
+				},
+				"iban": {
+					"title": "IBAN",
+					"transCode": "schema.org.iban",
+					"type": "string"
+				},
+				"swift": {
+					"title": "SWIFT",
+					"transCode": "schema.org.swift",
+					"type": "string"
+				},
+				"street": {
+					"title": "Ulica",
+					"transCode": "schema.org.street",
+					"type": "string",
+					"required": true
+				},
+				"houseNumber": {
+					"title": "Číslo domu",
+					"transCode": "schema.org.houseNumber",
+					"type": "string",
+					"required": true
+				},
+				"city": {
+					"$ref": "uri://registries/towns#town"
+				},
+				"zipCode": {
+					"title": "PSČ",
+					"transCode": "schema.org.zipCode",
+					"type": "string",
+					"required": true
+				},
+				"country": {
+					"$ref": "uri://registries/countries#country"
+				}
+			}
+		}
+	},
+
+	"models":{
+		"club":{
+			"table": "organizations",
+			"title":"Klub",
+			"security": {
+				"create": {
+					"static": [
+						"Registry - write"
+					]
+				},
+				"_read": {
+					"static": [
+						"Registry - read"
+					]
+				},
+				"_modify": {
+					"static": [
+						"Registry - write"
+					]
+				}
+			},
+			"forcedCriteria": [
+				{
+					"f": "club",
+					"op": "ex",
+					"v": ""
+				}
+			],
+			"fireEvents":{
+				"create": "event-agecategory-created",
+				"update": "event-agecategory-updated"
+			},
+			"properties":{
+				"club":{
+					"extends":"uri://registries/organizations#blocks/club"
+				},
+				"clubAdress":{
+					"$ref":"uri://registries/organizations#blocks/clubAdress"
+				},
+				"logoInfo":{
+					"$ref":"uri://registries/organizations#blocks/logoInfo"
+				},
+				"contactInfo": {
+					"$ref":"uri://registries/organizations#blocks/contactInfo"
+				},
+				"bankInfo": {
+					"$ref":"uri://registries/organizations#blocks/bankInfo"
+				}
+			}
+		},
+		"company":{
+			"table": "organizations",
+			"title": "Organizácia",
+			"xxtransCode": "schema.org.title",
+			"security": {
+				"create": {
+					"static": [
+						"Registry - write"
+					]
+				},
+				"_read": {
+					"static": [
+						"Registry - read"
+					]
+				},
+				"_modify": {
+					"static": [
+						"Registry - write"
+					]
+				}
+			},
+			"properties":{
+				"baseData":{
+					"extends":"uri://registries/organizations#blocks/baseData"
+				},
+				"club":{
+					"extends":"uri://registries/organizations#blocks/club"
+				},
+				"clubAdress":{
+					"$ref":"uri://registries/organizations#blocks/clubAdress"
+				},
+				"association":{
+					"extends":"uri://registries/organizations#blocks/association"
+				},
+				"associationAdress":{
+					"$ref":"uri://registries/organizations#blocks/associationAdress"
+				},
+				"logoInfo":{
+					"$ref":"uri://registries/organizations#blocks/logoInfo"
+				},
+				"contactInfo": {
+					"$ref":"uri://registries/organizations#blocks/contactInfo"
+				},
+				"bankInfo": {
+					"$ref":"uri://registries/organizations#blocks/bankInfo"
+				}
+			}
+
+		},
+		"association":{
+			"table": "organizations",
+			"title": "Zväzy",
+			"forcedCriteria": [
+				{
+					"f": "association",
+					"op": "ex",
+					"v": ""
+				}
+			],
+			"properties":{
+				"association":{
+					"extends":"uri://registries/organizations#blocks/association"
+				},
+				"associationAdress":{
+					"$ref":"uri://registries/organizations#blocks/associationAdress"
+				},
+				"logoInfo":{
+					"$ref":"uri://registries/organizations#blocks/logoInfo"
+				},
+				"contactInfo": {
+					"$ref":"uri://registries/organizations#blocks/contactInfo"
+				},
+				"bankInfo": {
+					"$ref":"uri://registries/organizations#blocks/bankInfo"
+				}
+			}
+
+		}
+	},
+
+
+	"views":{
+		"club":{
+			"new":{
+				"extends":"uri://registries/organizations#models/club"
+			},
+			"view":{
+				"extends":"uri://registries/organizations#models/club"
+			},
+			"search":{
+
+				"extends":"uri://registries/organizations#models/club",
+				"listFields": [
+					{
+						"field": "club.codeOfClub",
+						"title": "Klub ID"
+					},
+					{
+						"field": "club.name",
+						"title": "Názov klubu"
+					}
+				]
+			}
+		},
+		"company":{
+			"new":{
+				"extends":"uri://registries/organizations#models/company"
+			},
+			"view":{
+				"extends":"uri://registries/organizations#models/company"
+			},
+			"search":{
+
+				"extends":"uri://registries/organizations#models/company",
+				"listFields": [
+					{
+						"field": "club.codeOfClub",
+						"title": "Klub ID"
+					},
+					{
+						"field": "club.name",
+						"title": "Názov klubu"
+					}
+				]
+
+			}
+		},
+		"association":{
+			"new":{
+				"extends":"uri://registries/organizations#models/association"
+			},
+			"view":{
+				"extends":"uri://registries/organizations#models/association"
+			},
+			"search":{
+				"extends":"uri://registries/organizations#models/association",
+				"listFields": [
+					{
+						"field": "association.associationName",
+						"title": "Názov zväzu"
+					}
+				]
+			}
+		}
+
+	}
+}

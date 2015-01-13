@@ -1,0 +1,113 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"id": "uri://registries/competitions#",
+
+	"blocks":{
+		"baseData": {
+				"title": "Základné údaje",
+				"type": "object",
+				"properties": {
+					"name": {
+						"title": "Názov súťaže",
+						"type": "string",
+						"required": true
+					},
+					"season": {
+						"title": "Súťažný ročnik",
+						"objectLink": {
+							"registry": "seasons",
+							"name": "baseData.name"
+						},
+						"required": true
+					},
+					"association": {
+						"title": "Zväz",
+						"type": "object",
+						"objectLink": {
+							"registry": "organizations",
+							"name": "association.associationName"
+						},
+						"required": true
+					},
+					"ageCategory": {
+						"title": "Veková kategória",
+						"type": "object",
+						"objectLink": {
+							"registry": "ageCategories",
+							"name": "baseData.name"
+						},
+						"required": true
+					},
+					"gender": {
+						"extends":"uri://registries/commonenums#blocks/gender",
+						"title": "Pohlavie",
+						"transCode": "schema.people.gender",
+						"type": " string",
+						"required": true
+					},
+					"competitionLevel": {
+						"title": "Úroveň súťaže",
+						"type": "integer",
+						"required": true
+					}
+				}
+			}
+	},
+
+	"models":{
+		"competitions":{
+			"table": "competitons",
+			"title": "Súťaž",
+			"xxtransCode": "schema.transfer.title",
+
+			"security": {
+				"_create": {
+					"_static": [
+						"Security - write"
+					]
+				},
+				"_read": {
+					"_static": [
+						"Security - read"
+					]
+				},
+				"_modify": {
+					"_static": [
+						"Security - write"
+					]
+				}
+			},
+			"fireEvents":{
+				"create": "event-transfer-created",
+				"update": "event-transfer-updated"
+			},
+			"properties":{
+				"baseData":{
+					"extends":"uri://registries/competitions#blocks/baseData"
+				}
+			}
+		}
+
+	},
+
+	"views":{
+		"competitions":{
+			"new":{
+				"extends":"uri://registries/competitions#models/competitions"
+			},
+			"view":{
+				"extends":"uri://registries/competitions#models/competitions"
+			},
+			"search":{
+				"extends":"uri://registries/competitions#models/competitions",
+				"listFields": [
+					{
+						"field": "baseData.name",
+						"title": "Názov súťaže"
+					}
+				]
+			}
+		}
+
+	}
+}

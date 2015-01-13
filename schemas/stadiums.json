@@ -1,33 +1,9 @@
 {
 	"$schema": "http://json-schema.org/schema#",
-	"id": "uri://registries/stadium#",
-	"new": {
-		"table" : "stadiums",
-		"title" : "Nový športový objekt",
-		"xxtransCode": "schema.stadium.title",
-		"listFields": [
-			{"field":"baseData.name", "title":"Názov športového objektu"},
-			{"field":"additionalData.overallCapacity", "title":"Celková kapacita"}
-		],
-		"properties":{
-			"_security": {
-				"_create": {
-					"_static": [
-						"Security - write"
-					]
-				},
-				"_read": {
-					"_static": [
-						"Security - read"
-					]
-				},
-				"_modify": {
-					"_static": [
-						"Security - write"
-					]
-				}
-			},
-			"baseData":{
+	"id": "uri://registries/stadiums#",
+
+	"blocks":{
+		"baseData":{
 				"title": "Základné údaje o športovom objekte",
 				"type": "object",
 				"properties": {
@@ -72,6 +48,11 @@
 							"ihrisko",
 							"štadión"
 						],
+						"enumTransCodes":[
+							"schema.stadium.type.hall",
+							"schema.stadium.type.playground",
+							"schema.stadium.type.stadium"
+						],
 						"render":{
 							"component": "psui-selectbox",
 							"searchable": true
@@ -84,6 +65,10 @@
 						"enum":[
 							"prírodný",
 							"umelý"
+						],
+						"enumTransCodes":[
+							"schema.stadium.surface.natural",
+							"schema.stadium.surface.artificial"
 						],
 						"render":{
 							"component": "psui-selectbox",
@@ -118,47 +103,25 @@
 					"Illumination": {
 						"title": "Osvetlenie (lux)",
 						"type": "string",
-						"enum": [
-							"Áno",
-							"Nie"
-						],
-						"required": false,
-						"render":{
-							"component": "psui-selectbox",
-							"searchable": true
-						}
+						"required": false
 					},
 					"runningFrom": {
-						"title": "V prevádzke od",
-						"type": "string",
-						"required": false,
-						"render" : {
-							"component" : "psui-datepicker"
-						}
+						"extends":"uri://registries/commontypes#blocks/date",
+						"title": "V prevádzke od"
 					},
 					"dateOfLastIlluminationRevision": {
-						"title": "Dátum poslednej revízie osvetlenia",
-						"type": "string",
-						"required": false,
-						"render" : {
-							"component" : "psui-datepicker"
-						}
+						"extends":"uri://registries/commontypes#blocks/date",
+						"title": "Dátum poslednej revízie osvetlenia"
+
 					},
 					"dateOfLastElectricDeviceRevision": {
-						"title": "Dátum poslednej revízie elektrických zariadení",
-						"type": "string",
-						"required": false,
-						"render" : {
-							"component" : "psui-datepicker"
-						}
+						"extends":"uri://registries/commontypes#blocks/date",
+						"title": "Dátum poslednej revízie elektrických zariadení"
 					},
 					"dateOfSecurityCertificatePublication": {
-						"title": "Dátum vydania bezpčnostného certifikátu",
-						"type": "string",
-						"required": false,
-						"render" : {
-							"component" : "psui-datepicker"
-						}
+						"extends":"uri://registries/commontypes#blocks/date",
+						"title": "Dátum vydania bezpčnostného certifikátu"
+
 					},
 					"owner": {
 						"title": "Vlastník",
@@ -171,30 +134,62 @@
 						"required": false
 					},
 					"managersContact": {
-						"title": "Kontakt na Manažéra",
+						"title": "Kontakt na manažéra",
 						"type": "string",
 						"required": false
 					}
 				}
 			}
+	},
+
+	"models":{
+		"stadiums":{
+			"table" : "stadiums",
+			"title" : "Športový objekt",
+			"security": {
+				"create": {
+					"static": [
+						"Security - write"
+					]
+				},
+				"read": {
+					"static": [
+						"Security - read"
+					]
+				},
+				"modify": {
+					"static": [
+						"Security - write"
+					]
+				}
+			},
+			"properties":{
+				"baseData":{
+					"extends":"uri://registries/stadiums#blocks/baseData"
+				},
+				"additionalData":{
+					"extends":"uri://registries/stadiums#blocks/additionalData"
+				}
+			}
 		}
 	},
-	"view" : {
-		"$ref" : "uri://registries/stadium#new"
-	},
-	"search" : {
-		"table": "stadiums",
-    	"title": "športový objekt",
-        "listFields": {
-            "$ref": "uri://registries/stadium#new/listFields"
-        },
-        "properties": {
-            "baseData": {
-                "$ref": "uri://registries/stadium#new/properties/baseData"
-            },
-            "additionalData": {
-                "$ref": "uri://registries/stadium#new/properties/additionalData"
-            }
-        }
+
+	"views":{
+		"stadium":{
+			"new":{
+				"extends":"uri://registries/stadiums#models/stadiums"
+			},
+			"view":{
+				"extends":"uri://registries/stadiums#models/stadiums"
+			},
+			"search":{
+				"extends":"uri://registries/stadiums#models/stadiums",
+				"listFields": [
+					{"field":"baseData.name", "title":"Názov športového objektu"},
+					{"field":"additionalData.overallCapacity", "title":"Celková kapacita"}
+				]
+			}
+		}
+
 	}
 }

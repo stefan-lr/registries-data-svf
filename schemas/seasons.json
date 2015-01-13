@@ -1,0 +1,109 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"id": "uri://registries/seasons#",
+	"blocks":{
+			"baseData": {
+				"title": "Základné údaje",
+				"type": "object",
+				"properties": {
+					"name": {
+						"title": "Názov súťaže",
+						"type": "string",
+						"required": true
+					},
+					"season": {
+						"title": "Súťažný ročnik",
+						"objectLink": {
+							"registry": "seasons",
+							"name": "baseData.name"
+						},
+						"required": true
+					},
+					"association": {
+						"title": "Zväz",
+						"type": "object",
+						"objectLink": {
+							"registry": "organizations",
+							"name": "association.associationName"
+						},
+						"required": true
+					},
+					"ageCategory": {
+						"title": "Veková kategória",
+						"type": "object",
+						"objectLink": {
+							"registry": "ageCategories",
+							"name": "baseData.name"
+						},
+						"required": true
+					},
+					"gender": {
+						"title": "Pohlavie",
+						"type": "string",
+						"enum": [
+							"M",
+							"Z"
+						],
+						"required": true,
+						"render": {
+							"component": "psui-selectbox",
+							"searchable": true
+						}
+					},
+					"competitionLevel": {
+						"title": "Úroveň súťaže",
+						"type": "integer",
+						"required": true
+					}
+				}
+			}
+	},
+	"models":{
+		"competitions":{
+			"table" : "seasons",
+			"title" : "Nový suťažný ročník",
+			"security": {
+				"create": {
+					"static": [
+						"Security - write"
+					]
+				},
+				"read": {
+					"static": [
+						"Security - read"
+					]
+				},
+				"modify": {
+					"static": [
+						"Security - write"
+					]
+				}
+			},
+			"properties":{
+				"baseData":{
+					"extends":"uri://registries/competitions#blocks/baseData"
+				}
+			}
+		}
+	},
+	"views":{
+		"seasons":{
+			"new":{
+				"extends":"uri://registries/competitions#models/competitions"
+			},
+			"view":{
+				"extends":"uri://registries/competitions#models/competitions"
+			},
+			"search":{
+				"extends":"uri://registries/competitions#models/competitions",
+				"listFields": [
+					{
+						"field": "baseData.name",
+						"title": "Názov súťaže"
+					}
+				]
+			}
+		}
+
+	}
+}
