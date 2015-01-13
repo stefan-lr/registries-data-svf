@@ -78,12 +78,10 @@
 				"dateFrom": {
 					"extends":"uri://registries/commontypes#blocks/date",
 					"title": "Začiatok hosťovania"
-
 				},
 				"dateTo": {
 					"extends":"uri://registries/commontypes#blocks/date",
 					"title": "Koniec hosťovania"
-
 				},
 				"deliveredOn": {
 					"extends":"uri://registries/commontypes#blocks/date",
@@ -139,9 +137,8 @@
 	"models":{
 		"transfers":{
 			"table": "transfers",
-			"title": "Nová Zmena kl. príslušnosti",
+			"title": "Zmena kl. príslušnosti",
 			"xxtransCode": "schema.transfer.title",
-
 			"security": {
 				"create": {
 					"static": [
@@ -169,7 +166,6 @@
 				}
 			}
 		}
-
 	},
 
 	"views":{
@@ -202,6 +198,5 @@
 				]
 			}
 		}
-
 	}
 }

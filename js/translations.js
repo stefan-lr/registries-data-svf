@@ -2,7 +2,7 @@ angular.module('registries')
 .config(['$translateProvider', function($translateProvider) {
 	$translateProvider.preferredLanguage('sk');
 	$translateProvider.translations('sk', {
-		"schema.people.baseData": "Základné informácie",
+		"schema.people.baseData": "Základné údaje",
 		"schema.people.identifier": "Identifikačné číslo",
 		"schema.people.registrationID": "Registračné číslo",
 		"schema.people.name": "Meno",
@@ -96,7 +96,13 @@ angular.module('registries')
 		"schema.org.otherInfo":"Ostatné informácie",
 		"schema.org.note":"Poznámka",
 		"schema.org.view":"Organizácia",
-				
+
+		"schema.stadium.type.hall":"Hala",
+		"schema.stadium.type.playground":"Ihrisko",
+		"schema.stadium.type.stadium":"Štadión",
+		"schema.stadium.surface.natural":"Prírodný",
+		"schema.stadium.surface.artificial":"Umelý",
+
 		"schema.member.view":"Osoba"
 	});
 	

@@ -3,11 +3,26 @@
 	"id": "uri://registries/people#",
 
 	"blocks":{
-		"contact":{},
 		"person":{
-			"title": "Základné údaje o osobe",
+			"title": "Základné informácie",
+			"transCode": "schema.people.baseData",
 			"type": "object",
 			"properties":{
+				"registrationID": {
+					"title": "Registračné číslo",
+					"transCode": "schema.people.registrationID",
+					"type": "string"
+				},
+				"id": {
+					"title": "Identifikačné číslo",
+					"transCode": "schema.people.identifier",
+					"type": "string",
+					"required": true,
+					"unique": {
+						"schema": "uri://registries/person",
+						"field": "baseData.id"
+					}
+				},
 				"name": {
 					"title": "Meno",
 					"transCode": "schema.people.name",
@@ -37,21 +52,18 @@
 					"transCode": "schema.people.title.after",
 					"type": "string"
 				},
-
 				"birthDate": {
 						"extends":"uri://registries/commontypes#blocks/date",
 						"title": "Dátum narodenia",
 						"transCode": "schema.people.birthDate",
 						"required": true
 				},
-
 				"gender": {
 					"extends":"uri://registries/commonenums#blocks/gender",
 					"title": "Pohlavie",
 					"transCode": "schema.people.gender",
 					"required": true
 				},
-
 				"nationality": {
 					"$ref": "uri://registries/countries#country"
 				},
@@ -187,7 +199,8 @@
 					"title": "Dátum platnosti preukazu"
 				},
 				"dateOfApplicationForId": {
-					"extends":"uri://registries/commontypes#blocks/date"
+					"extends":"uri://registries/commontypes#blocks/date",
+					"title": "Dátum začiatku platnosti preukazu"
 				},
 				"feeDate": {
 					"extends":"uri://registries/commontypes#blocks/date",
@@ -376,7 +389,6 @@
 					"title": "Dátum začiatku platnosti preukazu"
 				}
 			},
-
 		"player": {
 			"title": "Hráč",
 			"type": "object",
@@ -481,7 +493,6 @@
 					"title": "Fotografia",
 					"transCode": "schema.people.photo",
 					"type": "string",
-					"required": false,
 					"render": {
 						"component": "psui-uploadable-image",
 						"height": 400,
@@ -489,9 +500,104 @@
 					}
 				}
 			}
-
+		},
+		"contact": {
+			"title": "Kontaktné údaje",
+			"transCode": "schema.people.contactInfo",
+			"type": "object",
+			"properties": {
+				"street": {
+					"title": "Ulica",
+					"transCode": "schema.people.street",
+					"type": "string"
+				},
+				"houseNumber": {
+					"title": "Číslo domu",
+					"transCode": "schema.people.houseNumber",
+					"type": "string"
+				},
+				"city": {
+					"$ref": "uri://registries/towns#town"
+				},
+				"zipCode": {
+					"title": "PSČ",
+					"transCode": "schema.people.zipCode",
+					"type": "string"
+				},
+				"country": {
+					"$ref": "uri://registries/countries#country"
+				},
+				"phoneNumber": {
+					"title": "Telefón",
+					"transCode": "schema.people.phoneNumber",
+					"type": "string"
+				},
+				"mobileNumber": {
+					"title": "Mobil",
+					"transCode": "schema.people.mobileNumber",
+					"type": "string"
+				},
+				"email": {
+					"title": "E-mail",
+					"transCode": "schema.people.email",
+					"type": "string"
+				}
+			}
+		},
+		"otherInfo": {
+			"title": "Ostatné údaje",
+			"transCode": "schema.people.otherInfo",
+			"type": "object",
+			"properties": {
+				"idCardNumber": {
+					"title": "Číslo OP",
+					"transCode": "schema.people.idCardNumber",
+					"type": "string"
+				},
+				"passportNumber": {
+					"title": "Číslo pasu",
+					"transCode": "schema.people.passportNumber",
+					"type": "string"
+				},
+				"note": {
+					"title": "Poznámka",
+					"transCode": "schema.people.note",
+					"type": "string",
+					"large": true
+				},
+				"language": {
+					"title": "Jazykové znalosti",
+					"transCode": "schema.people.language",
+					"type": "string"
+				}
+			}
+		},
+		"idInfo": {
+			"title": "Registračný preukaz",
+			"type": "object",
+			"properties": {
+				"currnetId": {
+					"title": "Aktuálne číslo preukazu člena",
+					"type": "string"
+				},
+				"dateOfExpiration": {
+					"title": "Dátum platnosti preukazu",
+					"type": "string",
+					"render": {
+						"component": "psui-datepicker"
+					}
+				},
+				"dateOfApplicationForId": {
+					"title": "Dátum začiatku platnosti preukazu",
+					"type": "string",
+					"render": {
+						"component": "psui-datepicker"
+					}
+				}
+			}
 		}
 	},
+
 	"models":{
 		"person":{
 			"table": "people",
@@ -521,8 +627,7 @@
 				"baseData":{
 					"extends":"uri://registries/people#blocks/person"
 				},
-
-				"contactData":{
+				"contact":{
 					"$ref":"uri://registries/people#blocks/contact"
 				}
 			}
@@ -534,8 +639,10 @@
 		"fullperson":{
 			"extends":"uri://registries/people#models/person",
 			"title":"Osoba",
-
 			"properties":{
+				"player":{
+					"$ref":"uri://registries/people#blocks/player"
+				},
 				"coach":{
 					"$ref":"uri://registries/people#blocks/coach"
 				},
@@ -550,6 +657,15 @@
 				},
 				"statistic":{
 					"$ref":"uri://registries/people#blocks/statistic"
+				},
+				"photoInfo":{
+					"$ref":"uri://registries/people#blocks/photoInfo"
+				},
+				"otherInfo":{
+					"$ref":"uri://registries/people#blocks/otherInfo"
+				},
+				"idInfo":{
+					"$ref":"uri://registries/people#blocks/idInfo"
 				}
 			}
 		},
@@ -563,10 +679,15 @@
 				"v": "Áno"
 				}
 			],
-
 			"properties":{
 				"coach":{
 					"$ref":"uri://registries/people#blocks/coach"
+				},
+				"otherInfo":{
+					"$ref":"uri://registries/people#blocks/otherInfo"
+				},
+				"idInfo":{
+					"$ref":"uri://registries/people#blocks/idInfo"
 				}
 			}
 		},
@@ -583,6 +704,12 @@
 			"properties":{
 				"referee":{
 					"$ref":"uri://registries/people#blocks/referee"
+				},
+				"otherInfo":{
+					"$ref":"uri://registries/people#blocks/otherInfo"
+				},
+				"idInfo":{
+					"$ref":"uri://registries/people#blocks/idInfo"
 				}
 			}
 		},
@@ -599,6 +726,12 @@
 			"properties":{
 				"officer":{
 					"$ref":"uri://registries/people#blocks/officer"
+				},
+				"otherInfo":{
+					"$ref":"uri://registries/people#blocks/otherInfo"
+				},
+				"idInfo":{
+					"$ref":"uri://registries/people#blocks/idInfo"
 				}
 			}
 		},
@@ -615,6 +748,12 @@
 			"properties":{
 				"statistic":{
 					"$ref":"uri://registries/people#blocks/statistic"
+				},
+				"otherInfo":{
+					"$ref":"uri://registries/people#blocks/otherInfo"
+				},
+				"idInfo":{
+					"$ref":"uri://registries/people#blocks/idInfo"
 				}
 			}
 		},
@@ -631,10 +770,15 @@
 			"properties":{
 				"medic":{
 					"$ref":"uri://registries/people#blocks/medic"
+				},
+				"otherInfo":{
+					"$ref":"uri://registries/people#blocks/otherInfo"
+				},
+				"idInfo":{
+					"$ref":"uri://registries/people#blocks/idInfo"
 				}
 			}
 		},
-
 		"player":{
 			"extends":"uri://registries/people#models/person",
 			"title":"Hráč",
@@ -648,6 +792,12 @@
 			"properties":{
 				"player":{
 					"$ref":"uri://registries/people#blocks/player"
+				},
+				"otherInfo":{
+					"$ref":"uri://registries/people#blocks/otherInfo"
+				},
+				"idInfo":{
+					"$ref":"uri://registries/people#blocks/idInfo"
 				}
 			}
 		}
@@ -662,12 +812,14 @@
 					"registrationID":null
 				}
 			},
-
 			"view":{
 				"extends":"uri://registries/people#models/fullperson"
 			},
 			"search":{
 				"extends":"uri://registries/people#models/fullperson",
+				"properties": {
+					"photoInfo":null
+				},
 				"listFields": [
 					{
 						"field": "baseData.surName",
@@ -687,7 +839,6 @@
 					}
 				]
 			}
-
 		},
 		"coach":{
 			"new":{
@@ -862,9 +1013,7 @@
 					}
 				]
 			}
-
 		},
-
 
 		"delegate_of_match":{
 			"extends":"uri://registries/people#views/delegate_observer"

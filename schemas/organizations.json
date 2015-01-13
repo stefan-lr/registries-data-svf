@@ -150,7 +150,6 @@
 				},
 				"higherAssociation": {
 					"title": "Nadradený zväz",
-
 					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
@@ -159,7 +158,6 @@
 				"startDate": {
 					"title": "Dátum založenia",
 					"type": "string",
-
 					"render": {
 						"component": "psui-datepicker"
 					}
@@ -175,7 +173,6 @@
 						"schema.association.state.active",
 						"schema.association.state.inactive"
 					],
-
 					"render": {
 						"component": "psui-selectbox",
 						"searchable": true
@@ -201,7 +198,6 @@
 				"dateOfRegistration": {
 					"title": "Dátum registrácie",
 					"type": "string",
-
 					"render": {
 						"component": "psui-datepicker"
 					}
@@ -215,22 +211,18 @@
 				"contactPerson": {
 					"title": "Kontaktná osoba",
 					"type": "string"
-
 				},
 				"mobileNumberOfContactPerson": {
 					"title": "Telefónne číslo kontaktnej osoby",
 					"type": "string"
-
 				},
 				"street": {
 					"title": "Ulica",
 					"type": "string"
-
 				},
 				"houseNumber": {
 					"title": "Číslo domu",
 					"type": "string"
-
 				},
 				"city": {
 					"$ref": "uri://registries/towns#town"
@@ -238,7 +230,6 @@
 				"zipCode": {
 					"title": "PSČ",
 					"type": "string"
-
 				},
 				"country": {
 					"$ref": "uri://registries/countries#country"
@@ -441,12 +432,6 @@
 				},
 				"logoInfo":{
 					"$ref":"uri://registries/organizations#blocks/logoInfo"
-				},
-				"contactInfo": {
-					"$ref":"uri://registries/organizations#blocks/contactInfo"
-				},
-				"bankInfo": {
-					"$ref":"uri://registries/organizations#blocks/bankInfo"
 				}
 			}
 		},
@@ -526,10 +511,8 @@
 					"$ref":"uri://registries/organizations#blocks/bankInfo"
 				}
 			}
-
 		}
 	},
-
 
 	"views":{
 		"club":{
@@ -540,8 +523,10 @@
 				"extends":"uri://registries/organizations#models/club"
 			},
 			"search":{
-
 				"extends":"uri://registries/organizations#models/club",
+				"properties":{
+					"logoInfo":null
+				},
 				"listFields": [
 					{
 						"field": "club.codeOfClub",
@@ -562,7 +547,6 @@
 				"extends":"uri://registries/organizations#models/company"
 			},
 			"search":{
-
 				"extends":"uri://registries/organizations#models/company",
 				"listFields": [
 					{
@@ -574,7 +558,6 @@
 						"title": "Názov klubu"
 					}
 				]
-
 			}
 		},
 		"association":{
@@ -586,6 +569,9 @@
 			},
 			"search":{
 				"extends":"uri://registries/organizations#models/association",
+				"properties":{
+					"logoInfo":null
+				},
 				"listFields": [
 					{
 						"field": "association.associationName",

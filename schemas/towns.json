@@ -3,7 +3,8 @@
 	"id": "uri://registries/towns#",
 	"type": "object",
 	"town":{
-	    "type": "string",
+		"title": "Obec",
+		"type": "string",
 		"enum":[
 			"Bánovce nad Bebravou",
 			"Ábelová",
@@ -4113,7 +4114,7 @@
 			"Zvolen",
 			"Žilina"
 		],
-        "required": false,
+		"required": false,
 		"render": {
 			"component": "psui-selectbox",
 			"searchable": true

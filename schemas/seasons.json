@@ -2,66 +2,41 @@
 	"$schema": "http://json-schema.org/schema#",
 	"id": "uri://registries/seasons#",
 	"blocks":{
-			"baseData": {
-				"title": "Základné údaje",
-				"type": "object",
-				"properties": {
-					"name": {
-						"title": "Názov súťaže",
-						"type": "string",
-						"required": true
-					},
-					"season": {
-						"title": "Súťažný ročnik",
-						"objectLink": {
-							"registry": "seasons",
-							"name": "baseData.name"
-						},
-						"required": true
-					},
-					"association": {
-						"title": "Zväz",
-						"type": "object",
-						"objectLink": {
-							"registry": "organizations",
-							"name": "association.associationName"
-						},
-						"required": true
-					},
-					"ageCategory": {
-						"title": "Veková kategória",
-						"type": "object",
-						"objectLink": {
-							"registry": "ageCategories",
-							"name": "baseData.name"
-						},
-						"required": true
-					},
-					"gender": {
-						"title": "Pohlavie",
-						"type": "string",
-						"enum": [
-							"M",
-							"Z"
-						],
-						"required": true,
-						"render": {
-							"component": "psui-selectbox",
-							"searchable": true
-						}
-					},
-					"competitionLevel": {
-						"title": "Úroveň súťaže",
-						"type": "integer",
-						"required": true
+		"baseData": {
+			"title": "Základné údaje",
+			"type": "object",
+			"properties": {
+				"name": {
+					"title": "Názov",
+					"xxtransCode": "schema.season",
+					"type": "string",
+					"required": true
+				},
+				"startSeason": {
+					"title": "Dátum začiatku",
+					"xxtransCode": "schema.season.startSeason",
+					"type": "string",
+					"required": true,
+					"render": {
+						"component": "psui-datepicker"
+					}
+				},
+				"endSeason": {
+					"title": "Dátum konca",
+					"xxtransCode": "schema.season.endSeason",
+					"type": "string",
+					"required": true,
+					"render": {
+						"component": "psui-datepicker"
 					}
 				}
 			}
+		}
 	},
 	"models":{
-		"competitions":{
+		"seasons":{
 			"table" : "seasons",
-			"title" : "Nový suťažný ročník",
+			"title" : "Súťažný ročník",
 			"security": {
 				"create": {
 					"static": [
@@ -81,7 +56,7 @@
 			},
 			"properties":{
 				"baseData":{
-					"extends":"uri://registries/competitions#blocks/baseData"
+					"extends":"uri://registries/seasons#blocks/baseData"
 				}
 			}
 		}
@@ -89,13 +64,13 @@
 	"views":{
 		"seasons":{
 			"new":{
-				"extends":"uri://registries/competitions#models/competitions"
+				"extends":"uri://registries/seasons#models/seasons"
 			},
 			"view":{
-				"extends":"uri://registries/competitions#models/competitions"
+				"extends":"uri://registries/seasons#models/seasons"
 			},
 			"search":{
-				"extends":"uri://registries/competitions#models/competitions",
+				"extends":"uri://registries/seasons#models/seasons",
 				"listFields": [
 					{
 						"field": "baseData.name",
@@ -104,6 +79,5 @@
 				]
 			}
 		}
-
 	}
 }

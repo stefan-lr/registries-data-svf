@@ -250,24 +250,19 @@
 					"$ref":"uri://registries/rosters#blocks/listOfPlayers"
 				}
 			}
-
 		}
-
 	},
 
 	"views":{
 		"rosters":{
 			"new":{
-				"new":{
-					"extends":"uri://registries/rosters#models/rosters"
-				}
+				"extends":"uri://registries/rosters#models/rosters"
 			},
 			"view":{
 				"extends":"uri://registries/rosters#models/rosters"
 			},
 			"search":{
 				"extends":"uri://registries/rosters#models/rosters",
-
 				"listFields": [
 					{
 						"field": "baseData.season.refData.name",

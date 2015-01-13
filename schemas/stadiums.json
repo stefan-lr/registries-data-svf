@@ -4,7 +4,7 @@
 
 	"blocks":{
 		"baseData":{
-				"title": "Základné údaje o športovom objekte",
+				"title": "Základné údaje",
 				"type": "object",
 				"properties": {
 					"name": {
@@ -36,7 +36,7 @@
 				}
 			},
 			"additionalData":{
-				"title": "Doplňujúce údaje o športovom objekte",
+				"title": "Doplňujúce údaje",
 				"type": "object",
 				"properties": {
 					"type": {

@@ -3,6 +3,9 @@
 	"id": "uri://registries/ageCategory#",
 	"blocks": {
 		"baseData": {
+			"title": "Základné údaje",
+			"xxtransCode": "",
+			"type": "object",
 			"properties": {
 				"name": {
 					"title": "Názov kategórie",

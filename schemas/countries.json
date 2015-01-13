@@ -4,9 +4,10 @@
 	"type": "object",
 	"country":{
 		"title": "Štát",
-		"transCode": "schema.nationality",
+		"transCode": "schema.people.nationality",
 		"default": "SVK",
 		"type": "string",
+		"required": true,
 		"transationPrefix":"schema.nationality",
 		"enum":[
 			"SVK",
