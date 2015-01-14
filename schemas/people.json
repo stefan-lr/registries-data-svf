@@ -813,7 +813,15 @@
 				}
 			},
 			"view":{
-				"extends":"uri://registries/people#models/fullperson"
+				"extends":"uri://registries/people#models/fullperson",
+				"clientActions": [
+						{
+							"__DIRECTIVE__": "action-link",
+							"title": "Tlač hráčskej licencie",
+							"schema": "uri://registries/people#views/fullperson/view",
+							"template": "playerLicenseCard.html"
+						}
+				]
 			},
 			"search":{
 				"extends":"uri://registries/people#models/fullperson",
@@ -1026,7 +1034,15 @@
 			},
 			"view":{
 				"extends":"uri://registries/people#models/player",
-				"title":"Hráč"
+				"title":"Hráč",
+				"clientActions": [
+					{
+						"__DIRECTIVE__": "action-link",
+						"title": "Tlač hráčskej licencie",
+						"schema": "uri://registries/people#views/fullperson/view",
+						"template": "playerLicenseCard.html"
+					}
+				]
 			},
 			"search":{
 				"extends":"uri://registries/people#models/player",

@@ -17,5 +17,6 @@
 	"statistics.json",
 	"teams.json",
 	"towns.json",
-	"transfers.json"
+	"transfers.json",
+	"userSecurity.json"
 ]
