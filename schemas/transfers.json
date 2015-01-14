@@ -109,21 +109,10 @@
 					}
 				},
 				"active": {
+					"extends":"uri://registries/commonenums#blocks/boolean",
 					"title": "Aktívny",
 					"type": "string",
-					"required": true,
-					"enum": [
-						"ano",
-						"nie"
-					],
-					"enumTransCodes":[
-						"schema.transfer.active.yes",
-						"schema.transfer.active.no"
-					],
-					"render": {
-						"component": "psui-selectbox",
-						"searchable": true
-					}
+					"required": true
 				},
 				"note": {
 					"title": "Poznámka",

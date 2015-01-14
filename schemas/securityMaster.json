@@ -32,6 +32,5 @@
 				"$ref": "uri://registries/security#profiles/properties/security"
 			}
 		}
-
 	}
 }

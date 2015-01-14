@@ -40,7 +40,7 @@ angular.module('registries')
 		"schema.people.isReferee":"Je rozhodca",
 		"schema.people.isOfficer":"Je funkcionár",
 		"schema.people.isMedic":"Je zdravotník",
-		"schema.people.isStatistic":"Je štatista",
+		"schema.people.isStatistic":"Je štatistik",
 		"schema.people.nationality":"Štátna príslušnosť",
 		"schema.people.photo":"Fotografia",
 		"schema.people.photoInfo":"Fotografie",
@@ -103,7 +103,66 @@ angular.module('registries')
 		"schema.stadium.surface.natural":"Prírodný",
 		"schema.stadium.surface.artificial":"Umelý",
 
-		"schema.member.view":"Osoba"
+		"schema.member.view":"Osoba",
+
+		"schema.club.state.active":"Aktívny",
+		"schema.club.state.inactive":"Neaktívny",
+		"schema.club.notPaying.yes":"Áno",
+		"schema.club.notPaying.no":"Nie",
+
+		"schema.association.state.active":"Aktívny",
+		"schema.association.state.inactive":"Neaktívny",
+		"schema.association.notPaying.yes":"Áno",
+		"schema.association.notPaying.no":"Nie",
+		
+		"schema.transfer.typ.transfer":"Prestup",
+		"schema.transfer.typ.hosting":"Hosťovanie",
+		"schema.transfer.typ.alternating.start":"Striedavý štart",
+		"schema.transfer.typ.foreign.transfer":"Zahr. prestup",
+		"schema.transfer.state.approved":"Schválený",
+		"schema.transfer.state.unapproved":"Neschváleny",
+		"schema.transfer.state.cancel":"Storno",
+		"schema.transfer.state.in.process":"V riešení",
+		"schema.transfer.active.yes":"Áno",
+		"schema.transfer.active.no":"Nie",
+		
+		"schema.competition.gender.man":"Muž",
+		"schema.competition.gender.woman":"Žena",
+		
+		"schema.stadium.type.hall":"Hala",
+		"schema.stadium.type.playground":"Ihrisko",
+		"schema.stadium.type.stadium":"Štadión",
+		"schema.stadium.surface.natural":"Prírodný",
+		"schema.stadium.surface.artificial":"Umelý",
+		
+		"schema.club.state.active":"Aktívny",
+		"schema.club.state.inactive":"Neaktívny",
+		"schema.club.notPaying.yes":"Áno",
+		"schema.club.notPaying.no":"Nie",
+
+		"schema.association.state.active":"Aktívny",
+		"schema.association.state.inactive":"Neaktívny",
+		"schema.association.notPaying.yes":"Áno",
+		"schema.association.notPaying.no":"Nie",
+		
+		"schema.transfer.typ.transfer":"Prestup",
+		"schema.transfer.typ.hosting":"Hosťovanie",
+		"schema.transfer.typ.alternating.start":"Striedavý štart",
+		"schema.transfer.typ.foreign.transfer":"Zahr. prestup",
+		"schema.transfer.state.approved":"Schválený",
+		"schema.transfer.state.unapproved":"Neschváleny",
+		"schema.transfer.state.cancel":"Storno",
+		"schema.transfer.state.in.process":"V riešení",
+		"schema.transfer.active.yes":"Áno",
+		"schema.transfer.active.no":"Nie",
+		
+		"schema.competition.gender.man":"Muž",
+		"schema.competition.gender.woman":"Žena",
+
+		"schema.statistics.view":"Štatistiky",
+		"schema.statistics.baseData":"Základné",
+		"schema.statistics.member.count":"Počet členov",
+		"schema.statistics.women.count":"Počet žien"
 	});
 	
 	$translateProvider.translations('cz', {
@@ -143,7 +202,7 @@ angular.module('registries')
 		"schema.people.isReferee":"Je rozhodca",
 		"schema.people.isOfficer":"Je funkcionár",
 		"schema.people.isMedic":"Je zdravontík",
-		"schema.people.isStatistic":"Je štatista",
+		"schema.people.isStatistic":"Je štatistik",
 		"schema.people.nationality":"Štátna príslušnosť",
 		"schema.people.photo":"Fotografia",
 		"schema.people.photoInfo":"Fotografie",

@@ -22,7 +22,6 @@
 					"type":"string",
 					"required":true
 				},
-
 				"verified": {
 					"type":"boolean",
 					"required":true
@@ -36,7 +35,6 @@
 					"type":"string",
 					"required":true
 				},
-
 				"verified": {
 					"type":"boolean",
 					"required":true
@@ -70,7 +68,6 @@
 				"country": {
 					"$ref": "uri://registries/countries#country"
 				}
-
 			}
 		}
 	}

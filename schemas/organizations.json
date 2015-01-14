@@ -34,8 +34,8 @@
 				},
 				"name": {
 					"title": "Názov klubu",
-					"type": "string"
-
+					"type": "string",
+					"required":true
 				},
 				"association": {
 					"title": "Zväz",
@@ -61,38 +61,14 @@
 					}
 				},
 				"stateOfClub": {
+					"extends":"uri://registries/commonenums#blocks/active",
 					"title": "Stav klubu",
-					"type": "string",
-					"enum": [
-						"aktívny",
-						"neaktívny"
-					],
-					"enumTransCodes":[
-						"schema.club.state.active",
-						"schema.club.state.inactive"
-					],
-
-					"render": {
-						"component": "psui-selectbox",
-						"searchable": true
-					}
+					"type": "string"
 				},
 				"notPaying": {
+					"extends":"uri://registries/commonenums#blocks/boolean",
 					"title": "Neplatič",
-					"type": "string",
-					"enum": [
-						"Áno",
-						"Nie"
-					],
-					"enumTransCodes":[
-						"schema.club.notPaying.yes",
-						"schema.club.notPaying.no"
-					],
-
-					"render": {
-						"component": "psui-selectbox",
-						"searchable": true
-					}
+					"type": "string"
 				},
 				"dateOfRegistration": {
 					"extends":"uri://registries/commontypes#blocks/date",
@@ -142,7 +118,8 @@
 			"properties": {
 				"associationName": {
 					"title": "Názov zväzu",
-					"type": "string"
+					"type": "string",
+					"required":true
 				},
 				"shortName": {
 					"title": "Skrátený názov zväzu",
@@ -156,51 +133,23 @@
 					}
 				},
 				"startDate": {
-					"title": "Dátum založenia",
-					"type": "string",
-					"render": {
-						"component": "psui-datepicker"
-					}
+					"extends":"uri://registries/commontypes#blocks/date",
+					"title": "Dátum založenia"
 				},
 				"stateOfAssociation": {
+					"extends":"uri://registries/commonenums#blocks/active",
 					"title": "Stav zväzu",
-					"type": "string",
-					"enum": [
-						"aktívny",
-						"neaktívny"
-					],
-					"enumTransCodes":[
-						"schema.association.state.active",
-						"schema.association.state.inactive"
-					],
-					"render": {
-						"component": "psui-selectbox",
-						"searchable": true
-					}
+					"type": "string"
 				},
 				"notPaying": {
+					"extends":"uri://registries/commonenums#blocks/boolean",
 					"title": "Neplatič",
 					"type": "string",
-					"enum": [
-						"Áno",
-						"Nie"
-					],
-					"enumTransCodes":[
-						"schema.association.notPaying.yes",
-						"schema.association.notPaying.no"
-					],
-					"required": true,
-					"render": {
-						"component": "psui-selectbox",
-						"searchable": true
-					}
+					"required": true
 				},
 				"dateOfRegistration": {
-					"title": "Dátum registrácie",
-					"type": "string",
-					"render": {
-						"component": "psui-datepicker"
-					}
+					"extends":"uri://registries/commontypes#blocks/date",
+					"title": "Dátum registrácie"
 				}
 			}
 		},

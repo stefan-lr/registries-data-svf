@@ -271,7 +271,7 @@
 					"title": "Je zdravotník"
 				},
 				"medicLicense": {
-					"title": "Číslo ZL",
+					"title": "Licencia",
 					"transCode": "schema.people.medicLicense",
 					"type": "string"
 				},
@@ -315,7 +315,7 @@
 					"transCode": "schema.people.isStatistic"
 				},
 				"statisticLicense": {
-					"title": "Číslo ŠL",
+					"title": "Licencia",
 					"transCode": "schema.people.statisticLicense",
 					"type": "string"
 				},
@@ -800,6 +800,21 @@
 					"$ref":"uri://registries/people#blocks/idInfo"
 				}
 			}
+		},
+		"personalProfile": {
+			"extends":"uri://registries/people#models/person",
+			"title":"Môj profil",
+			"properties":{
+				"photoInfo":{
+					"$ref":"uri://registries/people#blocks/photoInfo"
+				},
+				"contact":{
+					"$ref":"uri://registries/people#blocks/contact"
+				},
+				"otherInfo":{
+					"$ref":"uri://registries/people#blocks/otherInfo"
+				}
+			}
 		}
 	},
 
@@ -1055,6 +1070,38 @@
 					{
 					"field": "baseData.name",
 					"title": "Meno"
+					},
+					{
+						"field": "baseData.birthDate",
+						"title": "Dátum narodenia"
+					},
+					{
+						"field": "contactInfo.city",
+						"title": "Mesto"
+					}
+				]
+			}
+		},
+		"personalProfile":{
+			"new":{
+				"extends":"uri://registries/people#models/personalProfile",
+				"title":"Môj profil"
+			},
+			"view":{
+				"extends":"uri://registries/people#models/personalProfile",
+				"title":"Môj profil"
+			},
+			"search":{
+				"extends":"uri://registries/people#models/personalProfile",
+				"title":"Môj profil",
+				"listFields": [
+					{
+						"field": "baseData.surName",
+						"title": "Priezvisko"
+					},
+					{
+						"field": "baseData.name",
+						"title": "Meno"
 					},
 					{
 						"field": "baseData.birthDate",

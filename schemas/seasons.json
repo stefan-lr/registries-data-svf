@@ -13,22 +13,16 @@
 					"required": true
 				},
 				"startSeason": {
+					"extends":"uri://registries/commontypes#blocks/date",
 					"title": "Dátum začiatku",
 					"xxtransCode": "schema.season.startSeason",
-					"type": "string",
-					"required": true,
-					"render": {
-						"component": "psui-datepicker"
-					}
+					"required": true
 				},
 				"endSeason": {
+					"extends":"uri://registries/commontypes#blocks/date",
 					"title": "Dátum konca",
 					"xxtransCode": "schema.season.endSeason",
-					"type": "string",
-					"required": true,
-					"render": {
-						"component": "psui-datepicker"
-					}
+					"required": true
 				}
 			}
 		}

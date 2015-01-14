@@ -10,6 +10,10 @@
 				"TRUE",
 				"FALSE"
 			],
+			"enumTransCodes":[
+				"enum.boolean.true",
+				"enum.boolean.false"
+			],
 			"render": {
 				"component": "psui-selectbox",
 				"searchable": false
@@ -21,6 +25,10 @@
 			"enum":[
 				"active",
 				"inactive"
+			],
+			"enumTransCodes":[
+				"enum.active.A",
+				"enum.active.I"
 			],
 			"render": {
 				"component": "psui-selectbox",
