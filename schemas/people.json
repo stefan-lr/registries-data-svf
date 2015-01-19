@@ -76,6 +76,7 @@
 		},
 		"referee":{
 			"title": "Rozhodca",
+			"transCode": "schema.people.referee",
 			"type": "object",
 			"properties": {
 				"isReferee": {
@@ -85,17 +86,20 @@
 				},
 				"firstAssociation": {
 					"title": "Prvotný zväz",
+					"transCode": "schema.people.referee.firstAssociation",
 					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
 					}
 				},
 				"stateOfReferee": {
-					"extends":"uri://registries/commonenums#blocks/boolean",
-					"title": "Stav rozhodcu"
+					"extends":"uri://registries/commonenums#blocks/active",
+					"title": "Stav rozhodcu",
+					"transCode": "schema.people.referee.stateOfReferee"
 				},
 				"association": {
 					"title": "Aktuálny zväz",
+					"transCode": "schema.people.referee.association",
 					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
@@ -103,14 +107,17 @@
 				},
 				"firstYear": {
 					"extends":"uri://registries/commontypes#blocks/year",
-					"title": "Rok začiatku kariéry"
+					"title": "Rok začiatku kariéry",
+					"transCode": "schema.people.referee.firstYear"
 				},
 				"proffesionalCompetence": {
 					"title": "Odborná spôsobilosť od (rok)",
+					"transCode": "schema.people.referee.proffesionalCompetence",
 					"type": "string"
 				},
 				"dateOfRegistration": {
 					"title": "Dátum registrácie",
+					"transCode": "schema.people.referee.dateOfRegistration",
 					"type": "string",
 					"render": {
 						"component": "psui-datepicker"
@@ -118,10 +125,12 @@
 				},
 				"refereeLicense": {
 					"title": "Rozhodcovská licencia",
+					"transCode": "schema.people.referee.refereeLicense",
 					"type": "string"
 				},
 				"dateOfExpiration": {
 					"title": "Dátum platnosti preukazu",
+					"transCode": "schema.people.referee.dateOfExpiration",
 					"type": "string",
 					"render": {
 						"component": "psui-datepicker"
@@ -129,6 +138,7 @@
 				},
 				"dateOfApplicationForId": {
 					"title": "Dátum začiatku platnosti preukazu",
+					"transCode": "schema.people.referee.dateOfApplicationForId",
 					"type": "string",
 					"render": {
 						"component": "psui-datepicker"
@@ -138,6 +148,7 @@
 		},
 		"coach": {
 			"title": "Tréner",
+			"transCode": "schema.people.coach",
 			"type": "object",
 			"properties": {
 				"isCoach": {
@@ -147,17 +158,20 @@
 				},
 				"firstAssociation": {
 					"title": "Prvotný zväz",
-						"objectLink": {
+					"transCode": "schema.people.coach.firstAssociation",
+					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
 					}
 				},
 				"stateOfCoach": {
 					"extends":"uri://registries/commonenums#blocks/active",
-					"title": "Stav trénera"
+					"title": "Stav trénera",
+					"transCode": "schema.people.coach.stateOfCoach"
 				},
 				"association": {
 					"title": "Aktuálny zväz",
+					"transCode": "schema.people.coach.association",
 					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
@@ -165,22 +179,27 @@
 				},
 				"firstYear": {
 					"extends":"uri://registries/commontypes#blocks/year",
-					"title": "Rok začiatku kariéry"
+					"title": "Rok začiatku kariéry",
+					"transCode": "schema.people.coach.firstYear"
 				},
 				"proffesionalCompetence": {
 					"extends":"uri://registries/commontypes#blocks/year",
-					"title": "Odborná spôsobilosť od (rok)"
+					"title": "Odborná spôsobilosť od (rok)",
+					"transCode": "schema.people.coach.proffesionalCompetence"
 				},
 				"dateOfRegistration": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum registrácie"
+					"title": "Dátum registrácie",
+					"transCode": "schema.people.coach.dateOfRegistration"
 				},
 				"coachLicense": {
 					"title": "Trénerská licencia",
+					"transCode": "schema.people.coach.coachLicense",
 					"type": "string"
 				},
 				"coachLicenseType": {
 					"title": "Typ licencie",
+					"transCode": "schema.people.coach.coachLicenseType",
 					"type": " string",
 					"enum": [
 						"I",
@@ -196,32 +215,44 @@
 				},
 				"dateOfExpiration": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum platnosti preukazu"
+					"title": "Dátum platnosti preukazu",
+					"transCode": "schema.people.coach.dateOfExpiration"
 				},
 				"dateOfApplicationForId": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum začiatku platnosti preukazu"
+					"title": "Dátum začiatku platnosti preukazu",
+					"transCode": "schema.people.coach.dateOfApplicationForId"
 				},
 				"feeDate": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Poplatky"
+					"title": "Poplatky",
+					"transCode": "schema.people.coach.feeDate"
 				},
 				"licenseSeminar": {
 					"title": "Licenčný seminár",
+					"transCode": "schema.people.coach.licenseSeminar",
 					"type": "string"
 				}
 			}
 		},
 		"officer": {
 			"title": "Funkcionár",
+			"transCode": "schema.people.officer",
 			"type": "object",
 			"properties": {
 				"isOfficer": {
 					"extends":"uri://registries/commonenums#blocks/boolean",
-					"title": "Je funkcionár"
+					"title": "Je funkcionár",
+					"transCode": "schema.people.isOfficer"
+				},
+				"stateOfOfficer": {
+					"extends":"uri://registries/commonenums#blocks/active",
+					"title": "Stav funkcionára",
+					"transCode": "schema.people.officer.stateOfOfficer"
 				},
 				"association": {
 					"title": "Aktuálny zväz",
+					"transCode": "schema.people.officer.association",
 					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
@@ -229,6 +260,7 @@
 				},
 				"club": {
 					"title": "Klubová príslušnosť",
+					"transCode": "schema.people.officer.club",
 					"objectLink": {
 						"registry": "organizations",
 						"name": "club.name"
@@ -236,77 +268,82 @@
 				},
 				"note": {
 					"title": "Poznámka",
-					"transCode": "schema.people.note",
+					"transCode": "schema.people.officer.note",
 					"type": "string",
 					"large": true
 				},
 				"dateOfRegistration": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum registrácie"
+					"title": "Dátum registrácie",
+					"transCode": "schema.people.officer.dateOfRegistration"
 				},
 				"expiration": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Platnosť do"
-				},
-				"stateOfOfficer": {
-					"extends":"uri://registries/commonenums#blocks/active",
-					"title": "Stav funkcionára"
+					"title": "Platnosť do",
+					"transCode": "schema.people.officer.expiration"
 				},
 				"dateOfExpiration": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum platnosti preukazu"
+					"title": "Dátum platnosti preukazu",
+					"transCode": "schema.people.officer.dateOfExpiration"
 				},
 				"dateOfApplicationForId": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum začiatku platnosti preukazu"
+					"title": "Dátum začiatku platnosti preukazu",
+					"transCode": "schema.people.officer.dateOfApplicationForId"
 				}
 			}
 		},
 		"medic": {
 			"title": "Zdravotník",
+			"transCode": "schema.people.medic",
 			"type": "object",
 			"properties": {
 				"isMedic": {
 					"extends":"uri://registries/commonenums#blocks/boolean",
-					"title": "Je zdravotník"
+					"title": "Je zdravotník",
+					"transCode": "schema.people.isMedic"
 				},
 				"medicLicense": {
 					"title": "Licencia",
-					"transCode": "schema.people.medicLicense",
+					"transCode": "schema.people.medic.medicLicense",
 					"type": "string"
 				},
 				"stateOfMedic": {
 					"extends":"uri://registries/commonenums#blocks/active",
-					"title": "Stav zdravotníka"
+					"title": "Stav zdravotníka",
+					"transCode": "schema.people.medic.stateOfMedic"
 				},
 				"dateOfExpiration": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum platnosti preukazu"
+					"title": "Dátum platnosti preukazu",
+					"transCode": "schema.people.medic.dateOfExpiration"
 				},
 				"dateOfApplicationForId": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum začiatku platnosti preukazu"
+					"title": "Dátum začiatku platnosti preukazu",
+					"transCode": "schema.people.medic.dateOfApplicationForId"
 				},
 				"validFrom": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum platnosti"
+					"title": "Dátum platnosti",
+					"transCode": "schema.people.medic.validFrom"
 				},
 				"validTo": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Doba platnosti"
-				},
-				"medicLicense": {
-					"title": "Licencia",
-					"type": "string"
+					"title": "Doba platnosti",
+					"transCode": "schema.people.medic.validTo"
 				},
 				"modifiedOn": {
 					"extends":"uri://registries/commontypes#blocks/datetime",
-					"title": "Dátum aktualizácie"
+					"title": "Dátum aktualizácie",
+					"transCode": "schema.people.medic.modifiedOn"
 				}
 			}
 		},
 		"statistic": {
 			"title": "Štatistik",
+			"transCode": "schema.people.statistic",
 			"type": "object",
 			"properties": {
 				"isStatistic": {
@@ -316,41 +353,44 @@
 				},
 				"statisticLicense": {
 					"title": "Licencia",
-					"transCode": "schema.people.statisticLicense",
+					"transCode": "schema.people.statistic.statisticLicense",
 					"type": "string"
 				},
 				"stateOfStatistic": {
 					"extends":"uri://registries/commonenums#blocks/active",
-					"title": "Stav štatistika"
+					"title": "Stav štatistika",
+					"transCode": "schema.people.statistic.stateOfStatistic"
 				},
 				"dateOfExpiration": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum platnosti preukazu"
+					"title": "Dátum platnosti preukazu",
+					"transCode": "schema.people.statistic.dateOfExpiration"
 				},
 				"dateOfApplicationForId": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum začiatku platnosti preukazu"
+					"title": "Dátum začiatku platnosti preukazu",
+					"transCode": "schema.people.statistic.dateOfApplicationForId"
 				},
 				"validFrom": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum platnosti"
+					"title": "Dátum platnosti",
+					"transCode": "schema.people.statistic.validFrom"
 				},
 				"validTo": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Doba platnosti"
-				},
-				"statisticLicense": {
-					"title": "Licencia",
-					"type": "string"
+					"title": "Doba platnosti",
+					"transCode": "schema.people.statistic.validTo"
 				},
 				"modifiedOn": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum aktualizácie"
+					"title": "Dátum aktualizácie",
+					"transCode": "schema.people.statistic.modifiedOn"
 				}
 			}
 		},
 		"agent": {
 			"title": "Agent",
+			"transCode": "schema.people.agent",
 			"type": "object",
 			"properties": {
 				"firstAssociation": {
@@ -391,6 +431,7 @@
 			},
 		"player": {
 			"title": "Hráč",
+			"transCode": "schema.people.player",
 			"type": "object",
 			"properties": {
 				"isPlayer": {
@@ -400,11 +441,12 @@
 				},
 				"playerLicense": {
 					"title": "Číslo HL",
-					"transCode": "schema.people.playerLicense",
+					"transCode": "schema.people.player.playerLicense",
 					"type": "string"
 				},
 				"clubOfFirstRegistration": {
 					"title": "Materský klub",
+					"transCode": "schema.people.player.clubOfFirstRegistration",
 					"objectLink": {
 						"registry": "organizations",
 						"name": "club.name"
@@ -412,75 +454,76 @@
 				},
 				"club": {
 					"title": "Klubová príslušnosť",
+					"transCode": "schema.people.player.club",
 					"objectLink": {
 						"registry": "organizations",
 						"name": "club.name"
 					}
 				},
 				"stateOfPlayer": {
+					"extends":"uri://registries/commonenums#blocks/active",
 					"title": "Stav hráča",
-					"type": "string",
-					"enum": [
-						"aktívny",
-						"neaktívny",
-						"transfer"
-					],
-					"enumTransCodes": [
-						"schema.people.state.of.player.active",
-						"schema.people.state.of.player.inactive"
-					],
-					"render": {
-						"component": "psui-selectbox",
-						"searchable": true
-					}
+					"transCode": "schema.people.player.stateOfPlayer"
 				},
 				"expirationOfProffesionalContract": {
-					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Profesionálna zmluva"
+					"title": "Profesionálna zmluva",
+					"transCode": "schema.people.player.expirationOfProffesionalContract",
+					"type":"string"
 				},
 				"expirationOfAgentContract": {
-					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Zmluva s agentom"
+					"title": "Zmluva s agentom",
+					"transCode": "schema.people.player.expirationOfAgentContract",
+					"type":"string"
 				},
 				"expiration": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Platnosť do"
+					"title": "Platnosť do",
+					"transCode": "schema.people.player.expiration"
 				},
 				"registrationCanceled": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Zrušená registrácia"
+					"title": "Zrušená registrácia",
+					"transCode": "schema.people.player.registrationCanceled"
 				},
 				"dateOfRegistration": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum registrácie"
+					"title": "Dátum registrácie",
+					"transCode": "schema.people.player.dateOfRegistration"
 				},
 				"dateOfExpiration": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum platnosti preukazu"
+					"title": "Dátum platnosti preukazu",
+					"transCode": "schema.people.player.dateOfExpiration"
 				},
 				"dateOfApplicationForId": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum začiatku platnosti preukazu"
+					"title": "Dátum začiatku platnosti preukazu",
+					"transCode": "schema.people.player.dateOfApplicationForId"
 				},
 				"hostingStartDate": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum začiatku hosťovania"
+					"title": "Dátum začiatku hosťovania",
+					"transCode": "schema.people.player.hostingStartDate"
 				},
 				"hostingEndDate": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum konca hosťovania"
+					"title": "Dátum konca hosťovania",
+					"transCode": "schema.people.player.hostingEndDate"
 				},
 				"validFrom": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum platnosti"
+					"title": "Dátum platnosti",
+					"transCode": "schema.people.player.validFrom"
 				},
 				"validTo": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Doba platnosti"
+					"title": "Doba platnosti",
+					"transCode": "schema.people.player.validTo"
 				},
 				"modifiedOn": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum aktualizácie"
+					"title": "Dátum aktualizácie",
+					"transCode": "schema.people.player.modifiedOn"
 				}
 			}
 		},
@@ -574,25 +617,23 @@
 		},
 		"idInfo": {
 			"title": "Registračný preukaz",
+			"transCode": "schema.people.idInfo",
 			"type": "object",
 			"properties": {
 				"currnetId": {
 					"title": "Aktuálne číslo preukazu člena",
+					"transCode": "schema.people.currnetId",
 					"type": "string"
 				},
 				"dateOfExpiration": {
+					"extends":"uri://registries/commontypes#blocks/date",
 					"title": "Dátum platnosti preukazu",
-					"type": "string",
-					"render": {
-						"component": "psui-datepicker"
-					}
+					"transCode": "schema.people.dateOfExpiration"
 				},
 				"dateOfApplicationForId": {
+					"extends":"uri://registries/commontypes#blocks/date",
 					"title": "Dátum začiatku platnosti preukazu",
-					"type": "string",
-					"render": {
-						"component": "psui-datepicker"
-					}
+					"transCode": "schema.people.dateOfApplicationForId"
 				}
 			}
 		}
@@ -601,7 +642,6 @@
 	"models":{
 		"person":{
 			"table": "people",
-			"title":"Osoba",
 			"security": {
 				"create": {
 					"static": [
@@ -632,13 +672,10 @@
 				}
 			}
 		},
-		"delegate_observer":{
-			"extends":"uri://registries/people#models/person",
-			"title":"Delagát"
-		},
 		"fullperson":{
 			"extends":"uri://registries/people#models/person",
 			"title":"Osoba",
+			"transCode":"schema.people.title",
 			"properties":{
 				"player":{
 					"$ref":"uri://registries/people#blocks/player"
@@ -672,6 +709,7 @@
 		"coach":{
 			"extends":"uri://registries/people#models/person",
 			"title":"Tréner",
+			"transCode":"schema.people.coach",
 			"forcedCriteria": [
 				{
 				"f": "coach.isCoach",
@@ -694,6 +732,7 @@
 		"referee":{
 			"extends":"uri://registries/people#models/person",
 			"title":"Rozhodca",
+			"transCode":"schema.people.referee",
 			"forcedCriteria": [
 				{
 				"f": "coach.isCoach",
@@ -716,6 +755,7 @@
 		"officer":{
 			"extends":"uri://registries/people#models/person",
 			"title":"Funkcionár",
+			"transCode":"schema.people.officer",
 			"forcedCriteria": [
 				{
 				"f": "officer.isOfficer",
@@ -738,6 +778,7 @@
 		"statistic":{
 			"extends":"uri://registries/people#models/person",
 			"title":"Štatista",
+			"transCode":"schema.people.statistic",
 			"forcedCriteria": [
 				{
 				"f": "statistic.isOfficer",
@@ -760,6 +801,7 @@
 		"medic":{
 			"extends":"uri://registries/people#models/person",
 			"title":"Zdravotník",
+			"transCode":"schema.people.medic",
 			"forcedCriteria": [
 				{
 				"f": "medic.isMedic",
@@ -782,6 +824,7 @@
 		"player":{
 			"extends":"uri://registries/people#models/person",
 			"title":"Hráč",
+			"transCode":"schema.people.player",
 			"forcedCriteria": [
 				{
 				"f": "player.isPlayer",
@@ -804,6 +847,7 @@
 		"personalProfile": {
 			"extends":"uri://registries/people#models/person",
 			"title":"Môj profil",
+			"transCode":"schema.people.personalProfile",
 			"properties":{
 				"photoInfo":{
 					"$ref":"uri://registries/people#blocks/photoInfo"
@@ -846,19 +890,23 @@
 				"listFields": [
 					{
 						"field": "baseData.surName",
-						"title": "Priezvisko"
+						"title": "Priezvisko",
+						"transCode":"schema.people.listFields.surName"
 					},
 					{
 						"field": "baseData.name",
-						"title": "Meno"
+						"title": "Meno",
+						"transCode":"schema.people.listFields.name"
 					},
 					{
 						"field": "baseData.birthDate",
-						"title": "Dátum narodenia"
+						"title": "Dátum narodenia",
+						"transCode":"schema.people.listFields.birthDate"
 					},
 					{
 						"field": "contactInfo.city",
-						"title": "Mesto"
+						"title": "Mesto",
+						"transCode":"schema.people.listFields.city"
 					}
 				]
 			}
@@ -874,20 +922,24 @@
 				"extends":"uri://registries/people#models/coach",
 				"listFields": [
 					{
-					"field": "baseData.surName",
-					"title": "Priezvisko"
-					},
+						"field": "baseData.surName",
+						"title": "Priezvisko",
+						"transCode":"schema.people.listFields.surName"
+						},
 					{
-					"field": "baseData.name",
-					"title": "Meno"
+						"field": "baseData.name",
+						"title": "Meno",
+						"transCode":"schema.people.person.listFields.name"
 					},
 					{
 						"field": "baseData.birthDate",
-						"title": "Dátum narodenia"
+						"title": "Dátum narodenia",
+						"transCode":"schema.people.person.listFields.birthDate"
 					},
 					{
 						"field": "contactInfo.city",
-						"title": "Mesto"
+						"title": "Mesto",
+						"transCode":"schema.people.person.listFields.city"
 					}
 				]
 			}
@@ -903,20 +955,24 @@
 				"extends":"uri://registries/people#models/referee",
 				"listFields": [
 					{
-					"field": "baseData.surName",
-					"title": "Priezvisko"
+						"field": "baseData.surName",
+						"title": "Priezvisko",
+						"transCode":"schema.people.person.listFields.surName"
 					},
 					{
-					"field": "baseData.name",
-					"title": "Meno"
+						"field": "baseData.name",
+						"title": "Meno",
+						"transCode":"schema.people.person.listFields.name"
 					},
 					{
 						"field": "baseData.birthDate",
-						"title": "Dátum narodenia"
+						"title": "Dátum narodenia",
+						"transCode":"schema.people.person.listFields.birthDate"
 					},
 					{
 						"field": "contactInfo.city",
-						"title": "Mesto"
+						"title": "Mesto",
+						"transCode":"schema.people.person.listFields.city"
 					}
 				]
 			}
@@ -932,20 +988,24 @@
 				"extends":"uri://registries/people#models/officer",
 				"listFields": [
 					{
-					"field": "baseData.surName",
-					"title": "Priezvisko"
+						"field": "baseData.surName",
+						"title": "Priezvisko",
+						"transCode":"schema.people.person.listFields.surName"
 					},
 					{
-					"field": "baseData.name",
-					"title": "Meno"
-					},
+						"field": "baseData.name",
+						"title": "Meno",
+						"transCode":"schema.people.person.listFields.name"
+						},
 					{
 						"field": "baseData.birthDate",
-						"title": "Dátum narodenia"
+						"title": "Dátum narodenia",
+						"transCode":"schema.people.person.listFields.birthDate"
 					},
 					{
 						"field": "contactInfo.city",
-						"title": "Mesto"
+						"title": "Mesto",
+						"transCode":"schema.people.person.listFields.city"
 					}
 				]
 			}
@@ -961,12 +1021,12 @@
 				"extends":"uri://registries/people#models/medic",
 				"listFields": [
 					{
-					"field": "baseData.surName",
-					"title": "Priezvisko"
-					},
+						"field": "baseData.surName",
+						"title": "Priezvisko"
+						},
 					{
-					"field": "baseData.name",
-					"title": "Meno"
+						"field": "baseData.name",
+						"title": "Meno"
 					},
 					{
 						"field": "baseData.birthDate",
@@ -990,41 +1050,12 @@
 				"extends":"uri://registries/people#models/statistic",
 				"listFields": [
 					{
-					"field": "baseData.surName",
-					"title": "Priezvisko"
+						"field": "baseData.surName",
+						"title": "Priezvisko"
 					},
 					{
-					"field": "baseData.name",
-					"title": "Meno"
-					},
-					{
-						"field": "baseData.birthDate",
-						"title": "Dátum narodenia"
-					},
-					{
-						"field": "contactInfo.city",
-						"title": "Mesto"
-					}
-				]
-			}
-		},
-		"delegate_observer":{
-			"new":{
-				"extends":"uri://registries/people#models/delegate_observer"
-			},
-			"view":{
-				"extends":"uri://registries/people#models/delegate_observer"
-			},
-			"search":{
-				"extends":"uri://registries/people#models/delegate_observer",
-				"listFields": [
-					{
-					"field": "baseData.surName",
-					"title": "Priezvisko"
-					},
-					{
-					"field": "baseData.name",
-					"title": "Meno"
+						"field": "baseData.name",
+						"title": "Meno"
 					},
 					{
 						"field": "baseData.birthDate",
@@ -1038,9 +1069,6 @@
 			}
 		},
 
-		"delegate_of_match":{
-			"extends":"uri://registries/people#views/delegate_observer"
-		},
 
 		"player":{
 			"new":{
@@ -1064,12 +1092,12 @@
 				"title":"Hráč",
 				"listFields": [
 					{
-					"field": "baseData.surName",
-					"title": "Priezvisko"
-					},
+						"field": "baseData.surName",
+						"title": "Priezvisko"
+						},
 					{
-					"field": "baseData.name",
-					"title": "Meno"
+						"field": "baseData.name",
+						"title": "Meno"
 					},
 					{
 						"field": "baseData.birthDate",

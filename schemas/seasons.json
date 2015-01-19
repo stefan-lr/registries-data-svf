@@ -4,24 +4,25 @@
 	"blocks":{
 		"baseData": {
 			"title": "Základné údaje",
+			"transCode":"schema.season.baseData",
 			"type": "object",
 			"properties": {
 				"name": {
 					"title": "Názov",
-					"xxtransCode": "schema.season",
+					"transCode":"schema.season.name",
 					"type": "string",
 					"required": true
 				},
 				"startSeason": {
 					"extends":"uri://registries/commontypes#blocks/date",
 					"title": "Dátum začiatku",
-					"xxtransCode": "schema.season.startSeason",
+					"transCode": "schema.season.startSeason",
 					"required": true
 				},
 				"endSeason": {
 					"extends":"uri://registries/commontypes#blocks/date",
 					"title": "Dátum konca",
-					"xxtransCode": "schema.season.endSeason",
+					"transCode": "schema.season.endSeason",
 					"required": true
 				}
 			}
@@ -31,6 +32,7 @@
 		"seasons":{
 			"table" : "seasons",
 			"title" : "Súťažný ročník",
+			"transCode":"schema.season.title",
 			"security": {
 				"create": {
 					"static": [

@@ -4,18 +4,18 @@
 	"blocks": {
 		"baseData": {
 			"title": "Základné údaje",
-			"xxtransCode": "",
+			"transCode": "schema.ageCategory.baseData",
 			"type": "object",
 			"properties": {
 				"name": {
 					"title": "Názov kategórie",
-					"xxtransCode": "",
+					"transCode": "schema.ageCategory.name",
 					"type": "string",
 					"required": true
 				},
 				"description": {
 					"title": "Popis",
-					"xxtransCode": "",
+					"transCode": "schema.ageCategory.description",
 					"type": "string",
 					"required": true
 				}
@@ -23,30 +23,30 @@
 		},
 		"computation": {
 			"title": "Údaje pre výpočet",
-			"xxtransCode": "",
+			"transCode": "schema.ageCategory.computation",
 			"type": "object",
 			"properties": {
 				"day": {
 					"title": "Deň",
-					"xxtransCode": "",
+					"transCode": "schema.ageCategory.day",
 					"type": "string",
 					"required": true
 				},
 				"month": {
 					"title": "Mesiac",
-					"xxtransCode": "",
+					"transCode": "schema.ageCategory.month",
 					"type": "string",
 					"required": true
 				},
 				"age": {
 					"title": "Počet rokov",
-					"xxtransCode": "",
+					"transCode": "schema.ageCategory.year",
 					"type": "string",
 					"required": true
 				},
 				"operation": {
 					"title": "Operácia",
-					"xxtransCode": "",
+					"transCode": "schema.ageCategory.operation",
 					"type": "string",
 					"enum": [
 						"PO",
@@ -65,6 +65,7 @@
 		"ageCategory": {
 			"table": "ageCategories",
 			"title": "Veková kategória",
+			"transCode": "schema.ageCategory.title",
 			"security": {
 				"create": {
 					"static": [

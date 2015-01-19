@@ -47,14 +47,12 @@
 				"street": {
 					"title": "Ulica",
 					"transCode": "schema.people.street",
-					"type": "string",
-					"required": false
+					"type": "string"
 				},
 				"houseNumber": {
 					"title": "Číslo domu",
 					"transCode": "schema.people.houseNumber",
-					"type": "string",
-					"required": false
+					"type": "string"
 				},
 				"city": {
 					"$ref": "uri://registries/towns#town"
@@ -62,8 +60,7 @@
 				"zipCode": {
 					"title": "PSČ",
 					"transCode": "schema.people.zipCode",
-					"type": "string",
-					"required": false
+					"type": "string"
 				},
 				"country": {
 					"$ref": "uri://registries/countries#country"

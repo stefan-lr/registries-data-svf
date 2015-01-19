@@ -5,15 +5,18 @@
 	"blocks":{
 		"baseData": {
 			"title": "Základné údaje",
+			"transCode":"schema.roster.baseData",
 			"type": "object",
 			"properties": {
 				"prName": {
 					"title": "Názov družstva",
+					"transCode":"schema.roster.prName",
 					"type": "string",
 					"required": true
 				},
 				"club": {
 					"title": "Klub",
+					"transCode":"schema.roster.club",
 					"type": "object",
 					"objectLink": {
 						"registry": "organizations",
@@ -23,6 +26,7 @@
 				},
 				"season": {
 					"title": "Súťažný ročnik",
+					"transCode":"schema.roster.season",
 					"required": true,
 					"objectLink": {
 						"registry": "seasons",
@@ -30,24 +34,14 @@
 					}
 				},
 				"gender": {
+					"extends":"uri://registries/commonenums#blocks/gender",
 					"title": "Pohlavie",
-					"type": "string",
-					"enum": [
-						"M",
-						"Z"
-					],
-					"enumTransCodes":[
-						"schema.people.gender.man",
-						"schema.people.gender.woman"
-					],
-					"required": true,
-					"render": {
-						"component": "psui-selectbox",
-						"searchable": true
-					}
+					"transCode": "schema.people.gender",
+					"required": true
 				},
 				"ageCategory": {
 					"title": "Veková kategória",
+					"transCode":"schema.roster.ageCategory",
 					"type": "object",
 					"objectLink": {
 						"registry": "ageCategories",
@@ -57,6 +51,7 @@
 				},
 				"competition": {
 					"title": "Súťaž",
+					"transCode":"schema.roster.competition",
 					"required": true,
 					"objectLink": {
 						"registry": "competitions",
@@ -65,6 +60,7 @@
 				},
 				"lastModification": {
 					"title": "Dátum poslednej modifikácie",
+					"transCode":"schema.roster.lastModification",
 					"type": "string",
 					"readOnly": true,
 					"$timestamp" : true
@@ -72,156 +68,166 @@
 			}
 		},
 		"coaches": {
-				"title": "Tréneri",
-				"type": "object",
-				"properties": {
-					"coach": {
-						"title": "Tréner",
-						"type": "object",
-						"objectLink": {
-							"registry": "people",
-							"surName": "baseData.surName",
-							"firstName": "baseData.name",
-							"license": "coach.coachLicense",
-							"licenseType": "coach.coachLicenseType"
-						},
-						"objectLinkForcedCriteria": [
-							{
-								"f": "coach.isCoach",
-								"op": "eq",
-								"v": "Áno"
-							}
-						]
+			"title": "Tréneri",
+			"transCode":"schema.roster.coaches",
+			"type": "object",
+			"properties": {
+				"coach": {
+					"title": "Tréner",
+					"transCode":"schema.roster.coach",
+					"type": "object",
+					"objectLink": {
+						"registry": "people",
+						"surName": "baseData.surName",
+						"firstName": "baseData.name",
+						"license": "coach.coachLicense",
+						"licenseType": "coach.coachLicenseType"
 					},
-					"aCoach1": {
-						"title": "Asistent Trénera",
-						"type": "object",
-						"objectLink": {
-							"registry": "people",
-							"surName": "baseData.surName",
-							"firstName": "baseData.name",
-							"license": "coach.coachLicense",
-							"licenseType": "coach.coachLicenseType"
-						},
-						"objectLinkForcedCriteria": [
-							{
-								"f": "coach.isCoach",
-								"op": "eq",
-								"v": "Áno"
-							}
-						]
-					},
-					"aCoach2": {
-						"title": "Asistent Trénera",
-						"type": "object",
-						"objectLink": {
-							"registry": "people",
-							"surName": "baseData.surName",
-							"firstName": "baseData.name",
-							"license": "coach.coachLicense",
-							"licenseType": "coach.coachLicenseType"
-						},
-						"objectLinkForcedCriteria": [
-							{
-								"f": "coach.isCoach",
-								"op": "eq",
-								"v": "Áno"
-							}
-						]
-					},
-					"aCoach3": {
-						"title": "Asistent Trénera",
-						"type": "object",
-						"objectLink": {
-							"registry": "people",
-							"surName": "baseData.surName",
-							"firstName": "baseData.name",
-							"license": "coach.coachLicense",
-							"licenseType": "coach.coachLicenseType"
-						},
-						"objectLinkForcedCriteria": [
-							{
-								"f": "coach.isCoach",
-								"op": "eq",
-								"v": "Áno"
-							}
-						]
-					},
-					"aCoach4": {
-						"title": "Asistent Trénera",
-						"type": "object",
-						"objectLink": {
-							"registry": "people",
-							"surName": "baseData.surName",
-							"firstName": "baseData.name",
-							"license": "coach.coachLicense",
-							"licenseType": "coach.coachLicenseType"
-						},
-						"objectLinkForcedCriteria": [
-							{
-								"f": "coach.isCoach",
-								"op": "eq",
-								"v": "Áno"
-							}
-						]
-					},
-					"aCoach5": {
-						"title": "Asistent Trénera",
-						"type": "object",
-						"objectLink": {
-							"registry": "people",
-							"surName": "baseData.surName",
-							"firstName": "baseData.name",
-							"license": "coach.coachLicense",
-							"licenseType": "coach.coachLicenseType"
-						},
-						"objectLinkForcedCriteria": [
-							{
-								"f": "coach.isCoach",
-								"op": "eq",
-								"v": "Áno"
-							}
-						]
-					}
-				}
-			},
-			"listOfPlayers": {
-				"title": "Zoznam hráčov",
-				"type": "object",
-				"render": {
-					"width": "full"
-				},
-				"properties": {
-					"players": {
-						"title": "Hráči",
-						"type": "array",
-						"items": {
-							"objectLink": {
-								"registry": "people",
-								"surName": "baseData.surName",
-								"firstName": "baseData.name",
-								"birthDate": "baseData.birthDate",
-								"playerLicense": "player.playerLicense"
-							},
-							"required": true,
-							"_$objectLinkForcedCriteria": true,
-							"objectLinkForcedCriteria": [
-								{
-									"f": "player.isPlayer",
-									"op": "eq",
-									"v": "Áno"
-								}
-							]
+					"objectLinkForcedCriteria": [
+						{
+							"f": "coach.isCoach",
+							"op": "eq",
+							"v": "Áno"
 						}
+					]
+				},
+				"aCoach1": {
+					"title": "Asistent Trénera",
+					"transCode":"schema.roster.aCoach",
+					"type": "object",
+					"objectLink": {
+						"registry": "people",
+						"surName": "baseData.surName",
+						"firstName": "baseData.name",
+						"license": "coach.coachLicense",
+						"licenseType": "coach.coachLicenseType"
+					},
+					"objectLinkForcedCriteria": [
+						{
+							"f": "coach.isCoach",
+							"op": "eq",
+							"v": "Áno"
+						}
+					]
+				},
+				"aCoach2": {
+					"title": "Asistent Trénera",
+					"transCode":"schema.roster.aCoach",
+					"type": "object",
+					"objectLink": {
+						"registry": "people",
+						"surName": "baseData.surName",
+						"firstName": "baseData.name",
+						"license": "coach.coachLicense",
+						"licenseType": "coach.coachLicenseType"
+					},
+					"objectLinkForcedCriteria": [
+						{
+							"f": "coach.isCoach",
+							"op": "eq",
+							"v": "Áno"
+						}
+					]
+				},
+				"aCoach3": {
+					"title": "Asistent Trénera",
+					"transCode":"schema.roster.aCoach",
+					"type": "object",
+					"objectLink": {
+						"registry": "people",
+						"surName": "baseData.surName",
+						"firstName": "baseData.name",
+						"license": "coach.coachLicense",
+						"licenseType": "coach.coachLicenseType"
+					},
+					"objectLinkForcedCriteria": [
+						{
+							"f": "coach.isCoach",
+							"op": "eq",
+							"v": "Áno"
+						}
+					]
+				},
+				"aCoach4": {
+					"title": "Asistent Trénera",
+					"transCode":"schema.roster.aCoach",
+					"type": "object",
+					"objectLink": {
+						"registry": "people",
+						"surName": "baseData.surName",
+						"firstName": "baseData.name",
+						"license": "coach.coachLicense",
+						"licenseType": "coach.coachLicenseType"
+					},
+					"objectLinkForcedCriteria": [
+						{
+							"f": "coach.isCoach",
+							"op": "eq",
+							"v": "Áno"
+						}
+					]
+				},
+				"aCoach5": {
+					"title": "Asistent Trénera",
+					"transCode":"schema.roster.aCoach",
+					"type": "object",
+					"objectLink": {
+						"registry": "people",
+						"surName": "baseData.surName",
+						"firstName": "baseData.name",
+						"license": "coach.coachLicense",
+						"licenseType": "coach.coachLicenseType"
+					},
+					"objectLinkForcedCriteria": [
+						{
+							"f": "coach.isCoach",
+							"op": "eq",
+							"v": "Áno"
+						}
+					]
+				}
+			}
+		},
+		"listOfPlayers": {
+			"title": "Zoznam hráčov",
+			"transCode":"schema.roster.listOfPlayers",
+			"type": "object",
+			"render": {
+				"width": "full"
+			},
+			"properties": {
+				"players": {
+					"title": "Hráči",
+					"transCode":"schema.roster.players",
+					"type": "array",
+					"items": {
+						"objectLink": {
+							"registry": "people",
+							"surName": "baseData.surName",
+							"firstName": "baseData.name",
+							"birthDate": "baseData.birthDate",
+							"playerLicense": "player.playerLicense"
+						},
+						"required": true,
+						"_$objectLinkForcedCriteria": true,
+						"objectLinkForcedCriteria": [
+							{
+								"f": "player.isPlayer",
+								"op": "eq",
+								"v": "Áno"
+							}
+						]
 					}
 				}
 			}
+		}
 	},
 
 	"models":{
 		"rosters":{
 			"table": "rosters",
-			"title": "Nová súpiska",
+			"title": "Súpiska",
+			"transCode":"schema.roster.title",
 			"security": {
 				"create": {
 					"static": [

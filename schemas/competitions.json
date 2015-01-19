@@ -5,15 +5,18 @@
 	"blocks":{
 		"baseData": {
 				"title": "Základné údaje",
+				"transCode":"schema.competition.baseData",
 				"type": "object",
 				"properties": {
 					"name": {
 						"title": "Názov súťaže",
+						"transCode":"schema.competition.name",
 						"type": "string",
 						"required": true
 					},
 					"season": {
 						"title": "Súťažný ročnik",
+						"transCode":"schema.competition.season",
 						"objectLink": {
 							"registry": "seasons",
 							"name": "baseData.name"
@@ -22,6 +25,7 @@
 					},
 					"association": {
 						"title": "Zväz",
+						"transCode":"schema.competition.association",
 						"type": "object",
 						"objectLink": {
 							"registry": "organizations",
@@ -31,6 +35,7 @@
 					},
 					"ageCategory": {
 						"title": "Veková kategória",
+						"transCode":"schema.competition.ageCategory",
 						"type": "object",
 						"objectLink": {
 							"registry": "ageCategories",
@@ -47,6 +52,7 @@
 					},
 					"competitionLevel": {
 						"title": "Úroveň súťaže",
+						"transCode":"schema.competition.competitionLevel",
 						"type": "integer",
 						"required": true
 					}
@@ -58,8 +64,7 @@
 		"competitions":{
 			"table": "competitons",
 			"title": "Súťaž",
-			"xxtransCode": "schema.transfer.title",
-
+			"transCode":"schema.competition.title",
 			"security": {
 				"_create": {
 					"_static": [

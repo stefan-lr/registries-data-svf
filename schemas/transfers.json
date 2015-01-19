@@ -5,15 +5,18 @@
 	"blocks":{
 		"baseData": {
 			"title": "Základné údaje",
+			"transCode":"schema.transfer.baseData",
 			"type": "object",
 			"properties": {
 				"id": {
 					"title": "ID",
+					"transCode":"schema.transfer.id",
 					"type": "string",
 					"required": true
 				},
 				"player": {
 					"title": "Hráč",
+					"transCode":"schema.transfer.player",
 					"type": "string",
 					"required": true,
 					"objectLink": {
@@ -25,6 +28,7 @@
 				},
 				"clubFrom": {
 					"title": "Z klubu",
+					"transCode":"schema.transfer.clubFrom",
 					"type": "string",
 					"required": true,
 					"objectLink": {
@@ -34,6 +38,7 @@
 				},
 				"clubTo": {
 					"title": "Do klubu",
+					"transCode":"schema.transfer.clubTo",
 					"type": "string",
 					"required": true,
 					"objectLink": {
@@ -43,6 +48,7 @@
 				},
 				"season": {
 					"title": "Súťažný ročnik",
+					"transCode":"schema.transfer.season",
 					"objectLink": {
 						"registry": "seasons",
 						"name": "baseData.name"
@@ -51,6 +57,7 @@
 				},
 				"typeOfTransfer": {
 					"title": "Typ zmeny",
+					"transCode":"schema.transfer.typeOfTransfer",
 					"type": "string",
 					"required": true,
 					"enum": [
@@ -73,22 +80,27 @@
 				"dateOfRealization": {
 					"extends":"uri://registries/commontypes#blocks/date",
 					"title": "Dátum realizácie",
+					"transCode":"schema.transfer.dateOfRealization",
 					"required": true
 				},
 				"dateFrom": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Začiatok hosťovania"
+					"title": "Začiatok hosťovania",
+					"transCode":"schema.transfer.dateFrom"
 				},
 				"dateTo": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Koniec hosťovania"
+					"title": "Koniec hosťovania",
+					"transCode":"schema.transfer.dateTo"
 				},
 				"deliveredOn": {
 					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum doručenia"
+					"title": "Dátum doručenia",
+					"transCode":"schema.transfer.deliveredOn"
 				},
 				"stateOfTransfer": {
 					"title": "Stav",
+					"transCode":"schema.transfer.stateOfTransfer",
 					"type": "string",
 					"required": true,
 					"enum": [
@@ -111,11 +123,13 @@
 				"active": {
 					"extends":"uri://registries/commonenums#blocks/boolean",
 					"title": "Aktívny",
+					"transCode":"schema.transfer.active",
 					"type": "string",
 					"required": true
 				},
 				"note": {
 					"title": "Poznámka",
+					"transCode":"schema.transfer.note",
 					"type": "string",
 					"large": true
 				}
@@ -127,7 +141,7 @@
 		"transfers":{
 			"table": "transfers",
 			"title": "Zmena kl. príslušnosti",
-			"xxtransCode": "schema.transfer.title",
+			"transCode": "schema.transfer.title",
 			"security": {
 				"create": {
 					"static": [

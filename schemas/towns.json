@@ -5,6 +5,7 @@
 	"town":{
 		"title": "Obec",
 		"type": "string",
+		"transCode": "schema.towns.town",
 		"enum":[
 			"Bánovce nad Bebravou",
 			"Ábelová",
