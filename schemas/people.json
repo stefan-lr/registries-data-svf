@@ -714,7 +714,7 @@
 				{
 				"f": "coach.isCoach",
 				"op": "eq",
-				"v": "Áno"
+				"v": "TRUE"
 				}
 			],
 			"properties":{
@@ -737,7 +737,7 @@
 				{
 				"f": "coach.isCoach",
 				"op": "eq",
-				"v": "Áno"
+				"v": "TRUE"
 				}
 			],
 			"properties":{
@@ -760,7 +760,7 @@
 				{
 				"f": "officer.isOfficer",
 				"op": "eq",
-				"v": "Áno"
+				"v": "TRUE"
 				}
 			],
 			"properties":{
@@ -783,7 +783,7 @@
 				{
 				"f": "statistic.isOfficer",
 				"op": "eq",
-				"v": "Áno"
+				"v": "TRUE"
 				}
 			],
 			"properties":{
@@ -806,7 +806,7 @@
 				{
 				"f": "medic.isMedic",
 				"op": "eq",
-				"v": "Áno"
+				"v": "TRUE"
 				}
 			],
 			"properties":{
@@ -829,7 +829,7 @@
 				{
 				"f": "player.isPlayer",
 				"op": "eq",
-				"v": "Áno"
+				"v": "TRUE"
 				}
 			],
 			"properties":{
@@ -891,22 +891,22 @@
 					{
 						"field": "baseData.surName",
 						"title": "Priezvisko",
-						"transCode":"schema.people.listFields.surName"
+						"transCode":"schema.people.surName"
 					},
 					{
 						"field": "baseData.name",
 						"title": "Meno",
-						"transCode":"schema.people.listFields.name"
+						"transCode":"schema.people.name"
 					},
 					{
 						"field": "baseData.birthDate",
 						"title": "Dátum narodenia",
-						"transCode":"schema.people.listFields.birthDate"
+						"transCode":"schema.people.birthDate"
 					},
 					{
 						"field": "contactInfo.city",
 						"title": "Mesto",
-						"transCode":"schema.people.listFields.city"
+						"transCode":"schema.people.city"
 					}
 				]
 			}
@@ -924,22 +924,22 @@
 					{
 						"field": "baseData.surName",
 						"title": "Priezvisko",
-						"transCode":"schema.people.listFields.surName"
+						"transCode":"schema.people.surName"
 						},
 					{
 						"field": "baseData.name",
 						"title": "Meno",
-						"transCode":"schema.people.person.listFields.name"
+						"transCode":"schema.people.name"
 					},
 					{
 						"field": "baseData.birthDate",
 						"title": "Dátum narodenia",
-						"transCode":"schema.people.person.listFields.birthDate"
+						"transCode":"schema.people.birthDate"
 					},
 					{
 						"field": "contactInfo.city",
 						"title": "Mesto",
-						"transCode":"schema.people.person.listFields.city"
+						"transCode":"schema.people.city"
 					}
 				]
 			}
@@ -957,22 +957,22 @@
 					{
 						"field": "baseData.surName",
 						"title": "Priezvisko",
-						"transCode":"schema.people.person.listFields.surName"
+						"transCode":"schema.people.surName"
 					},
 					{
 						"field": "baseData.name",
 						"title": "Meno",
-						"transCode":"schema.people.person.listFields.name"
+						"transCode":"schema.people.name"
 					},
 					{
 						"field": "baseData.birthDate",
 						"title": "Dátum narodenia",
-						"transCode":"schema.people.person.listFields.birthDate"
+						"transCode":"schema.people.birthDate"
 					},
 					{
 						"field": "contactInfo.city",
 						"title": "Mesto",
-						"transCode":"schema.people.person.listFields.city"
+						"transCode":"schema.people.city"
 					}
 				]
 			}
@@ -990,22 +990,22 @@
 					{
 						"field": "baseData.surName",
 						"title": "Priezvisko",
-						"transCode":"schema.people.person.listFields.surName"
+						"transCode":"schema.people.surName"
 					},
 					{
 						"field": "baseData.name",
 						"title": "Meno",
-						"transCode":"schema.people.person.listFields.name"
+						"transCode":"schema.people.name"
 						},
 					{
 						"field": "baseData.birthDate",
 						"title": "Dátum narodenia",
-						"transCode":"schema.people.person.listFields.birthDate"
+						"transCode":"schema.people.birthDate"
 					},
 					{
 						"field": "contactInfo.city",
 						"title": "Mesto",
-						"transCode":"schema.people.person.listFields.city"
+						"transCode":"schema.people.city"
 					}
 				]
 			}
