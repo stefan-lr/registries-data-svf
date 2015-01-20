@@ -1,9 +1,7 @@
 {
 	"$schema": "http://json-schema.org/schema#",
 	"id": "uri://registries/organizations#",
-
-	"blocks":{
-
+	"blocks": {
 		"baseData": {
 			"title": "Základné údaje",
 			"transCode": "schema.org.baseData",
@@ -30,20 +28,20 @@
 			"properties": {
 				"codeOfClub": {
 					"title": "Kód klubu",
-					"transCode":"schema.org.club.codeOfClub",
+					"transCode": "schema.org.club.codeOfClub",
 					"type": "string",
 					"$sequence": "clubs"
 				},
 				"name": {
 					"title": "Názov klubu",
-					"transCode":"schema.org.club.name",
+					"transCode": "schema.org.club.name",
 					"type": "string",
-					"required":true,
-					"collate":true
+					"required": true,
+					"collate": true
 				},
 				"association": {
 					"title": "Zväz",
-					"transCode":"schema.org.club.association",
+					"transCode": "schema.org.club.association",
 					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
@@ -55,60 +53,60 @@
 					"type": "string"
 				},
 				"startDate": {
-					"extends":"uri://registries/commontypes#blocks/date",
+					"extends": "uri://registries/commontypes#blocks/date",
 					"title": "Dátum založenia",
-					"transCode":"schema.org.club.startDate"
+					"transCode": "schema.org.club.startDate"
 				},
 				"stadium": {
 					"title": "Štadión",
-					"transCode":"schema.org.club.stadium",
+					"transCode": "schema.org.club.stadium",
 					"objectLink": {
 						"registry": "stadiums",
 						"name": "baseData.name"
 					}
 				},
 				"stateOfClub": {
-					"extends":"uri://registries/commonenums#blocks/active",
+					"extends": "uri://registries/commonenums#blocks/active",
 					"title": "Stav klubu",
-					"transCode":"schema.org.club.stateOfClub",
+					"transCode": "schema.org.club.stateOfClub",
 					"type": "string"
 				},
 				"notPaying": {
-					"extends":"uri://registries/commonenums#blocks/boolean",
+					"extends": "uri://registries/commonenums#blocks/boolean",
 					"title": "Neplatič",
-					"transCode":"schema.org.club.notPaying",
+					"transCode": "schema.org.club.notPaying",
 					"type": "string"
 				},
 				"dateOfRegistration": {
-					"extends":"uri://registries/commontypes#blocks/date",
+					"extends": "uri://registries/commontypes#blocks/date",
 					"title": "Dátum registrácie",
-					"transCode":"schema.org.club.dateOfRegistration"
+					"transCode": "schema.org.club.dateOfRegistration"
 				}
 			}
 		},
 		"clubAdress": {
 			"title": "Klub - poštová adresa",
-			"transCode":"schema.org.club.clubAdress",
+			"transCode": "schema.org.club.clubAdress",
 			"type": "object",
 			"properties": {
 				"contactPerson": {
 					"title": "Kontaktná osoba",
-					"transCode":"schema.org.club.contactPerson",
+					"transCode": "schema.org.club.contactPerson",
 					"type": "string"
 				},
 				"mobileNumberOfContactPerson": {
 					"title": "Telefónne číslo kontaktnej osoby",
-					"transCode":"schema.org.club.mobileNumberOfContactPerson",
+					"transCode": "schema.org.club.mobileNumberOfContactPerson",
 					"type": "string"
 				},
 				"street": {
 					"title": "Ulica",
-					"transCode":"schema.org.club.street",
+					"transCode": "schema.org.club.street",
 					"type": "string"
 				},
 				"houseNumber": {
 					"title": "Číslo domu",
-					"transCode":"schema.org.club.houseNumber",
+					"transCode": "schema.org.club.houseNumber",
 					"type": "string"
 				},
 				"city": {
@@ -116,12 +114,12 @@
 				},
 				"zipCode": {
 					"title": "PSČ",
-					"transCode":"schema.org.club.zipCode",
+					"transCode": "schema.org.club.zipCode",
 					"type": "string"
 				},
 				"region": {
 					"title": "Kraj",
-					"transCode":"schema.org.club.region",
+					"transCode": "schema.org.club.region",
 					"type": "string"
 				},
 				"country": {
@@ -136,71 +134,71 @@
 			"properties": {
 				"associationName": {
 					"title": "Názov zväzu",
-					"transCode":"schema.org.assoc.associationName",
+					"transCode": "schema.org.assoc.associationName",
 					"type": "string",
-					"required":true
+					"required": true
 				},
 				"shortName": {
 					"title": "Skrátený názov zväzu",
-					"transCode":"schema.org.assoc.shortName",
+					"transCode": "schema.org.assoc.shortName",
 					"type": "string"
 				},
 				"higherAssociation": {
 					"title": "Nadradený zväz",
-					"transCode":"schema.org.assoc.higherAssociation",
+					"transCode": "schema.org.assoc.higherAssociation",
 					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
 					}
 				},
 				"startDate": {
-					"extends":"uri://registries/commontypes#blocks/date",
+					"extends": "uri://registries/commontypes#blocks/date",
 					"title": "Dátum založenia",
-					"transCode":"schema.org.assoc.startDate"
+					"transCode": "schema.org.assoc.startDate"
 				},
 				"stateOfAssociation": {
-					"extends":"uri://registries/commonenums#blocks/active",
+					"extends": "uri://registries/commonenums#blocks/active",
 					"title": "Stav zväzu",
-					"transCode":"schema.org.assoc.stateOfAssociation",
+					"transCode": "schema.org.assoc.stateOfAssociation",
 					"type": "string"
 				},
 				"notPaying": {
-					"extends":"uri://registries/commonenums#blocks/boolean",
+					"extends": "uri://registries/commonenums#blocks/boolean",
 					"title": "Neplatič",
-					"transCode":"schema.org.assoc.notPaying",
+					"transCode": "schema.org.assoc.notPaying",
 					"type": "string",
 					"required": true
 				},
 				"dateOfRegistration": {
-					"extends":"uri://registries/commontypes#blocks/date",
+					"extends": "uri://registries/commontypes#blocks/date",
 					"title": "Dátum registrácie",
-					"transCode":"schema.org.assoc.dateOfRegistration"
+					"transCode": "schema.org.assoc.dateOfRegistration"
 				}
 			}
 		},
 		"associationAdress": {
 			"title": "Zväz - poštová adresa",
-			"transCode":"schema.org.assoc.associationAdress",
+			"transCode": "schema.org.assoc.associationAdress",
 			"type": "object",
 			"properties": {
 				"contactPerson": {
 					"title": "Kontaktná osoba",
-					"transCode":"schema.org.assoc.contactPerson",
+					"transCode": "schema.org.assoc.contactPerson",
 					"type": "string"
 				},
 				"mobileNumberOfContactPerson": {
 					"title": "Telefónne číslo kontaktnej osoby",
-					"transCode":"schema.org.assoc.mobileNumberOfContactPerson",
+					"transCode": "schema.org.assoc.mobileNumberOfContactPerson",
 					"type": "string"
 				},
 				"street": {
 					"title": "Ulica",
-					"transCode":"schema.org.assoc.street",
+					"transCode": "schema.org.assoc.street",
 					"type": "string"
 				},
 				"houseNumber": {
 					"title": "Číslo domu",
-					"transCode":"schema.org.assoc.houseNumber",
+					"transCode": "schema.org.assoc.houseNumber",
 					"type": "string"
 				},
 				"city": {
@@ -208,7 +206,7 @@
 				},
 				"zipCode": {
 					"title": "PSČ",
-					"transCode":"schema.org.assoc.zipCode",
+					"transCode": "schema.org.assoc.zipCode",
 					"type": "string"
 				},
 				"country": {
@@ -369,12 +367,11 @@
 			}
 		}
 	},
-
-	"models":{
-		"club":{
+	"models": {
+		"club": {
 			"table": "organizations",
-			"title":"Klub",
-			"transCode":"schema.club.title",
+			"title": "Klub",
+			"transCode": "schema.club.title",
 			"security": {
 				"create": {
 					"static": [
@@ -399,23 +396,23 @@
 					"v": ""
 				}
 			],
-			"fireEvents":{
+			"fireEvents": {
 				"create": "event-agecategory-created",
 				"update": "event-agecategory-updated"
 			},
-			"properties":{
-				"club":{
-					"extends":"uri://registries/organizations#blocks/club"
+			"properties": {
+				"club": {
+					"extends": "uri://registries/organizations#blocks/club"
 				},
-				"clubAdress":{
-					"$ref":"uri://registries/organizations#blocks/clubAdress"
+				"clubAdress": {
+					"$ref": "uri://registries/organizations#blocks/clubAdress"
 				},
-				"logoInfo":{
-					"$ref":"uri://registries/organizations#blocks/logoInfo"
+				"logoInfo": {
+					"$ref": "uri://registries/organizations#blocks/logoInfo"
 				}
 			}
 		},
-		"company":{
+		"company": {
 			"table": "organizations",
 			"title": "Organizácia",
 			"xxtransCode": "schema.org.title",
@@ -436,38 +433,37 @@
 					]
 				}
 			},
-			"properties":{
-				"baseData":{
-					"extends":"uri://registries/organizations#blocks/baseData"
+			"properties": {
+				"baseData": {
+					"extends": "uri://registries/organizations#blocks/baseData"
 				},
-				"club":{
-					"extends":"uri://registries/organizations#blocks/club"
+				"club": {
+					"extends": "uri://registries/organizations#blocks/club"
 				},
-				"clubAdress":{
-					"$ref":"uri://registries/organizations#blocks/clubAdress"
+				"clubAdress": {
+					"$ref": "uri://registries/organizations#blocks/clubAdress"
 				},
-				"association":{
-					"extends":"uri://registries/organizations#blocks/association"
+				"association": {
+					"extends": "uri://registries/organizations#blocks/association"
 				},
-				"associationAdress":{
-					"$ref":"uri://registries/organizations#blocks/associationAdress"
+				"associationAdress": {
+					"$ref": "uri://registries/organizations#blocks/associationAdress"
 				},
-				"logoInfo":{
-					"$ref":"uri://registries/organizations#blocks/logoInfo"
+				"logoInfo": {
+					"$ref": "uri://registries/organizations#blocks/logoInfo"
 				},
 				"contactInfo": {
-					"$ref":"uri://registries/organizations#blocks/contactInfo"
+					"$ref": "uri://registries/organizations#blocks/contactInfo"
 				},
 				"bankInfo": {
-					"$ref":"uri://registries/organizations#blocks/bankInfo"
+					"$ref": "uri://registries/organizations#blocks/bankInfo"
 				}
 			}
-
 		},
-		"association":{
+		"association": {
 			"table": "organizations",
 			"title": "Zväzy",
-			"transCode":"schema.association.title",
+			"transCode": "schema.association.title",
 			"forcedCriteria": [
 				{
 					"f": "association",
@@ -475,38 +471,37 @@
 					"v": ""
 				}
 			],
-			"properties":{
-				"association":{
-					"extends":"uri://registries/organizations#blocks/association"
+			"properties": {
+				"association": {
+					"extends": "uri://registries/organizations#blocks/association"
 				},
-				"associationAdress":{
-					"$ref":"uri://registries/organizations#blocks/associationAdress"
+				"associationAdress": {
+					"$ref": "uri://registries/organizations#blocks/associationAdress"
 				},
-				"logoInfo":{
-					"$ref":"uri://registries/organizations#blocks/logoInfo"
+				"logoInfo": {
+					"$ref": "uri://registries/organizations#blocks/logoInfo"
 				},
 				"contactInfo": {
-					"$ref":"uri://registries/organizations#blocks/contactInfo"
+					"$ref": "uri://registries/organizations#blocks/contactInfo"
 				},
 				"bankInfo": {
-					"$ref":"uri://registries/organizations#blocks/bankInfo"
+					"$ref": "uri://registries/organizations#blocks/bankInfo"
 				}
 			}
 		}
 	},
-
-	"views":{
-		"club":{
-			"new":{
-				"extends":"uri://registries/organizations#models/club"
+	"views": {
+		"club": {
+			"new": {
+				"extends": "uri://registries/organizations#models/club"
 			},
-			"view":{
-				"extends":"uri://registries/organizations#models/club"
+			"view": {
+				"extends": "uri://registries/organizations#models/club"
 			},
-			"search":{
-				"extends":"uri://registries/organizations#models/club",
-				"properties":{
-					"logoInfo":null
+			"search": {
+				"extends": "uri://registries/organizations#models/club",
+				"properties": {
+					"logoInfo": null
 				},
 				"listFields": [
 					{
@@ -520,15 +515,15 @@
 				]
 			}
 		},
-		"company":{
-			"new":{
-				"extends":"uri://registries/organizations#models/company"
+		"company": {
+			"new": {
+				"extends": "uri://registries/organizations#models/company"
 			},
-			"view":{
-				"extends":"uri://registries/organizations#models/company"
+			"view": {
+				"extends": "uri://registries/organizations#models/company"
 			},
-			"search":{
-				"extends":"uri://registries/organizations#models/company",
+			"search": {
+				"extends": "uri://registries/organizations#models/company",
 				"listFields": [
 					{
 						"field": "club.codeOfClub",
@@ -541,17 +536,17 @@
 				]
 			}
 		},
-		"association":{
-			"new":{
-				"extends":"uri://registries/organizations#models/association"
+		"association": {
+			"new": {
+				"extends": "uri://registries/organizations#models/association"
 			},
-			"view":{
-				"extends":"uri://registries/organizations#models/association"
+			"view": {
+				"extends": "uri://registries/organizations#models/association"
 			},
-			"search":{
-				"extends":"uri://registries/organizations#models/association",
-				"properties":{
-					"logoInfo":null
+			"search": {
+				"extends": "uri://registries/organizations#models/association",
+				"properties": {
+					"logoInfo": null
 				},
 				"listFields": [
 					{
@@ -561,6 +556,5 @@
 				]
 			}
 		}
-
 	}
 }
