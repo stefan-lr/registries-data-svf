@@ -735,7 +735,7 @@
 			"transCode":"schema.people.referee",
 			"forcedCriteria": [
 				{
-				"f": "coach.isCoach",
+				"f": "referee.isReferee",
 				"op": "eq",
 				"v": "TRUE"
 				}
@@ -781,7 +781,7 @@
 			"transCode":"schema.people.statistic",
 			"forcedCriteria": [
 				{
-				"f": "statistic.isOfficer",
+				"f": "statistic.isStatistic",
 				"op": "eq",
 				"v": "TRUE"
 				}
