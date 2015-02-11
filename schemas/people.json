@@ -87,8 +87,9 @@
 				"firstAssociation": {
 					"title": "Prvotný zväz",
 					"transCode": "schema.people.referee.firstAssociation",
+					"type": "string",
 					"$objectLink2": {
-						"schema": "uri://registries/organizations",
+						"schema": "uri://registries/organizations#views/association",
 						"fields": {
 							"name": "association.associationName"
 						}
@@ -96,6 +97,19 @@
 					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
+					}
+				},
+				"test": {
+					"title": "test",
+					"type": "array",
+					"items": {
+						"type": "string",
+						"$objectLink2": {
+							"schema": "uri://registries/organizations#views/association",
+							"fields": {
+								"name": "association.associationName"
+							}
+						}
 					}
 				},
 				"stateOfReferee": {
