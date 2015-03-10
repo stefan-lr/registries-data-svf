@@ -93,7 +93,7 @@
 						"fields": {
 							"name": "association.associationName"
 						}
-					},	
+					},
 					"objectLink": {
 						"registry": "organizations",
 						"name": "association.associationName"
@@ -120,8 +120,9 @@
 				"association": {
 					"title": "Aktuálny zväz",
 					"transCode": "schema.people.referee.association",
+					"type": "string",
 					"$objectLink2": {
-						"schema": "uri://registries/organizations",
+						"schema": "uri://registries/organizations#views/association",
 						"fields": {
 							"name": "association.associationName"
 						}
@@ -185,8 +186,9 @@
 				"firstAssociation": {
 					"title": "Prvotný zväz",
 					"transCode": "schema.people.coach.firstAssociation",
+					"type": "string",
 					"$objectLink2": {
-						"schema": "uri://registries/organizations",
+						"schema": "uri://registries/organizations#views/association",
 						"fields": {
 							"name": "association.associationName"
 						}
@@ -204,8 +206,9 @@
 				"association": {
 					"title": "Aktuálny zväz",
 					"transCode": "schema.people.coach.association",
+					"type": "string",
 					"$objectLink2": {
-						"schema": "uri://registries/organizations",
+						"schema": "uri://registries/organizations#views/association",
 						"fields": {
 							"name": "association.associationName"
 						}
@@ -291,8 +294,9 @@
 				"association": {
 					"title": "Aktuálny zväz",
 					"transCode": "schema.people.officer.association",
+					"type": "string",
 					"$objectLink2": {
-						"schema": "uri://registries/organizations",
+						"schema": "uri://registries/organizations#views/association",
 						"fields": {
 							"name": "association.associationName"
 						}
@@ -305,10 +309,11 @@
 				"club": {
 					"title": "Klubová príslušnosť",
 					"transCode": "schema.people.officer.club",
+					"type": "string",
 					"$objectLink2": {
-						"schema": "uri://registries/organizations",
+						"schema": "uri://registries/organizations#views/club",
 						"fields": {
-							"name": "association.associationName"
+							"name": "club.name"
 						}
 					},
 					"objectLink": {
@@ -445,8 +450,9 @@
 			"properties": {
 				"firstAssociation": {
 					"title": "Prvotný zväz",
+					"type": "string",
 					"$objectLink2": {
-						"schema": "uri://registries/organizations",
+						"schema": "uri://registries/organizations#views/association",
 						"fields": {
 							"name": "association.associationName"
 						}
@@ -462,8 +468,9 @@
 				},
 				"association": {
 					"title": "Zväzová príslušnosť",
+					"type": "string",
 					"$objectLink2": {
-						"schema": "uri://registries/organizations",
+						"schema": "uri://registries/organizations#views/association",
 						"fields": {
 							"name": "association.associationName"
 						}
@@ -509,10 +516,11 @@
 				"clubOfFirstRegistration": {
 					"title": "Materský klub",
 					"transCode": "schema.people.player.clubOfFirstRegistration",
+					"type": "string",
 					"$objectLink2": {
-						"schema": "uri://registries/organizations",
+						"schema": "uri://registries/organizations#views/club",
 						"fields": {
-							"name": "club.name.v"
+							"name": "club.name"
 						}
 					},
 					"objectLink": {
@@ -523,10 +531,11 @@
 				"club": {
 					"title": "Klubová príslušnosť",
 					"transCode": "schema.people.player.club",
+					"type": "string",
 					"$objectLink2": {
-						"schema": "uri://registries/organizations",
+						"schema": "uri://registries/organizations#views/club",
 						"fields": {
-							"name": "club.name.v"
+							"name": "club.name"
 						}
 					},
 					"objectLink": {
@@ -618,7 +627,7 @@
 					"$uploadableImage": {
 						"height": 400,
 						"width": 300
-					}
+ 					}
 				}
 			}
 		},

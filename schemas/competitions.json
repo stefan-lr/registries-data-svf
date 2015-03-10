@@ -17,6 +17,13 @@
 					"season": {
 						"title": "Súťažný ročnik",
 						"transCode":"schema.competition.season",
+						"type": "string",
+						"$objectLink2": {
+							"schema": "uri://registries/seasons#views/seasons",
+							"fields": {
+								"name": "baseData.name"
+							}
+						},
 						"objectLink": {
 							"registry": "seasons",
 							"name": "baseData.name"
@@ -27,6 +34,13 @@
 						"title": "Zväz",
 						"transCode":"schema.competition.association",
 						"type": "object",
+						"type": "string",
+						"$objectLink2": {
+							"schema": "uri://registries/organizations#views/association",
+							"fields": {
+								"name": "baseData.name"
+							}
+						},
 						"objectLink": {
 							"registry": "organizations",
 							"name": "association.associationName"
@@ -37,6 +51,13 @@
 						"title": "Veková kategória",
 						"transCode":"schema.competition.ageCategory",
 						"type": "object",
+						"type": "string",
+						"$objectLink2": {
+							"schema": "uri://registries/ageCategory#views/ageCategory",
+							"fields": {
+								"name": "baseData.name"
+							}
+						},
 						"objectLink": {
 							"registry": "ageCategories",
 							"name": "baseData.name"
